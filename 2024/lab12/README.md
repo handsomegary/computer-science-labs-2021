@@ -1,5 +1,18 @@
 # 2024 Lab 12：Pointer II
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 12.1 題目與 solution](solutions/lab12_1.md)
+- [Lab 12.2 題目與 solution](solutions/lab12_2.md)
+- [Lab 12.3 題目與 solution](solutions/lab12_3.md)
+- [Lab 12.4 題目與 solution](solutions/lab12_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依 **2024Fall_EE1007_CSLab_Lab12_20241216.pdf** 獨立實作；四個 `.cpp` 皆可單獨編譯及提交。
 
 ```sh

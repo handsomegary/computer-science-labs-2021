@@ -1,0 +1,30 @@
+[
+  {
+    "document": "lab6_1.md",
+    "source": "2024/lab06/lab6_1.cpp",
+    "stdin": "3.25 -2.5 9.75\n",
+    "stdout": "-2.5\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab6_2.md",
+    "source": "2024/lab06/lab6_2.cpp",
+    "stdin": "21 6\n",
+    "stdout": "42\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab6_3.md",
+    "source": "2024/lab06/lab6_3.cpp",
+    "stdin": "y\ny\n5000\nn\n",
+    "stdout": "*** NCU Electrical Appliance Store ***\nDo you want to go inside or leave the store(Y/N): Do you have the membership card(Y/N): Enter the money you spent: ***Congratulations !! You get 1000 dollars coupon!!\n*** NCU Electrical Appliance Store ***\nDo you want to go inside or leave the store(Y/N): ************************ GOOD BYE! *************************\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab6_4.md",
+    "source": "2024/lab06/lab6_4.cpp",
+    "stdin": "3 5 4\n",
+    "stdout": "1\n",
+    "returncode": 0
+  }
+]

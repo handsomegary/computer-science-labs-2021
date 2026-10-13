@@ -1,5 +1,18 @@
 # 2024 Lab 6：函式
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 6.1 題目與 solution](solutions/lab6_1.md)
+- [Lab 6.2 題目與 solution](solutions/lab6_2.md)
+- [Lab 6.3 題目與 solution](solutions/lab6_3.md)
+- [Lab 6.4 題目與 solution](solutions/lab6_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據課程的 `2024Fall_EE1007_CSLab_Lab6_20241026.pdf`，逐頁檢查文字與程式碼圖片後獨立實作。2024 題目與提供的原始程式資料夾的 2021 題目不同，這些檔案沒有沿用 2021 題號的答案。未把講義原檔放入 repo。
 
 講義是教學／Review 提示，部分題目沒有完整 `main`、原始 OJ 題面、輸入範圍或輸出範例。下表明列本 repo 的可執行介面；測試驗證這個介面，不代表已取得原 OJ 的 Accepted。

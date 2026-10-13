@@ -1,5 +1,18 @@
 # 2024 Lab 3：Control Statement I
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 3.1 題目與 solution](solutions/lab3_1.md)
+- [Lab 3.2 題目與 solution](solutions/lab3_2.md)
+- [Lab 3.3 題目與 solution](solutions/lab3_3.md)
+- [Lab 3.4 題目與 solution](solutions/lab3_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據 `2024Fall_EE1007_CSLab_Lab3_Review_20241010` 的題目文字、流程圖與程式片段完成。四題都是 2024 題目，與 2021 Lab 3 不同。每支 `.cpp` 是獨立 C++11 程式。
 
 | 程式 | 題目 | 講義明確規則與作法 |

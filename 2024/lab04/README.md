@@ -1,5 +1,18 @@
 # 2024 Lab 4：Control Statement II
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 4.1 題目與 solution](solutions/lab4_1.md)
+- [Lab 4.2 題目與 solution](solutions/lab4_2.md)
+- [Lab 4.3 題目與 solution](solutions/lab4_3.md)
+- [Lab 4.4 題目與 solution](solutions/lab4_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據 `2024Fall_EE1007_CSLab_Lab4_Review_20241017` 的文字、畫面與程式片段完成，使用該年度題意。每題可獨立以 C++11 編譯。
 
 ```sh

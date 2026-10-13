@@ -1,5 +1,18 @@
 # 2024 Lab 7：函式
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 7.1 題目與 solution](solutions/lab7_1.md)
+- [Lab 7.2 題目與 solution](solutions/lab7_2.md)
+- [Lab 7.3 題目與 solution](solutions/lab7_3.md)
+- [Lab 7.4 題目與 solution](solutions/lab7_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據課程的 `2024Fall_EE1007_CSLab_Lab7_20241105.pdf`，檢查流程圖與程式碼圖片後獨立實作。這組題目是三角形、油燈、Almost Prime 與 Feistel，不是 2021 的遞迴課題。
 
 講義缺少原 OJ 完整題面與多數精確 I/O 範例。下列程式可編譯執行；指定函式與明確規則按講義完成，缺少的介面採公開的參考 contract，不能視為原 OJ 已 Accepted。

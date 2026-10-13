@@ -1,0 +1,30 @@
+[
+  {
+    "document": "lab8_1.md",
+    "source": "2024/lab08/lab8_1.cpp",
+    "stdin": "5 2\n",
+    "stdout": "ans: 10\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab8_2.md",
+    "source": "2024/lab08/lab8_2.cpp",
+    "stdin": "8 12\n",
+    "stdout": "12\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab8_3.md",
+    "source": "2024/lab08/lab8_3.cpp",
+    "stdin": "4 123\n",
+    "stdout": "7\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab8_4.md",
+    "source": "2024/lab08/lab8_4.cpp",
+    "stdin": "12121122\n",
+    "stdout": "7\n",
+    "returncode": 0
+  }
+]

@@ -1,5 +1,18 @@
 # 2024 Lab 10：Vector
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 10.1 題目與 solution](solutions/lab10_1.md)
+- [Lab 10.2 題目與 solution](solutions/lab10_2.md)
+- [Lab 10.3 題目與 solution](solutions/lab10_3.md)
+- [Lab 10.4 題目與 solution](solutions/lab10_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 這一組依 **2024Fall_EE1007_CSLab_Lab10_20241204.pdf** 的 2024 題目獨立實作，和 2021 Lab 10 是不同題目。每個 `.cpp` 可單獨編譯、提交，不依賴其他原始檔。
 
 ```sh

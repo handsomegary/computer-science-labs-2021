@@ -1,0 +1,65 @@
+[
+  {
+    "document": "lab3_1.md",
+    "source": "2024/lab03/lab3_1.cpp",
+    "stdin": "10\n3\n7\n",
+    "stdout": "The candy bar is open!\nHow many candy do you want to take: The candy bar is open!\nHow many candy do you want to take: The candy bar is closed!\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_1.md",
+    "source": "2024/lab03/lab3_1.cpp",
+    "stdin": "0\n",
+    "stdout": "The candy bar is closed!\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_2.md",
+    "source": "2024/lab03/lab3_2.cpp",
+    "stdin": "139 140 150 1\n",
+    "stdout": "2\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_2.md",
+    "source": "2024/lab03/lab3_2.cpp",
+    "stdin": "120 120 119.9 2\n",
+    "stdout": "2\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_3.md",
+    "source": "2024/lab03/lab3_3.cpp",
+    "stdin": "16461\n",
+    "stdout": "YES\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_3.md",
+    "source": "2024/lab03/lab3_3.cpp",
+    "stdin": "0\n",
+    "stdout": "YES\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_3.md",
+    "source": "2024/lab03/lab3_3.cpp",
+    "stdin": "-121\n",
+    "stdout": "NO\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_4.md",
+    "source": "2024/lab03/lab3_4.cpp",
+    "stdin": "50\n65\n30\n50\n",
+    "stdout": "Enter the bomb number (0~100): Range 0~100: Range 0~65: Range 30~65: Bomb number: 50\nRounds: 3\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab3_4.md",
+    "source": "2024/lab03/lab3_4.cpp",
+    "stdin": "0\n100\n1\n0\n1\n",
+    "stdout": "Enter the bomb number (0~100): Out of range! Please enter again: Out of range! Please enter again: Range 0~100: Out of range! Please enter again: Bomb number: 1\nRounds: 1\n",
+    "returncode": 0
+  }
+]

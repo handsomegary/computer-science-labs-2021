@@ -3,3 +3,6 @@
 *.py text eol=lf
 *.md text eol=lf
 *.yml text eol=lf
+*.json text eol=lf
+# Reconstructed solution pages preserve exact prompt spaces in output fences.
+2024/lab*/solutions/*.md whitespace=-blank-at-eol

@@ -1,0 +1,20 @@
+[
+  {
+    "document": "lab7_4.md",
+    "source": "2024/lab07/lab7_4.cpp",
+    "stdin": "1 2 3 4\n-1 -1 -1 -1\nN 1 2 3 4\n1\nE 1 0\n",
+    "stdout": "3 4 3 4\n"
+  },
+  {
+    "document": "lab7_4.md",
+    "source": "2024/lab07/lab7_4.cpp",
+    "stdin": "1 2 3 4\n-1 -1 -1 -1\nN 1 2 3 4\n2\nE 1 0\nD 1 0\n",
+    "stdout": "1 2 3 4\n"
+  },
+  {
+    "document": "lab7_4.md",
+    "source": "2024/lab07/lab7_4.cpp",
+    "stdin": "0 0 0 0\n-1 -1 -1 -1\nT A B!\n0\n",
+    "stdout": "A B!\n"
+  }
+]

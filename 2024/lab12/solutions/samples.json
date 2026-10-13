@@ -1,0 +1,38 @@
+[
+  {
+    "document": "lab12_1.md",
+    "source": "2024/lab12/lab12_1.cpp",
+    "stdin": "1 2 3 4 5\n",
+    "stdout": "5 4 3 2 1\n"
+  },
+  {
+    "document": "lab12_2.md",
+    "source": "2024/lab12/lab12_2.cpp",
+    "stdin": "12345\n",
+    "stdout": "digital root: 6\n"
+  },
+  {
+    "document": "lab12_2.md",
+    "source": "2024/lab12/lab12_2.cpp",
+    "stdin": "-2147483648\n",
+    "stdout": "digital root: 2\n"
+  },
+  {
+    "document": "lab12_3.md",
+    "source": "2024/lab12/lab12_3.cpp",
+    "stdin": "2\nAlice\n9/6\n1-1\n2\nBob\n09/06\n1-1\n2-2\n1\n9/6\n2\nexit()\n",
+    "stdout": "1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> \nEnter your name: Enter date: Enter room number to reserve: Reserved successfully!\n\n1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> \nEnter your name: Enter date: Enter room number to reserve: The selected room is not available, please enter again!\nEnter room number to reserve: Reserved successfully!\n\n1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> \nEnter date: How many people? \n*** Garden Hotel        Distance: 1km ***\nNo. Room                               Price\n2-3 Twin                               NTD 1420\n\n*** City Big Hotel      Distance: 1.5km ***\nNo. Room                               Price\n3-1 Double                             NTD 2540\n\n1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> "
+  },
+  {
+    "document": "lab12_4.md",
+    "source": "2024/lab12/lab12_4.cpp",
+    "stdin": "2 3\n000\n000\n",
+    "stdout": "(0, 0) (0, 1) (0, 2) (1, 2)\n"
+  },
+  {
+    "document": "lab12_4.md",
+    "source": "2024/lab12/lab12_4.cpp",
+    "stdin": "2 2\n01\n10\n",
+    "stdout": "Can't reach the exit!\n"
+  }
+]

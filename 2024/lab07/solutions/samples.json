@@ -1,0 +1,23 @@
+[
+  {
+    "document": "lab7_1.md",
+    "source": "2024/lab07/lab7_1.cpp",
+    "stdin": "3 4 5\n",
+    "stdout": "perimeter: 12\narea: 6\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab7_2.md",
+    "source": "2024/lab07/lab7_2.cpp",
+    "stdin": "16\n",
+    "stdout": "on\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab7_3.md",
+    "source": "2024/lab07/lab7_3.cpp",
+    "stdin": "4 10\n",
+    "stdout": "decimal: 4\nbinary: 100\nhex: 4\n",
+    "returncode": 0
+  }
+]

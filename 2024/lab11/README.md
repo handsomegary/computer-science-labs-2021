@@ -1,5 +1,18 @@
 # 2024 Lab 11：Pointer
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 11.1 題目與 solution](solutions/lab11_1.md)
+- [Lab 11.2 題目與 solution](solutions/lab11_2.md)
+- [Lab 11.3 題目與 solution](solutions/lab11_3.md)
+- [Lab 11.4 題目與 solution](solutions/lab11_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依 **2024Fall_EE1007_CSLab_Lab11_20241209.pdf** 獨立實作。PDF 第 1–2 頁把 Price Discount 誤標為 Lab 1.1，但本目錄依本週題號放在 `lab11_1.cpp`。
 
 ```sh

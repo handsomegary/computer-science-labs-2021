@@ -1,5 +1,18 @@
 # 2024 Lab 5：重複控制與除錯
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 5.1 題目與 solution](solutions/lab5_1.md)
+- [Lab 5.2 題目與 solution](solutions/lab5_2.md)
+- [Lab 5.3 題目與 solution](solutions/lab5_3.md)
+- [Lab 5.4 題目與 solution](solutions/lab5_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據 `2024Fall_EE1007_CSLab_Lab5_Review_20241024` 的題目、程式片段及畫面完成。`2024Fall_CSLab_Lab5_Debugger_20241017` 是除錯操作補充，沒有新增第五題。使用 2024 的四題，未以 2021 圖形／全加器取代。每題為獨立 C++11 程式。
 
 ```sh

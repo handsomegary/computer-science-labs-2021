@@ -1,5 +1,18 @@
 # 2024 Lab 9：陣列
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 9.1 題目與 solution](solutions/lab9_1.md)
+- [Lab 9.2 題目與 solution](solutions/lab9_2.md)
+- [Lab 9.3 題目與 solution](solutions/lab9_3.md)
+- [Lab 9.4 題目與 solution](solutions/lab9_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據課程的 `2024Fall_EE1007_CSLab_Lab9_20241128.pdf`（頁內日期為 2024/12/17），檢查陣列索引、區間加總、排列與 LBP 的流程及圖片程式碼後獨立完成。所有題目實際使用陣列，未沿用 2021 相同題號的不同答案。
 
 Review 檔案沒有完整原 OJ 題面；缺少的初始輸入與輸出介面在下表說明，不宣稱已取得 OJ Accepted。

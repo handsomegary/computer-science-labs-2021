@@ -1,5 +1,18 @@
 # 2024 Lab 8：遞迴
 
+<!-- SOLUTIONS_NAV_BEGIN -->
+## 完整重建題目與 solution
+
+以下各頁包含明確題目、補定規則、實測範例、題解核心片段與完整 C++11 程式碼。
+
+- [Lab 8.1 題目與 solution](solutions/lab8_1.md)
+- [Lab 8.2 題目與 solution](solutions/lab8_2.md)
+- [Lab 8.3 題目與 solution](solutions/lab8_3.md)
+- [Lab 8.4 題目與 solution](solutions/lab8_4.md)
+
+[全部 40 題索引](../SOLUTIONS.md) · [problem / solution 資料集](../problems.json)
+<!-- SOLUTIONS_NAV_END -->
+
 依據課程的 `2024Fall_EE1007_CSLab_Lab8_20241121.pdf`，逐頁檢查組合數、面積、糖果與評分的流程圖及程式碼圖片。2021 Lab 8 題目不同，這些是依 2024 規則獨立完成的解答。
 
 原資料是 Review 提示，未附完整 OJ 題面／輸入範圍／多數輸出範例。以下明列本 repo 的介面與從圖片還原的規則，測試不等同 OJ Accepted。

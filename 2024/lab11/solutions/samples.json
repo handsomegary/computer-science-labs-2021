@@ -1,0 +1,38 @@
+[
+  {
+    "document": "lab11_1.md",
+    "source": "2024/lab11/lab11_1.cpp",
+    "stdin": "100\n0.85\n",
+    "stdout": "Please enter the price: Please enter the discount: After discount, the price is 85.00\n"
+  },
+  {
+    "document": "lab11_2.md",
+    "source": "2024/lab11/lab11_2.cpp",
+    "stdin": "20000229\n",
+    "stdout": "This is legal.\n"
+  },
+  {
+    "document": "lab11_2.md",
+    "source": "2024/lab11/lab11_2.cpp",
+    "stdin": "19000229\n",
+    "stdout": "This is not legal.\n"
+  },
+  {
+    "document": "lab11_3.md",
+    "source": "2024/lab11/lab11_3.cpp",
+    "stdin": "2\nAlice Example\n9/6\n3-1\n2\nAlice Example\n2/10\n2-3\n3\nAlice Example\nexit()\n",
+    "stdout": "1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> \nEnter your name: Enter date: Enter room number to reserve: Reserved successfully!\n\n1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> \nEnter your name: Enter date: Enter room number to reserve: Reserved successfully!\n\n1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> \nEnter your name: \n*** This is Alice Example's order ***\nDate: 9/6\nHotel                              Price\n---------------------------------------------\nCity Big Hotel Double Room         NTD 2540\n\nDate: 2/10\nHotel                              Price\n---------------------------------------------\nGarden Hotel Twin Room             NTD 1420\n\n---------------------------------------------\nTotal                              NTD 3960\n\n1. Search System\n2. Reserve System\n3. Payment\nexit(). Quit\n>>> "
+  },
+  {
+    "document": "lab11_4.md",
+    "source": "2024/lab11/lab11_4.cpp",
+    "stdin": "4\n0123\n3210\n0011\n0123\n",
+    "stdout": "0A4B\n1A1B\n4A0B\nYou win!\n"
+  },
+  {
+    "document": "lab11_4.md",
+    "source": "2024/lab11/lab11_4.cpp",
+    "stdin": "3\n012\n210\n210\n210\n210\n",
+    "stdout": "1A2B\n1A2B\n1A2B\n1A2B\nYou lose!\n"
+  }
+]

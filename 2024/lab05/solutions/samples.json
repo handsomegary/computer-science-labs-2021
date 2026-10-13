@@ -1,0 +1,58 @@
+[
+  {
+    "document": "lab5_1.md",
+    "source": "2024/lab05/lab5_1.cpp",
+    "stdin": "+\n2 3\n^\n2 3\ne\n",
+    "stdout": "Welcome to use our calculator. Type 'e' to exit.\nEnter a and b: Calculation result: a + b = 5\n\nEnter a and b: Calculation result: a ^ b = 8\n\nGoodbye~\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_1.md",
+    "source": "2024/lab05/lab5_1.cpp",
+    "stdin": "*\n2147483647 2147483647\n^\n2 63\ne\n",
+    "stdout": "Welcome to use our calculator. Type 'e' to exit.\nEnter a and b: Calculation result: a * b = 4611686014132420609\n\nEnter a and b: Calculation result is out of range.\n\nGoodbye~\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_2.md",
+    "source": "2024/lab05/lab5_2.cpp",
+    "stdin": "12\n6 2 3\n",
+    "stdout": "Enter the total number of the cookies: Enter 3 different quantities: \nAll possibilities:\n[6,6]\n[3,3,6]\n[3,3,3,3]\n[2,2,2,6]\n[2,2,2,3,3]\n[2,2,2,2,2,2]\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_2.md",
+    "source": "2024/lab05/lab5_2.cpp",
+    "stdin": "0\n1 2 3\n",
+    "stdout": "Enter the total number of the cookies: Enter 3 different quantities: \nAll possibilities:\n[]\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_3.md",
+    "source": "2024/lab05/lab5_3.cpp",
+    "stdin": "2024 9 3 2\n47\n0512002\n",
+    "stdout": "Today: How many bottles of the juice: 7-digit number: \nFinish all the juice on 2024/10/03 (Thu.).\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_3.md",
+    "source": "2024/lab05/lab5_3.cpp",
+    "stdin": "2024 9 3 2\n1\n0512002\n",
+    "stdout": "Today: How many bottles of the juice: 7-digit number: \nFinish all the juice on 2024/09/03 (Tue.).\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_4.md",
+    "source": "2024/lab05/lab5_4.cpp",
+    "stdin": "3 3\na\n2\n1\n6\n6\n6\n6\n",
+    "stdout": "Enter height and width: Enter Sequence: \nStart Game!\nA move: B move: A and B are at position 0 and 1\nA and B have score 101 and 101\n\nA move: B move: A and B are at position 4 and 7\nA and B have score 102 and 102\n\nA move: B move: A and B are at position 8 and 8\nA and B have score 102 and 102\nThe two players are tied!\n",
+    "returncode": 0
+  },
+  {
+    "document": "lab5_4.md",
+    "source": "2024/lab05/lab5_4.cpp",
+    "stdin": "6 7\na.Bz\n6\n1\n6\n6\n6\n6\n6\n6\n",
+    "stdout": "Enter height and width: Enter Sequence: \nStart Game!\nA move: B move: A and B are at position 6 and 1\nA and B have score 100 and 101\n\nA move: B move: A and B are at position 12 and 7\nA and B have score 126 and 99\n\nA move: B move: A and B are at position 18 and 13\nA and B have score 126 and 100\n\nA move: B move: A and B are at position 22 and 19\nA and B have score 126 and 98\nPlayer A wins the game!\n",
+    "returncode": 0
+  }
+]

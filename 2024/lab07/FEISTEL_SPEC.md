@@ -1,4 +1,4 @@
-# 2024 Lab 7.4：Feistel Cipher 參考實作
+# 2024 Lab 7.4：Feistel Cipher 重建版規格
 
 `lab7_4.cpp` 完成提供的 Review 中可確認的 Key Scrambler、Key Integrator、XOR／AND／OR／MOD 算子、Feistel round、輸入與輸出整合。依題目限制，全程使用純量與函式，不宣告 array、vector 或 string。
 
@@ -13,9 +13,9 @@
 
 ## Review 沒有提供的部分
 
-投影片未列出每個 key 由哪個 key 控制的完整排列、Iteration Time Generator 如何產生輪數、每輪選哪個 KEY／key'／F，以及原題的完整輸入輸出範例。因此這份程式把這些值作為**明確設定輸入**，不假造原課程的排程公式，也不宣稱它已符合未取得的 HydroOJ P113028 原題介面。
+投影片未列出每個 key 由哪個 key 控制的完整排列、Iteration Time Generator 如何產生輪數、每輪選哪個 KEY／key'／F，以及原題的完整輸入輸出範例。本次依使用者要求，由題解程式碼重建完整練習題，把這些值正式定義為**明確設定輸入**，而不冒稱自訂公式來自原課程。
 
-目前可用它驗證講義的運算部件及自行指定的完整加解密流程。取得原題之後，運算函式可保留，再將 `main` 的設定讀取換成原題的 key 排程與輪數公式。
+完整題面、輸入輸出、限制、實測範例、題解核心片段與完整程式碼，見 [Lab 7.4 題目與 solution](solutions/lab7_4.md)。下列是同一份重建題目的介面摘要，已足以獨立練習及驗證全部轉換流程。
 
 ## 可執行介面
 
