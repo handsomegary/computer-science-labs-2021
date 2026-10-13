@@ -1,12 +1,18 @@
 cmake_minimum_required(VERSION 3.12)
-project(computer_science_labs_2021 LANGUAGES CXX)
+project(computer_science_labs LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-file(GLOB_RECURSE LAB_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/lab*/*.cpp")
+file(GLOB_RECURSE LAB_SOURCES CONFIGURE_DEPENDS
+  "${CMAKE_CURRENT_SOURCE_DIR}/lab*/*.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/2024/lab*/*.cpp")
 foreach(source IN LISTS LAB_SOURCES)
   get_filename_component(target "${source}" NAME_WE)
+  file(RELATIVE_PATH relative_source "${CMAKE_CURRENT_SOURCE_DIR}" "${source}")
+  if(relative_source MATCHES "^2024/")
+    set(target "y2024_${target}")
+  endif()
   add_executable("${target}" "${source}")
   if(MSVC)
     target_compile_options("${target}" PRIVATE /W4)
