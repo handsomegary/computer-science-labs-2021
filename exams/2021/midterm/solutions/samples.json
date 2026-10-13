@@ -1,0 +1,114 @@
+[
+  {
+    "document": "problem_a.md",
+    "source": "exams/2021/midterm/problem_a.cpp",
+    "stdin": "5\n16\n5\n15\n0\n0\n",
+    "stdout": "Chick 2 Rabbit 3\nno\nBye\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_a.md",
+    "source": "exams/2021/midterm/problem_a.cpp",
+    "stdin": "1073741823 2147483646\n0 1\n0 0\n",
+    "stdout": "Chick 1073741823 Rabbit 0\nno\nBye\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_b.md",
+    "source": "exams/2021/midterm/problem_b.cpp",
+    "stdin": "-5\n1234567892\n",
+    "stdout": "You should input a positive integer\nf(n)=1+2+3+4+5+6+7+8+9+2=47\nf(f(n))=4+7=11\nf(f(f(n)))=1+1=2\nThe summing digit is:2\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_b.md",
+    "source": "exams/2021/midterm/problem_b.cpp",
+    "stdin": "100\n",
+    "stdout": "f(n)=1+0+0=1\nThe summing digit is:1\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_b.md",
+    "source": "exams/2021/midterm/problem_b.cpp",
+    "stdin": "0\n",
+    "stdout": "The summing digit is:0\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_c.md",
+    "source": "exams/2021/midterm/problem_c.cpp",
+    "stdin": "3\n",
+    "stdout": "move disk 1 from A to C\nmove disk 2 from A to B\nmove disk 1 from C to B\nmove disk 3 from A to C\nmove disk 1 from B to A\nmove disk 2 from B to C\nmove disk 1 from A to C\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_d.md",
+    "source": "exams/2021/midterm/problem_d.cpp",
+    "stdin": "100\n999\n",
+    "stdout": "153 & 370 & 371 & 407 \n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_d.md",
+    "source": "exams/2021/midterm/problem_d.cpp",
+    "stdin": "10\n99\n",
+    "stdout": "none\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_d.md",
+    "source": "exams/2021/midterm/problem_d.cpp",
+    "stdin": "0 9\n",
+    "stdout": "0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_e.md",
+    "source": "exams/2021/midterm/problem_e.cpp",
+    "stdin": "3\n10\n15\n21\n4\n23\n10\n12\n30\n",
+    "stdout": "Input again!\nDecimal 20\nOctet 24\nBinary 10100\nCome on\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_e.md",
+    "source": "exams/2021/midterm/problem_e.cpp",
+    "stdin": "1\n63\n",
+    "stdout": "Decimal 63\nOctet 77\nBinary 111111\nThe country is rich\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_e.md",
+    "source": "exams/2021/midterm/problem_e.cpp",
+    "stdin": "2\n0\n0\n",
+    "stdout": "Decimal 0\nOctet 0\nBinary 0\nCome on\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_f.md",
+    "source": "exams/2021/midterm/problem_f.cpp",
+    "stdin": "3 2\n5 1\n0 0\n",
+    "stdout": "7\n5\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_f.md",
+    "source": "exams/2021/midterm/problem_f.cpp",
+    "stdin": "1 8\n8 1\n0 0\n",
+    "stdout": "8\n8\n",
+    "stderr": "",
+    "returncode": 0
+  }
+]

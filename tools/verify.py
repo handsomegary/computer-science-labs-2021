@@ -1,4 +1,4 @@
-"""Run every lab regression suite without retaining executable files."""
+"""Run every lab and exam regression suite without retaining executable files."""
 import argparse
 import os
 from pathlib import Path

@@ -1,0 +1,18 @@
+[
+  {
+    "document": "problem_g.md",
+    "source": "exams/2021/final/problem_g.cpp",
+    "stdin": "7\nmember1.txt\n6\n10\n",
+    "stdout": "*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***Load member information***\nPlease enter the member file name: The file member1.txt has been loaded...\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***NCU Theater Membership***\nNo.  Username    Phone\n1.   GuestA      0000000001\n2.   GuestB      0000000002\n3.   GuestLong   0000000003\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \nThank you for using our system\nHave a nice day~~\n",
+    "files": {
+      "member1.txt": "Name Password Phone\nGuestA demoA 0000000001\nGuestB demoB 0000000002\nGuestLong demoC 0000000003\n"
+    }
+  },
+  {
+    "document": "problem_g.md",
+    "source": "exams/2021/final/problem_g.cpp",
+    "stdin": "6\n10\n",
+    "stdout": "*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***NCU Theater Membership***\nNo Member\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \nThank you for using our system\nHave a nice day~~\n",
+    "files": {}
+  }
+]

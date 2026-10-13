@@ -6,3 +6,4 @@
 *.json text eol=lf
 # Reconstructed solution pages preserve exact prompt spaces in output fences.
 2024/lab*/solutions/*.md whitespace=-blank-at-eol
+exams/2021/*/solutions/*.md whitespace=-blank-at-eol

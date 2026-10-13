@@ -6,12 +6,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 file(GLOB_RECURSE LAB_SOURCES CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/lab*/*.cpp"
-  "${CMAKE_CURRENT_SOURCE_DIR}/2024/lab*/*.cpp")
+  "${CMAKE_CURRENT_SOURCE_DIR}/2024/lab*/*.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/exams/2021/*/*.cpp")
 foreach(source IN LISTS LAB_SOURCES)
   get_filename_component(target "${source}" NAME_WE)
   file(RELATIVE_PATH relative_source "${CMAKE_CURRENT_SOURCE_DIR}" "${source}")
   if(relative_source MATCHES "^2024/")
     set(target "y2024_${target}")
+  elseif(relative_source MATCHES "^exams/([0-9]+)/([^/]+)/")
+    set(target "exam${CMAKE_MATCH_1}_${CMAKE_MATCH_2}_${target}")
   endif()
   add_executable("${target}" "${source}")
   if(MSVC)

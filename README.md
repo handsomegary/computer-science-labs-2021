@@ -8,8 +8,11 @@
 | --- | --- | --- |
 | 2021 | 根目錄 `lab01` 到 `lab14` | Lab 1–14，共 47 題，另有 Lab 6.1 大數延伸版 |
 | 2024 | `2024/lab03` 到 `2024/lab12` | Lab 3–12，共 40 題重建題目、完整 solution 與可執行程式 |
+| 2021 考古 | `exams/2021/midterm`、`exams/2021/final` | 期中 6 題、期末 7 題，共 13 題完整題目與 solution |
 
 年份相同的題號也可能對應不同題目，請先選年份，再看各目錄的 README。每個 `labX_Y.cpp` 都有自己的 `main`，請逐題編譯，不要將多個作業一起連結。需依學校繳交規定命名時，可把該題檔案改為指定的「學號_姓名_LabX.Y.cpp」。2021 Lab 1.2 的姓名、學校與學號使用占位文字，可依繳交需求自行填寫。
+
+考古題由 **[期中／期末完整題目與 solution 索引](exams/SOLUTIONS.md)** 進入；每頁包含完整程式碼，亦可取得 [JSON 題目集](exams/problems.json)。
 
 ```sh
 g++ -std=c++11 -Wall -Wextra -Wpedantic lab14/lab14_1.cpp -o lab14_1

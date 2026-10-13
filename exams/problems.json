@@ -1,0 +1,413 @@
+[
+  {
+    "id": "2021-Midterm-A",
+    "title": "2021 期中考 A：雞兔同籠",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期中考 A：雞兔同籠\n\n依提供的考卷與參考程式整理。題目採正式考卷，輸出字串以範例為準；必要的矛盾處理與補充行為於文末明列。\n\n## 題目\n\n農場籠中共有 x 個頭、y 條腿。每隻雞一個頭兩條腿，每隻兔子一個頭四條腿。計算雞與兔的數量；無非負整數解時輸出 no。反覆處理資料，直到讀到 0 0。\n\n## 輸入格式\n\n多組資料，每組依序輸入兩個整數 x、y，分別為頭數、腿數，以空白或換行分隔。0 0 是終止記號，不是要輸出的動物組合。\n\n## 輸出格式\n\n不印任何輸入提示。每組有解印 `Chick C Rabbit R` 與換行，其中 C、R 是雞、兔數；無解印小寫 `no` 與換行。讀到 0 0 印 `Bye` 與換行後結束。\n\n## 限制與邊界\n\n0 <= x,y <= 2147483647。雞、兔數必須為非負整數。除終止記號外，頭數或腿數為零仍照正常規則判定，例如 0 1 無解。使用 64 位中間計算，避免 2x、4x 在 32 位整數中溢位。考卷不要求範圍外輸入防呆；本實作對範圍外數值在 stderr 印 `Invalid input.` 與換行並回傳 1，EOF 正常結束。\n\n## 考卷依據與採用規則\n\n依提供的考卷與參考程式：兩輸入順序、動物頭腿數、合法範圍、多組處理與終止記號採考卷；精確字串與大小寫採範例。以 64 位中間值是避免溢位的實作修正，沒有改變合法資料答案。\n\n## 範例\n\n範例 1 的 5 個頭、16 條腿得到雞 2、兔 3；15 條腿是奇數，無解。範例 2 檢查大數乘法與零邊界：1073741823 隻雞共有 2147483646 條腿；0 個頭、1 條腿無解。\n\n以下是實跑的完整 stdout，不含終端機輸入回顯；範例獨立啟動程序，包含每個空格與換行。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n5\n16\n5\n15\n0\n0\n```\n\n### 範例 1 輸出\n\n```text\nChick 2 Rabbit 3\nno\nBye\n```\n\n### 範例 2 輸入\n\n```text\n1073741823 2147483646\n0 1\n0 0\n```\n\n### 範例 2 輸出\n\n```text\nChick 1073741823 Rabbit 0\nno\nBye\n```",
+      "document": "exams/2021/midterm/solutions/problem_a.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法說明\n\n設雞數 C、兔數 R，C+R=x、2C+4R=y，因此 R=(y−2x)/2、C=x−R。合法條件為 y 是偶數且 2x <= y <= 4x。檢查條件後直接代入，不需要枚舉動物數量。每組時間 O(1)、額外空間 O(1)。\n\n## 題解核心程式片段\n\n下列為本題解核心節錄，完整可編譯程式列於下一節。\n\n```cpp\nif (legs % 2 != 0 || legs < 2 * heads || legs > 4 * heads) {\n    std::cout << \"no\\n\";\n} else {\n    const long long rabbits = (legs - 2 * heads) / 2;\n    const long long chicks = heads - rabbits;\n    std::cout << \"Chick \" << chicks << \" Rabbit \" << rabbits << '\\n';\n}\n```\n\n## 完整題解程式碼\n\n\n\n## 編譯與執行\n\n在 `exams/2021/midterm` 執行：\n\n```sh\ng++ -std=c++11 -Wall -Wextra -Wpedantic problem_a.cpp -o problem_a\n./problem_a\n```\n\nWindows PowerShell 執行 `./problem_a.exe`。獨立原始碼：[problem_a.cpp](../problem_a.cpp)。範例亦保存在本目錄的 `samples.json`。",
+      "code": "// Based on the provided exam and reference code.\n#include <iostream>\n\nint main()\n{\n    long long heads = 0;\n    long long legs = 0;\n    while (std::cin >> heads >> legs) {\n        if (heads == 0 && legs == 0) {\n            std::cout << \"Bye\\n\";\n            return 0;\n        }\n        if (heads < 0 || heads > 2147483647LL || legs < 0 || legs > 2147483647LL) {\n            std::cerr << \"Invalid input.\\n\";\n            return 1;\n        }\n        if (legs % 2 != 0 || legs < 2 * heads || legs > 4 * heads) {\n            std::cout << \"no\\n\";\n        } else {\n            const long long rabbits = (legs - 2 * heads) / 2;\n            const long long chicks = heads - rabbits;\n            std::cout << \"Chick \" << chicks << \" Rabbit \" << rabbits << '\\n';\n        }\n    }\n    return 0;\n}\n",
+      "source": "exams/2021/midterm/problem_a.cpp",
+      "source_sha256": "119a79005147935cad8f2ae4de6b2022fedc6eac5d2354ce7b3b5c126ef1b301"
+    },
+    "examples": [
+      {
+        "stdin": "5\n16\n5\n15\n0\n0\n",
+        "stdout": "Chick 2 Rabbit 3\nno\nBye\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "1073741823 2147483646\n0 1\n0 0\n",
+        "stdout": "Chick 1073741823 Rabbit 0\nno\nBye\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Midterm-B",
+    "title": "2021 期中考 B：逐次數位加總",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期中考 B：逐次數位加總\n\n依提供的考卷與參考程式整理。題目採正式考卷，輸出字串以範例為準；必要的矛盾處理與補充行為於文末明列。\n\n## 題目\n\n令 f(n) 為 n 的十進位各位數總和。反覆求 f，直到結果只剩一位數；列出每一次實際運算與最後的 summing digit。輸入值超出範圍時先印錯誤訊息，再重新取得一個值。\n\n## 輸入格式\n\n輸入一個整數 n；若該值不在合法範圍，繼續輸入替代值，直到取得合法 n。數值以空白或換行分隔。接受一個合法 n 並完成計算後，程式結束，不再處理下一筆。\n\n## 輸出格式\n\n不印輸入提示。每個範圍錯誤印 `You should input a positive integer` 與換行。第一次加總格式為 `f(n)=d1+d2+...+dm=S`，下一次為 `f(f(n))=...`，依次增加外層 f；等號與加號前後沒有空白，每行最後換行。位數由左至右輸出，包含 0。最後印 `The summing digit is:G` 與換行，冒號後沒有空白。若輸入本身是單一位數，只印最後一行，沒有加總運算行。\n\n## 限制與邊界\n\n0 <= n <= 2147483647。考卷文字稱正整數，但明列範圍包含 0；本實作以該範圍為準，n=0 合法且最後數字為 0。逐一讀取空白分隔的數值 token；非法 token、負數或超大數值都印同一錯誤訊息並取得下一個 token。可接受開頭的加號、前導零與數值為零的負零表示。即使超大數字位於 EOF 前且沒有換行，也先印錯誤，再因無新輸入而正常結束。用整數除法取得數位，不使用浮點 pow。\n\n## 考卷依據與採用規則\n\n依提供的考卷與參考程式：逐次加總目的、輸入範圍、範圍外重試採考卷，f 的巢狀形式與所有字串採範例。範圍含 0 與「positive」用詞不一致時採明列範圍；單位數不用執行 f，直接報告結果。\n\n## 範例\n\n範例 1 先拒絕 −5，再由 1234567892 算出 47、11、2，三個加總行都必須保留。範例 2 的 100 仍要印出兩個零；範例 3 確認範圍下界 0。\n\n以下是實跑的完整 stdout，不含終端機輸入回顯；範例獨立啟動程序，包含每個空格與換行。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n-5\n1234567892\n```\n\n### 範例 1 輸出\n\n```text\nYou should input a positive integer\nf(n)=1+2+3+4+5+6+7+8+9+2=47\nf(f(n))=4+7=11\nf(f(f(n)))=1+1=2\nThe summing digit is:2\n```\n\n### 範例 2 輸入\n\n```text\n100\n```\n\n### 範例 2 輸出\n\n```text\nf(n)=1+0+0=1\nThe summing digit is:1\n```\n\n### 範例 3 輸入\n\n```text\n0\n```\n\n### 範例 3 輸出\n\n```text\nThe summing digit is:0\n```",
+      "document": "exams/2021/midterm/solutions/problem_b.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法說明\n\n當 n>=10，找最高十進位除數，從最左位依序取得 n/divisor%10、印出數位並累加，再以總和取代 n。iteration 決定外層 f 的數量，所以不省略中間步驟。首輪最多十位，後續更短；時間為所有實際處理位數總和，額外數值空間 O(1)。\n\n## 題解核心程式片段\n\n下列為本題解核心節錄，完整可編譯程式列於下一節。\n\n```cpp\nlong long sum = 0;\nwhile (divisor > 0) {\n    const long long digit = number / divisor % 10;\n    std::cout << digit;\n    sum += digit;\n    divisor /= 10;\n    if (divisor > 0) std::cout << '+';\n}\nstd::cout << '=' << sum << '\\n';\nnumber = sum;\n```\n\n## 完整題解程式碼\n\n\n\n## 編譯與執行\n\n在 `exams/2021/midterm` 執行：\n\n```sh\ng++ -std=c++11 -Wall -Wextra -Wpedantic problem_b.cpp -o problem_b\n./problem_b\n```\n\nWindows PowerShell 執行 `./problem_b.exe`。獨立原始碼：[problem_b.cpp](../problem_b.cpp)。範例亦保存在本目錄的 `samples.json`。",
+      "code": "// Based on the provided exam and reference code.\n#include <iostream>\n#include <string>\n\nbool parseNumber(const std::string& token, long long& number)\n{\n    std::size_t position = 0;\n    bool negative = false;\n    if (!token.empty() && (token[0] == '+' || token[0] == '-')) {\n        negative = token[0] == '-';\n        position = 1;\n    }\n    if (position == token.size()) return false;\n    long long value = 0;\n    for (; position < token.size(); ++position) {\n        if (token[position] < '0' || token[position] > '9') return false;\n        const int digit = token[position] - '0';\n        if (value > (2147483647LL - digit) / 10) return false;\n        value = value * 10 + digit;\n    }\n    if (negative && value != 0) return false;\n    number = value;\n    return true;\n}\n\nint main()\n{\n    long long number = 0;\n    std::string token;\n    while (std::cin >> token) {\n        if (parseNumber(token, number)) break;\n        std::cout << \"You should input a positive integer\\n\";\n    }\n    if (!std::cin || !parseNumber(token, number)) return 0;\n    unsigned iteration = 0;\n    while (number >= 10) {\n        ++iteration;\n        for (unsigned index = 0; index < iteration; ++index) std::cout << \"f(\";\n        std::cout << 'n';\n        for (unsigned index = 0; index < iteration; ++index) std::cout << ')';\n        std::cout << '=';\n        long long divisor = 1;\n        for (long long rest = number; rest >= 10; rest /= 10) divisor *= 10;\n        long long sum = 0;\n        while (divisor > 0) {\n            const long long digit = number / divisor % 10;\n            std::cout << digit;\n            sum += digit;\n            divisor /= 10;\n            if (divisor > 0) std::cout << '+';\n        }\n        std::cout << '=' << sum << '\\n';\n        number = sum;\n    }\n    std::cout << \"The summing digit is:\" << number << '\\n';\n    return 0;\n}\n",
+      "source": "exams/2021/midterm/problem_b.cpp",
+      "source_sha256": "4eb05d6e6058831146ff64f460418867b5c44eed53dab6494e6065a5213ab73e"
+    },
+    "examples": [
+      {
+        "stdin": "-5\n1234567892\n",
+        "stdout": "You should input a positive integer\nf(n)=1+2+3+4+5+6+7+8+9+2=47\nf(f(n))=4+7=11\nf(f(f(n)))=1+1=2\nThe summing digit is:2\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "100\n",
+        "stdout": "f(n)=1+0+0=1\nThe summing digit is:1\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "0\n",
+        "stdout": "The summing digit is:0\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Midterm-C",
+    "title": "2021 期中考 C：Tower of Hanoi：最少移動步驟",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期中考 C：Tower of Hanoi：最少移動步驟\n\n依提供的考卷與參考程式整理。題目採正式考卷，輸出字串以範例為準；必要的矛盾處理與補充行為於文末明列。\n\n## 題目\n\n有 A、B、C 三根柱子，n 個圓盤起初位於 A，從上到下依序編號 1–n，編號越大盤子越大。每次只能移動一個最上方的盤子，不能把大盤放到小盤上。請以最少步數把全部盤子搬到 C，依序列出每一步。必須使用回傳 void 的 Hanoi 函式。\n\n## 輸入格式\n\n一個整數 n，代表圓盤數。\n\n## 輸出格式\n\n每一步一行，精確格式 `move disk D from X to Y`，其中 D 是盤號，X、Y 為 A／B／C，最後換行。依範例不印輸入提示、不另印總步數；輸出本身共有 2^n−1 行。\n\n## 限制與邊界\n\n3 <= n <= 10。程式需先宣告 `void Hanoi(...);`，由 main 呼叫，main 後定義 Hanoi；允許自行選參數。最大輸出 1023 行。考卷不要求合法範圍外防呆；本實作對不合法 n 在 stderr 印 `Invalid disk count.` 與換行並回傳 1。\n\n## 考卷依據與採用規則\n\n依提供的考卷與參考程式：柱子名稱、盤號、合法範圍與 void Hanoi 函式模板採考卷。文字提到一開始顯示提示，但 sample 沒有提示，因此以 sample 定輸出：只列移動，不加提示或總數。\n\n## 範例\n\n範例使用合法下界 n=3，七步完成。第一步必須從 A 到 C，與考卷範例一致。盤數 10 時仍採相同遞迴規則，只是輸出 1023 步。\n\n以下是實跑的完整 stdout，不含終端機輸入回顯；範例獨立啟動程序，包含每個空格與換行。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n3\n```\n\n### 範例 1 輸出\n\n```text\nmove disk 1 from A to C\nmove disk 2 from A to B\nmove disk 1 from C to B\nmove disk 3 from A to C\nmove disk 1 from B to A\nmove disk 2 from B to C\nmove disk 1 from A to C\n```",
+      "document": "exams/2021/midterm/solutions/problem_c.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法說明\n\n把 n−1 個小盤由 source 移到 auxiliary，把盤 n 由 source 移到 target，再把 n−1 個小盤由 auxiliary 移到 target。空問題 n=0 不移動。T(n)=2T(n−1)+1，所以正好 2^n−1 步，達到最少步數；時間 O(2^n)，遞迴堆疊 O(n)。\n\n## 題解核心程式片段\n\n下列為本題解核心節錄，完整可編譯程式列於下一節。\n\n```cpp\nvoid Hanoi(int disks, char source, char auxiliary, char target)\n{\n    if (disks == 0) return;\n    Hanoi(disks - 1, source, target, auxiliary);\n    std::cout << \"move disk \" << disks << \" from \" << source << \" to \" << target << '\\n';\n    Hanoi(disks - 1, auxiliary, source, target);\n}\n```\n\n## 完整題解程式碼\n\n\n\n## 編譯與執行\n\n在 `exams/2021/midterm` 執行：\n\n```sh\ng++ -std=c++11 -Wall -Wextra -Wpedantic problem_c.cpp -o problem_c\n./problem_c\n```\n\nWindows PowerShell 執行 `./problem_c.exe`。獨立原始碼：[problem_c.cpp](../problem_c.cpp)。範例亦保存在本目錄的 `samples.json`。",
+      "code": "// Based on the provided exam and reference code.\n#include <iostream>\n\nvoid Hanoi(int disks, char source, char auxiliary, char target);\n\nint main()\n{\n    int disks = 0;\n    if (!(std::cin >> disks) || disks < 3 || disks > 10) {\n        std::cerr << \"Invalid disk count.\\n\";\n        return 1;\n    }\n    Hanoi(disks, 'A', 'B', 'C');\n    return 0;\n}\n\nvoid Hanoi(int disks, char source, char auxiliary, char target)\n{\n    if (disks == 0) return;\n    Hanoi(disks - 1, source, target, auxiliary);\n    std::cout << \"move disk \" << disks << \" from \" << source << \" to \" << target << '\\n';\n    Hanoi(disks - 1, auxiliary, source, target);\n}\n",
+      "source": "exams/2021/midterm/problem_c.cpp",
+      "source_sha256": "e8ea269a99071ab5824fbad3df035b9341eba617d8014f3f61e1608ac77c2ff8"
+    },
+    "examples": [
+      {
+        "stdin": "3\n",
+        "stdout": "move disk 1 from A to C\nmove disk 2 from A to B\nmove disk 1 from C to B\nmove disk 3 from A to C\nmove disk 1 from B to A\nmove disk 2 from B to C\nmove disk 1 from A to C\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Midterm-D",
+    "title": "2021 期中考 D：區間內的 Armstrong Numbers",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期中考 D：區間內的 Armstrong Numbers\n\n依提供的考卷與參考程式整理。題目採正式考卷，輸出字串以範例為準；必要的矛盾處理與補充行為於文末明列。\n\n## 題目\n\n若一個非負整數等於其每位數字的「位數次方」總和，就稱為 Armstrong number。例如 407=4^3+0^3+7^3、1634=1^4+6^4+3^4+4^4。找出閉區間 [a,b] 的全部 Armstrong numbers，依小到大輸出；無解輸出 none。\n\n## 輸入格式\n\n依序輸入整數下界 a、上界 b，以空白或換行分隔。\n\n## 輸出格式\n\n不印任何輸入提示。有解時以 ` & ` 分隔數值，依範例在最後一個數值後保留一個空格，再換行，例如 `153 & 370 & 371 & 407 `。沒有答案時印 `none` 與換行，不加尾端空格。\n\n## 限制與邊界\n\n0 <= a,b <= 2147483647。0 視為一位數，所以 0 也是 Armstrong number；所有 0–9 都符合。兩界包含在查找區間中。上界最多十位；不得從 a 到 b 線性掃描。若 a>b，視為空區間，輸出 none；考卷不要求這種逆序防呆，此為明確的補充規則。範圍外數值在 stderr 印 `Invalid range.` 與換行並回傳 1。\n\n## 考卷依據與採用規則\n\n依提供的考卷與參考程式：Armstrong 定義、閉區間、輸入範圍與 none 採考卷。分隔符與最後空格採 sample。文字稱正整數邊界，但數值範圍含0，因此接受0。數位集合搜尋是效率修訂，不以硬編碼答案清單替代計算。\n\n## 範例\n\n範例 1 的 100–999 有 153、370、371、407。範例 2 的 10–99 無答案。範例 3 包含下界0，十個一位數都等於自己的一次方。\n\n以下是實跑的完整 stdout，不含終端機輸入回顯；範例獨立啟動程序，包含每個空格與換行。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n100\n999\n```\n\n### 範例 1 輸出\n\n```text\n153 & 370 & 371 & 407 \n```\n\n### 範例 2 輸入\n\n```text\n10\n99\n```\n\n### 範例 2 輸出\n\n```text\nnone\n```\n\n### 範例 3 輸入\n\n```text\n0 9\n```\n\n### 範例 3 輸出\n\n```text\n0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \n```",
+      "document": "exams/2021/midterm/solutions/problem_d.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法說明\n\n答案只取決於各數字出現幾次。針對每種位數 L=1..10，枚舉 c0+...+c9=L 的數位多重集合，算 S=Σcd×d^L。只有 S 位數等於 L、數位出現次數也恰好是該集合且在區間內時，才是答案；排序後印出。\n\nL位多重集合數為 C(L+9,9)，L=1..10合計184755種。每次以整數乘法計次方，用64位中間值；最大總和10×9^10仍可安全表示。時間由數位集合總數決定，而非區間寬度；額外空間為遞迴深度及答案列表。\n\n## 題解核心程式片段\n\n下列為本題解核心節錄，完整可編譯程式列於下一節。\n\n```cpp\nif (digit == 9) {\n    counts[9] = remaining;\n    const long long candidate = sum + remaining * powers[9];\n    if (candidate >= lower && candidate <= upper && matchingDigits(candidate, length, counts))\n        answers.push_back(candidate);\n    return;\n}\nfor (int count = 0; count <= remaining; ++count) {\n    const long long nextSum = sum + count * powers[digit];\n    if (nextSum > upper) break;\n    counts[digit] = count;\n    enumerateDigits(digit + 1, remaining - count, length, nextSum,\n                    powers, counts, lower, upper, answers);\n}\n```\n\n## 完整題解程式碼\n\n\n\n## 編譯與執行\n\n在 `exams/2021/midterm` 執行：\n\n```sh\ng++ -std=c++11 -Wall -Wextra -Wpedantic problem_d.cpp -o problem_d\n./problem_d\n```\n\nWindows PowerShell 執行 `./problem_d.exe`。獨立原始碼：[problem_d.cpp](../problem_d.cpp)。範例亦保存在本目錄的 `samples.json`。",
+      "code": "// Based on the provided exam and reference code.\n// Enumerate digit multisets rather than scanning the requested integer range.\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nbool matchingDigits(long long number, int length, const int counts[10])\n{\n    int actual[10] = {};\n    int digits = 0;\n    do {\n        ++actual[number % 10];\n        ++digits;\n        number /= 10;\n    } while (number > 0);\n    if (digits != length) return false;\n    for (int digit = 0; digit < 10; ++digit)\n        if (actual[digit] != counts[digit]) return false;\n    return true;\n}\n\nvoid enumerateDigits(int digit, int remaining, int length, long long sum,\n                     const long long powers[10], int counts[10],\n                     long long lower, long long upper, std::vector<long long>& answers)\n{\n    if (digit == 9) {\n        counts[9] = remaining;\n        const long long candidate = sum + remaining * powers[9];\n        if (candidate >= lower && candidate <= upper && matchingDigits(candidate, length, counts))\n            answers.push_back(candidate);\n        return;\n    }\n    for (int count = 0; count <= remaining; ++count) {\n        const long long nextSum = sum + count * powers[digit];\n        if (nextSum > upper) break;\n        counts[digit] = count;\n        enumerateDigits(digit + 1, remaining - count, length, nextSum,\n                        powers, counts, lower, upper, answers);\n    }\n}\n\nint main()\n{\n    long long lower = 0, upper = 0;\n    if (!(std::cin >> lower >> upper) || lower < 0 || upper < 0\n        || lower > 2147483647LL || upper > 2147483647LL) {\n        std::cerr << \"Invalid range.\\n\";\n        return 1;\n    }\n    std::vector<long long> answers;\n    int maximumLength = 1;\n    for (long long rest = upper; rest >= 10; rest /= 10) ++maximumLength;\n    if (lower <= upper) {\n        for (int length = 1; length <= maximumLength; ++length) {\n            long long powers[10] = {};\n            for (int digit = 0; digit < 10; ++digit) {\n                powers[digit] = 1;\n                for (int exponent = 0; exponent < length; ++exponent) powers[digit] *= digit;\n            }\n            int counts[10] = {};\n            enumerateDigits(0, length, length, 0, powers, counts, lower, upper, answers);\n        }\n    }\n    std::sort(answers.begin(), answers.end());\n    answers.erase(std::unique(answers.begin(), answers.end()), answers.end());\n    if (answers.empty()) {\n        std::cout << \"none\\n\";\n    } else {\n        for (std::size_t index = 0; index < answers.size(); ++index) {\n            if (index != 0) std::cout << \" & \";\n            std::cout << answers[index];\n        }\n        std::cout << \" \\n\"; // The exam sample includes a space after the last value.\n    }\n    return 0;\n}\n",
+      "source": "exams/2021/midterm/problem_d.cpp",
+      "source_sha256": "033eab2caff10166e54620f2b809e8671898cb276d32a2f48d9801507a22a003"
+    },
+    "examples": [
+      {
+        "stdin": "100\n999\n",
+        "stdout": "153 & 370 & 371 & 407 \n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "10\n99\n",
+        "stdout": "none\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "0 9\n",
+        "stdout": "0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Midterm-E",
+    "title": "2021 期中考 E：極值平均與十進位／八進位／二進位",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期中考 E：極值平均與十進位／八進位／二進位\n\n依提供的考卷與參考程式整理。題目採正式考卷，輸出字串以範例為準；必要的矛盾處理與補充行為於文末明列。\n\n## 題目\n\n取得 n 筆非負收入資料，以最大值與最小值的平均代表整組資料。若平均不是整數，要求重新輸入一整組：包括新的 n 與新的全部收入。合法平均依序印十進位、八進位與二進位；若平均至少為二進位 111111，印富裕訊息，否則印鼓勵訊息。\n\n## 輸入格式\n\n先輸入筆數 n，接著 n 個收入整數。若須重試，再從新 n 開始提供資料；n 可以與上一組不同。數值以空白或換行分隔。取得第一組整數平均後結束。\n\n## 輸出格式\n\n不印輸入提示。平均非整數時印 `Input again!` 與換行。最後依序四行：`Decimal A`、`Octet O`、`Binary B`，第四行為 `The country is rich` 或 `Come on`；各行最後換行。O、B 不加前綴或前導零，平均0時兩者都印0。\n\n## 限制與邊界\n\n正常資料1 <= n <= 2147483647，收入值0–2147483647。考卷一面稱n為正整數，一面把n的數值範圍列為含0；由於空資料沒有最大與最小值，本實作 n=0 印 Input again! 並重新讀n。二進位111111的數值是63，所以判斷平均>=63，不是與十進位111111或字串比較。極值相加使用64位，避免兩個INTMAX相加溢位。範圍外筆數／收入在stderr分別印 `Invalid data count.`／`Invalid revenue data.` 與換行並回傳1；尚未輸入n時EOF正常結束。\n\n## 考卷依據與採用規則\n\n依提供的考卷與參考程式：只平均極值、平均非整數重輸、三種進位、富裕門檻採考卷。重試範例從n=3變n=4，因此明確必須重讀n與完整資料，不能只重讀前一次n筆。n=0的處理是解決空資料矛盾的補充規則；Octet 字串保留原sample拼法。\n\n## 範例\n\n範例1首先最小10、最大21，平均15.5，因此重讀一組4筆；新組最小10、最大30，平均20，八進位24、二進位10100，未達63。範例2恰為門檻63，二進位111111，判為rich。範例3檢查收入全0。\n\n以下是實跑的完整 stdout，不含終端機輸入回顯；範例獨立啟動程序，包含每個空格與換行。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n3\n10\n15\n21\n4\n23\n10\n12\n30\n```\n\n### 範例 1 輸出\n\n```text\nInput again!\nDecimal 20\nOctet 24\nBinary 10100\nCome on\n```\n\n### 範例 2 輸入\n\n```text\n1\n63\n```\n\n### 範例 2 輸出\n\n```text\nDecimal 63\nOctet 77\nBinary 111111\nThe country is rich\n```\n\n### 範例 3 輸入\n\n```text\n2\n0\n0\n```\n\n### 範例 3 輸出\n\n```text\nDecimal 0\nOctet 0\nBinary 0\nCome on\n```",
+      "document": "exams/2021/midterm/solutions/problem_e.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法說明\n\n串流讀n個值，只維持minimum、maximum，沒有配置n個元素的陣列。sum=minimum+maximum為奇數時，平均非整數，重讀整組。偶數時A=sum/2，以oct輸出八進位並恢復dec，二進位用遞迴先印商再印餘數。每組時間O(n)，極值計算空間O(1)，二進位列印堆疊O(log(A+1))。\n\n## 題解核心程式片段\n\n下列為本題解核心節錄，完整可編譯程式列於下一節。\n\n```cpp\nconst long long sum = minimum + maximum;\nif (sum % 2 != 0) {\n    std::cout << \"Input again!\\n\";\n    continue;\n}\nconst unsigned average = static_cast<unsigned>(sum / 2);\nstd::cout << \"Decimal \" << average << \"\\nOctet \" << std::oct << average\n          << std::dec << \"\\nBinary \";\nprintBinary(average);\nstd::cout << '\\n' << (average >= 63 ? \"The country is rich\\n\" : \"Come on\\n\");\n```\n\n## 完整題解程式碼\n\n\n\n## 編譯與執行\n\n在 `exams/2021/midterm` 執行：\n\n```sh\ng++ -std=c++11 -Wall -Wextra -Wpedantic problem_e.cpp -o problem_e\n./problem_e\n```\n\nWindows PowerShell 執行 `./problem_e.exe`。獨立原始碼：[problem_e.cpp](../problem_e.cpp)。範例亦保存在本目錄的 `samples.json`。",
+      "code": "// Based on the provided exam and reference code.\n#include <algorithm>\n#include <iostream>\n\nvoid printBinary(unsigned number)\n{\n    if (number >= 2) printBinary(number / 2);\n    std::cout << number % 2;\n}\n\nint main()\n{\n    long long count = 0;\n    while (std::cin >> count) {\n        if (count < 0 || count > 2147483647LL) {\n            std::cerr << \"Invalid data count.\\n\";\n            return 1;\n        }\n        // The description requires a positive count; an empty data set has no extrema.\n        if (count == 0) {\n            std::cout << \"Input again!\\n\";\n            continue;\n        }\n        long long minimum = 2147483647LL;\n        long long maximum = 0;\n        for (long long index = 0; index < count; ++index) {\n            long long value = 0;\n            if (!(std::cin >> value) || value < 0 || value > 2147483647LL) {\n                std::cerr << \"Invalid revenue data.\\n\";\n                return 1;\n            }\n            minimum = std::min(minimum, value);\n            maximum = std::max(maximum, value);\n        }\n        const long long sum = minimum + maximum;\n        if (sum % 2 != 0) {\n            std::cout << \"Input again!\\n\";\n            continue; // Read both the new count and a complete new set of values.\n        }\n        const unsigned average = static_cast<unsigned>(sum / 2);\n        std::cout << \"Decimal \" << average << \"\\nOctet \" << std::oct << average << std::dec << \"\\nBinary \";\n        printBinary(average);\n        std::cout << '\\n' << (average >= 63 ? \"The country is rich\\n\" : \"Come on\\n\");\n        return 0;\n    }\n    return 0;\n}\n",
+      "source": "exams/2021/midterm/problem_e.cpp",
+      "source_sha256": "fb46aa51df9ef7b790522ffc22cb767f06d4308d8461ea47ce0f25e9dea53250"
+    },
+    "examples": [
+      {
+        "stdin": "3\n10\n15\n21\n4\n23\n10\n12\n30\n",
+        "stdout": "Input again!\nDecimal 20\nOctet 24\nBinary 10100\nCome on\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "1\n63\n",
+        "stdout": "Decimal 63\nOctet 77\nBinary 111111\nThe country is rich\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "2\n0\n0\n",
+        "stdout": "Decimal 0\nOctet 0\nBinary 0\nCome on\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Midterm-F",
+    "title": "2021 期中考 F：Postage Stamps：最大連續可付金額",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期中考 F：Postage Stamps：最大連續可付金額\n\n依提供的考卷與參考程式整理。題目採正式考卷，輸出字串以範例為準；必要的矛盾處理與補充行為於文末明列。\n\n## 題目\n\n每份文件最多貼 h 張郵票，可以設計 k 種不同的正整數面額，每種郵票供應不限。對選定面額，求從1開始每個整數金額都能用最多h張郵票湊出的最大連續上界。選擇最佳面額，使此上界最大，輸出 n(h,k)。可以重複使用同一面額；不要求恰好用滿h張。\n\n## 輸入格式\n\n多組資料，每行兩個整數 h、k。0 0為終止記號，其餘正常資料h、k均為正整數。\n\n## 輸出格式\n\n每組輸出一行十進位最大連續可付金額n(h,k)，最後換行。0 0不印任何內容。依考卷最終輸出段落與sample，只印上界，不印最佳面額集合、提示或告別詞。\n\n## 限制與邊界\n\nh>=1、k>=1、h+k<=9，因此各參數最多8，共36組合法參數。面額為互異正整數，排列為嚴格遞增；第一個面額必須是1，否則不能支付1。程式必須搜尋最佳值，不能硬編碼答案表。重複輸入可快取已計算結果。範圍外參數在stderr印 `Invalid stamp limits.` 與換行並回傳1；EOF正常結束。\n\n## 考卷依據與採用規則\n\n依提供的考卷與參考程式：最多h張、k種面額、單位正整數、最大從1連續可付金額、多組h+k<=9、0 0終止採考卷。敘述提到尋找最佳面額，但正式輸出段落與sample只印n，因此只輸出上界。非終止資料採正h、正k；此為有實際支付與面額的正常定義。\n\n## 範例\n\nh=3、k=2時面額1與3可以支付1–7，8無法在3張內湊成，因此上界7；所有候選面額搜尋後確認7為最大。h=5、k=1只能以面額1支付1–5，答案5。範例2檢查h+k=9兩個極端：h=1、k=8選1–8得8；h=8、k=1得8。\n\n以下是實跑的完整 stdout，不含終端機輸入回顯；範例獨立啟動程序，包含每個空格與換行。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n3 2\n5 1\n0 0\n```\n\n### 範例 1 輸出\n\n```text\n7\n5\n```\n\n### 範例 2 輸入\n\n```text\n1 8\n8 1\n0 0\n```\n\n### 範例 2 輸出\n\n```text\n8\n8\n```",
+      "document": "exams/2021/midterm/solutions/problem_f.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法說明\n\n對部分面額集合以minimumStamps[v]記錄支付v的最少張數，超過h的值統一用h+1表示。加入面額d時，先複製舊DP，再由小到大更新dp[v]=min(dp[v],dp[v−d]+1)，因此同一新面額可以用多張。掃描首次不能在h張內支付的值，得到當前連續上界N。\n\n深度優先搜尋下一面額d，只枚舉previous<d<=N+1。若d>N+1，現有集合不能付N+1，往後更大面額也補不了此缺口，所以這類分支不可能更優。每加入一個面額，整體上界至多h(N+1)，反覆套用得到剩餘層的樂觀上界；不超過目前best時可剪枝。合法h+k<=9時DP的理論最大上界不超過1364，因此不需搜尋無限金額。\n\n若S為實際搜尋節點數、V為最大DP大小，時間O(SV)、遞迴保留各層DP的空間O(kV)。快取只保存本次執行中已搜尋出的答案，起初全部為0，不是預存答案表。\n\n## 題解核心程式片段\n\n下列為本題解核心節錄，完整可編譯程式列於下一節。\n\n```cpp\nfor (int denomination = consecutive + 1; denomination > previous; --denomination) {\n    std::vector<int> next(maximumStamps * denomination + 1, maximumStamps + 1);\n    std::copy(minimumStamps.begin(), minimumStamps.end(), next.begin());\n    for (int value = denomination; value < static_cast<int>(next.size()); ++value)\n        if (next[value - denomination] < maximumStamps)\n            next[value] = std::min(next[value], next[value - denomination] + 1);\n    searchDenominations(maximumStamps, denominationCount, selected + 1, denomination,\n                        coverage(next, maximumStamps), next, best);\n}\n```\n\n## 完整題解程式碼\n\n\n\n## 編譯與執行\n\n在 `exams/2021/midterm` 執行：\n\n```sh\ng++ -std=c++11 -Wall -Wextra -Wpedantic problem_f.cpp -o problem_f\n./problem_f\n```\n\nWindows PowerShell 執行 `./problem_f.exe`。獨立原始碼：[problem_f.cpp](../problem_f.cpp)。範例亦保存在本目錄的 `samples.json`。",
+      "code": "// Based on the provided exam and reference code.\n// Search denominations and compute exact coverage; no answer table is hardcoded.\n#include <algorithm>\n#include <iostream>\n#include <vector>\n\nint coverage(const std::vector<int>& minimumStamps, int maximumStamps)\n{\n    int value = 1;\n    while (value < static_cast<int>(minimumStamps.size()) && minimumStamps[value] <= maximumStamps) ++value;\n    return value - 1;\n}\n\nvoid searchDenominations(int maximumStamps, int denominationCount, int selected,\n                         int previous, int consecutive, const std::vector<int>& minimumStamps,\n                         int& best)\n{\n    if (selected == denominationCount) {\n        best = std::max(best, consecutive);\n        return;\n    }\n    // Even the next denomination cannot exceed the first uncovered value.\n    // Adding another denomination can cover no more than h*(coverage+1).\n    int optimistic = consecutive;\n    for (int remaining = selected; remaining < denominationCount; ++remaining)\n        optimistic = maximumStamps * (optimistic + 1);\n    if (optimistic <= best) return;\n\n    for (int denomination = consecutive + 1; denomination > previous; --denomination) {\n        std::vector<int> next(static_cast<std::size_t>(maximumStamps * denomination + 1), maximumStamps + 1);\n        std::copy(minimumStamps.begin(), minimumStamps.end(), next.begin());\n        for (int value = denomination; value < static_cast<int>(next.size()); ++value) {\n            if (next[value - denomination] < maximumStamps)\n                next[value] = std::min(next[value], next[value - denomination] + 1);\n        }\n        searchDenominations(maximumStamps, denominationCount, selected + 1, denomination,\n                            coverage(next, maximumStamps), next, best);\n    }\n}\n\nint optimumCoverage(int maximumStamps, int denominationCount)\n{\n    // Denomination 1 is necessary to make the first value of the sequence.\n    std::vector<int> minimumStamps(static_cast<std::size_t>(maximumStamps + 1));\n    for (int value = 0; value <= maximumStamps; ++value) minimumStamps[value] = value;\n    int best = 0;\n    searchDenominations(maximumStamps, denominationCount, 1, 1, maximumStamps, minimumStamps, best);\n    return best;\n}\n\nint main()\n{\n    int cached[9][9] = {};\n    int maximumStamps = 0, denominationCount = 0;\n    while (std::cin >> maximumStamps >> denominationCount) {\n        if (maximumStamps == 0 && denominationCount == 0) return 0;\n        if (maximumStamps < 1 || denominationCount < 1 || maximumStamps > 8\n            || denominationCount > 8 || maximumStamps + denominationCount > 9) {\n            std::cerr << \"Invalid stamp limits.\\n\";\n            return 1;\n        }\n        int& answer = cached[maximumStamps][denominationCount];\n        if (answer == 0) answer = optimumCoverage(maximumStamps, denominationCount);\n        std::cout << answer << '\\n';\n    }\n    return 0;\n}\n",
+      "source": "exams/2021/midterm/problem_f.cpp",
+      "source_sha256": "2883ee072854f829c892767df0644af1170c5bb6f9740f27fd7069d3f4520389"
+    },
+    "examples": [
+      {
+        "stdin": "3 2\n5 1\n0 0\n",
+        "stdout": "7\n5\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "1 8\n8 1\n0 0\n",
+        "stdout": "8\n8\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-A",
+    "title": "2021 期末 A：Spiral Graph II：外擴螺旋",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 A：Spiral Graph II：外擴螺旋\n\n> 完整重建版，非考卷逐字抄錄。已知規則與範例依2021期末考卷；歧義與缺漏以本頁明訂規則補齊。程式為獨立重新實作，公開內容只使用非個資範例。\n\n## 題目\n\n建立 width 列、length 欄的矩形，在座標 (x,y) 放入 1，再依順時針、向外擴大的螺旋順序填入遞增整數。x 是列、y 是欄，座標從 0 起算。第一方向向右，直線段長度依序為 1、1、2、2、3、3、…，方向為右、下、左、上循環。螺旋可以走到矩形外；越界位置只消耗移動步數，不填入數字，不改變轉彎時機。返回矩形內的未填格才放下一個數字，直到每格都填滿。這與考卷圖中越界的紅色虛線及兩個範例相符。\n\n## 輸入\n\n單筆四個整數 width、length、x、y，以空白或換行分隔。也可原樣貼上範例中的 `Width,Length`、`x,y` 標籤；程式只忽略這兩個完整 token，不印出標籤。\n\n## 輸出\n\n只輸出 width 行，每行 length 個整數，各數以一個空格分隔，行尾無空格，最後換行。每格補零至 width×length 的十進位位數。維度、起點或讀取格式無效時印 `error` 並回傳 1。\n\n## 限制與邊界\n\n3≤width,length≤31；0≤x<width，0≤y<length。考卷另列 x,y≤30，重建版補上必須位於目前矩形內。最大數為961，使用固定31×31陣列。\n\n## 範例\n\nstdout只包含程式輸出，不含終端機回顯的輸入。以下輸出已由C++11編譯後實際捕捉。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\nWidth,Length\n4 5\nx,y\n1 3\n```\n\n### 範例 1 輸出\n\n```text\n20 16 07 08 09\n19 15 06 01 02\n18 14 05 04 03\n17 13 12 11 10\n```\n\n### 範例 2 輸入\n\n```text\n10 22\n0 21\n```\n\n### 範例 2 輸出\n\n```text\n220 210 200 190 180 170 160 150 140 130 120 110 100 081 064 049 036 025 016 009 004 001\n219 209 199 189 179 169 159 149 139 129 119 109 099 080 063 048 035 024 015 008 003 002\n218 208 198 188 178 168 158 148 138 128 118 108 098 079 062 047 034 023 014 007 006 005\n217 207 197 187 177 167 157 147 137 127 117 107 097 078 061 046 033 022 013 012 011 010\n216 206 196 186 176 166 156 146 136 126 116 106 096 077 060 045 032 021 020 019 018 017\n215 205 195 185 175 165 155 145 135 125 115 105 095 076 059 044 031 030 029 028 027 026\n214 204 194 184 174 164 154 144 134 124 114 104 094 075 058 043 042 041 040 039 038 037\n213 203 193 183 173 163 153 143 133 123 113 103 093 074 057 056 055 054 053 052 051 050\n212 202 192 182 172 162 152 142 132 122 112 102 092 073 072 071 070 069 068 067 066 065\n211 201 191 181 171 161 151 141 131 121 111 101 091 090 089 088 087 086 085 084 083 082\n```\n\n範例說明：第一例從(1,3)先向右到2、下到3，再向左到4、5。外圈暫時越界後在底列填10–13，最左欄依序填17–20。第二例起點在右上角；首次越界的步數不占數字，所以右上是001，右下是082。\n\n## 考卷已知與重建補定\n\n考卷已知：考卷給出順時針外擴、不重訪、矩形邊界、補零及兩個正式範例；圖示明確容許在矩形外繼續行走。\n\n重建補定：明訂width為列、length為欄、起點需位於矩形、首次向右與1,1,2,2段長、可忽略範例標籤、非法輸入的error，以及無提示／無行尾空格。",
+      "document": "exams/2021/final/solutions/problem_a.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法\n\n保留矩形外的目前座標，按兩個等長直線段增加段長。只有座標合法且值為0時填入下一數字。不能一碰邊界就提前轉向，否則會卡在已填格而與正式範例不符。最大外擴距離至多30，整段模擬至多覆蓋約61×61的位置；時間O(max(width,length)²)，儲存矩形為O(width×length)。\n\n## 完整題解程式\n\n獨立來源：[../problem_a.cpp](../problem_a.cpp)。",
+      "code": "// 2021 final A: an expanding clockwise spiral, clipped to the rectangle.\n#include <iomanip>\n#include <iostream>\n#include <sstream>\n#include <string>\nusing namespace std;\n\nbool readInteger(int& number) {\n    string token;\n    while (cin >> token) {\n        if (token == \"Width,Length\" || token == \"x,y\") continue;\n        istringstream input(token);\n        return static_cast<bool>(input >> number) && input.peek() == char_traits<char>::eof();\n    }\n    return false;\n}\nint main() {\n    int rows, columns, row, column;\n    if (!readInteger(rows) || !readInteger(columns) || !readInteger(row) || !readInteger(column) ||\n        rows < 3 || rows > 31 || columns < 3 || columns > 31 || row < 0 || row >= rows ||\n        column < 0 || column >= columns) { cout << \"error\\n\"; return 1; }\n    int graph[31][31] = {};\n    const int dr[4] = {0, 1, 0, -1}, dc[4] = {1, 0, -1, 0};\n    const int total = rows * columns;\n    int value = 1, direction = 0, distance = 1;\n    graph[row][column] = value++;\n    while (value <= total) {\n        // Segment lengths 1,1,2,2,3,3,...; off-grid positions consume steps,\n        // but do not consume sequence numbers or change the spiral geometry.\n        for (int segment = 0; segment < 2 && value <= total; ++segment) {\n            for (int step = 0; step < distance && value <= total; ++step) {\n                row += dr[direction];\n                column += dc[direction];\n                if (row >= 0 && row < rows && column >= 0 && column < columns && graph[row][column] == 0)\n                    graph[row][column] = value++;\n            }\n            direction = (direction + 1) % 4;\n        }\n        ++distance;\n    }\n    const int digits = total < 10 ? 1 : total < 100 ? 2 : 3;\n    for (int r = 0; r < rows; ++r) {\n        for (int c = 0; c < columns; ++c) {\n            if (c) cout << ' ';\n            cout << setfill('0') << setw(digits) << graph[r][c];\n        }\n        cout << '\\n';\n    }\n}\n",
+      "source": "exams/2021/final/problem_a.cpp",
+      "source_sha256": "b9344cc31905519fc45e83164434a4f9295c9d70b1fe54cd04003f41db213213"
+    },
+    "examples": [
+      {
+        "stdin": "Width,Length\n4 5\nx,y\n1 3\n",
+        "stdout": "20 16 07 08 09\n19 15 06 01 02\n18 14 05 04 03\n17 13 12 11 10\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "10 22\n0 21\n",
+        "stdout": "220 210 200 190 180 170 160 150 140 130 120 110 100 081 064 049 036 025 016 009 004 001\n219 209 199 189 179 169 159 149 139 129 119 109 099 080 063 048 035 024 015 008 003 002\n218 208 198 188 178 168 158 148 138 128 118 108 098 079 062 047 034 023 014 007 006 005\n217 207 197 187 177 167 157 147 137 127 117 107 097 078 061 046 033 022 013 012 011 010\n216 206 196 186 176 166 156 146 136 126 116 106 096 077 060 045 032 021 020 019 018 017\n215 205 195 185 175 165 155 145 135 125 115 105 095 076 059 044 031 030 029 028 027 026\n214 204 194 184 174 164 154 144 134 124 114 104 094 075 058 043 042 041 040 039 038 037\n213 203 193 183 173 163 153 143 133 123 113 103 093 074 057 056 055 054 053 052 051 050\n212 202 192 182 172 162 152 142 132 122 112 102 092 073 072 071 070 069 068 067 066 065\n211 201 191 181 171 161 151 141 131 121 111 101 091 090 089 088 087 086 085 084 083 082\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-B",
+    "title": "2021 期末 B：Build a Tree：七節點搜尋樹",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 B：Build a Tree：七節點搜尋樹\n\n> 完整重建版，非考卷逐字抄錄。已知規則與範例依2021期末考卷；歧義與缺漏以本頁明訂規則補齊。程式為獨立重新實作，公開內容只使用非個資範例。\n\n## 題目\n\n依輸入順序將七個互異整數建成二元搜尋樹。第一個數是根節點；新值比目前節點小時往左，比目前節點大時往右，在第一個空子指標處接上新節點。最後依左子樹、右子樹、根節點的後序順序輸出所有值。必須使用具有num、left、right的node結構及恰好七個元素的node陣列；先逐一存入數值，再連接指標。\n\n## 輸入\n\n恰好七個互異十進位整數，以空白或換行分隔。\n\n## 輸出\n\n七個後序遍歷數值，同一行以單一空格隔開，沒有行尾空格，最後換行。數值超範圍、缺少輸入或重複值時印error並回傳1。\n\n## 限制與邊界\n\n每個值在-2147483648至2147483647。考卷規定左值嚴格小於、右值嚴格大於，因此重建版明訂七個值互異；不可用固定平衡樹位置或排序後陣列冒充指標樹。\n\n## 範例\n\nstdout只包含程式輸出，不含終端機回顯的輸入。以下輸出已由C++11編譯後實際捕捉。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n26 17 41 14 21 30 47\n```\n\n### 範例 1 輸出\n\n```text\n14 21 17 30 47 41 26\n```\n\n### 範例 2 輸入\n\n```text\n1 2 3 4 5 6 7\n```\n\n### 範例 2 輸出\n\n```text\n7 6 5 4 3 2 1\n```\n\n範例說明：第一例左右子樹分別輸出14 21 17與30 47 41，最後根26。第二例逐次向右形成一條鏈，後序從最深的7一路回到1。\n\n## 考卷已知與重建補定\n\n考卷已知：考卷指定node結構、七元素陣列、首值為根、左右大小規則；紅色遍歷編號及兩個範例確認後序。\n\n重建補定：將未說明的重複值明訂為錯誤，補上讀取錯誤處理及精確空格格式。節點不另行動態配置。",
+      "document": "exams/2021/final/solutions/problem_b.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法\n\n七個node陣列元素持有實際節點，插入時沿left/right指標查找空位。遞迴後序先處理左右，再印目前節點；bool first控制空格。建樹最壞O(7²)，遍歷O(7)，節點與遞迴堆疊最多七個。\n\n## 完整題解程式\n\n獨立來源：[../problem_b.cpp](../problem_b.cpp)。",
+      "code": "// 2021 final B: the prescribed seven-element node array and postorder traversal.\n#include <cstdint>\n#include <iostream>\nusing namespace std;\n\nstruct node {\n    int num;\n    node *left = nullptr;\n    node *right = nullptr;\n};\nvoid insert(node *root, node *item) {\n    while (true) {\n        node **child = item->num < root->num ? &root->left : &root->right;\n        if (*child == nullptr) { *child = item; return; }\n        root = *child;\n    }\n}\nvoid postorder(const node *root, bool& first) {\n    if (root == nullptr) return;\n    postorder(root->left, first);\n    postorder(root->right, first);\n    if (!first) cout << ' ';\n    cout << root->num;\n    first = false;\n}\nint main() {\n    node nodes[7];\n    for (int i = 0; i < 7; ++i) {\n        int64_t value;\n        if (!(cin >> value) || value < -2147483648LL || value > 2147483647LL) {\n            cout << \"error\\n\";\n            return 1;\n        }\n        nodes[i].num = static_cast<int>(value);\n        for (int j = 0; j < i; ++j) if (nodes[j].num == nodes[i].num) {\n            cout << \"error\\n\";\n            return 1;\n        }\n    }\n    for (int i = 1; i < 7; ++i) insert(&nodes[0], &nodes[i]);\n    bool first = true;\n    postorder(&nodes[0], first);\n    cout << '\\n';\n}\n",
+      "source": "exams/2021/final/problem_b.cpp",
+      "source_sha256": "7d287866797831fe4b58e66270d87addf99633899ebbb94a2816911f8d1c177c"
+    },
+    "examples": [
+      {
+        "stdin": "26 17 41 14 21 30 47\n",
+        "stdout": "14 21 17 30 47 41 26\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "1 2 3 4 5 6 7\n",
+        "stdout": "7 6 5 4 3 2 1\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-C",
+    "title": "2021 期末 C：Buy and Sell Stock：不限交易次數的最大利潤",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 C：Buy and Sell Stock：不限交易次數的最大利潤\n\n> 完整重建版，非考卷逐字抄錄。已知規則與範例依2021期末考卷；歧義與缺漏以本頁明訂規則補齊。程式為獨立重新實作，公開內容只使用非個資範例。\n\n## 題目\n\n讀取股票價格檔案，計算能取得的最大總利潤。每天可買進或賣出，交易次數不限，但任一時刻至多持有一股；當天買進後立刻賣出也可以。價格依天數排列，不可回到過去交易，不可放空，也沒有手續費。沒有能獲利的交易時答案為0。\n\n## 輸入\n\nstdin是一整行檔名，可含中間空白。檔案第一行為非空股票名稱，第二行為`prices:`及至少一個整數價格，以空白分隔。檔名相對於程式工作目錄。合法檔案只含這兩行；參考程式只解析前兩行，不將後續行納入價格。\n\n## 輸出\n\n先印`File: `且不換行。成功時印`Maximum profit: P`及換行；使用者的檔名回顯不屬於stdout，所以範例捕捉輸出是`File: Maximum profit: 7`同一行。找不到檔案印`Cannot open file.`；格式、價格或筆數無效印`Invalid stock data.`，這些錯誤回傳1。\n\n## 限制與邊界\n\n正式限制按現有考卷明文採1–312筆、價格0–104。文字`104`沒有上標；若原排版原意為10⁴，現有解法仍可處理。作為額外數值擴充，參考程式接受0–2147483647的價格、利潤用64位元整數；這不改正式測資限制。\n\n## 範例\n\nstdout只包含程式輸出，不含終端機回顯的輸入。以下輸出已由C++11編譯後實際捕捉。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 附件 `stock1.txt`\n\n```text\nstock1\nprices: 7 1 5 3 6 4\n```\n\n### 範例 1 輸入\n\n```text\nstock1.txt\n```\n\n### 範例 1 輸出\n\n```text\nFile: Maximum profit: 7\n```\n\n### 範例 2 附件 `stock2.txt`\n\n```text\nstock2\nprices: 1 2 3 4 5 6 7 8 9 10\n```\n\n### 範例 2 輸入\n\n```text\nstock2.txt\n```\n\n### 範例 2 輸出\n\n```text\nFile: Maximum profit: 9\n```\n\n範例說明：stock1買1賣5得4，再買3賣6得3，總利潤7。stock2一路上升，可買1賣10得9；分段每日交易總額也相同。範例所需檔案內容隨samples.json提供，並有fixtures副本。\n\n## 考卷已知與重建補定\n\n考卷已知：考卷明定檔案前兩行、交易不限、至多一股、同日可交易、無獲利輸出0，以及stock1最大利潤7。\n\n重建補定：嚴格`prices:`標籤、單行完整檔名、檔案錯誤訊息、只解析前兩行、64位元擴充與數值範圍。對模糊數字採明文104，未把它暗改成10⁴。",
+      "document": "exams/2021/final/solutions/problem_c.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法\n\n每一段上升路徑的谷底買、峰頂賣，利潤等於該段所有正相鄰差值總和。不同上升段之間不持股，符合至多一股限制。累加max(0,prices[i]-prices[i-1])即可。時間O(N)，保存價格空間O(N)。索引從1掃到N-1，避免讀取不存在的最後一日。\n\n## 完整題解程式\n\n獨立來源：[../problem_c.cpp](../problem_c.cpp)。",
+      "code": "// 2021 final C: unlimited transactions, with at most one share held.\n#include <fstream>\n#include <iostream>\n#include <sstream>\n#include <string>\n#include <vector>\nusing namespace std;\n\nlong long maximumProfit(const vector<long long>& prices) {\n    long long profit = 0;\n    for (size_t i = 1; i < prices.size(); ++i)\n        if (prices[i] > prices[i - 1]) profit += prices[i] - prices[i - 1];\n    return profit;\n}\nint main() {\n    string filename;\n    cout << \"File: \";\n    if (!getline(cin, filename)) return 1;\n    if (!filename.empty() && filename.back() == '\\r') filename.pop_back();\n    ifstream file(filename.c_str());\n    if (!file) { cout << \"Cannot open file.\\n\"; return 1; }\n    string name, line, label;\n    if (!getline(file, name) || !getline(file, line) || name.empty()) {\n        cout << \"Invalid stock data.\\n\";\n        return 1;\n    }\n    istringstream input(line);\n    if (!(input >> label) || label != \"prices:\") { cout << \"Invalid stock data.\\n\"; return 1; }\n    vector<long long> prices;\n    string token;\n    while (input >> token) {\n        istringstream parser(token);\n        long long price;\n        if (!(parser >> price) || parser.peek() != char_traits<char>::eof() ||\n            price < 0 || price > 2147483647LL || prices.size() == 312) {\n            cout << \"Invalid stock data.\\n\";\n            return 1;\n        }\n        prices.push_back(price);\n    }\n    if (!input.eof() || prices.empty()) { cout << \"Invalid stock data.\\n\"; return 1; }\n    cout << \"Maximum profit: \" << maximumProfit(prices) << '\\n';\n}\n",
+      "source": "exams/2021/final/problem_c.cpp",
+      "source_sha256": "8a2f03070d7ba8a19bd0be2a05ad1340bddbb555165ee0fc5359c3a32341f1a7"
+    },
+    "examples": [
+      {
+        "stdin": "stock1.txt\n",
+        "stdout": "File: Maximum profit: 7\n",
+        "stderr": "",
+        "returncode": 0,
+        "files": {
+          "stock1.txt": "stock1\nprices: 7 1 5 3 6 4\n"
+        }
+      },
+      {
+        "stdin": "stock2.txt\n",
+        "stdout": "File: Maximum profit: 9\n",
+        "stderr": "",
+        "returncode": 0,
+        "files": {
+          "stock2.txt": "stock2\nprices: 1 2 3 4 5 6 7 8 9 10\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-D",
+    "title": "2021 期末 D：Is Anagram：字母重排判斷",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 D：Is Anagram：字母重排判斷\n\n> 完整重建版，非考卷逐字抄錄。已知規則與範例依2021期末考卷；歧義與缺漏以本頁明訂規則補齊。程式為獨立重新實作，公開內容只使用非個資範例。\n\n## 題目\n\n給定兩個只含a–z的小寫字串，判斷能否將第一個字串的所有字母重新排列而得到第二個。每個字母必須使用恰好相同次數；只是使用相同種類的字母並不足夠。\n\n## 輸入\n\n兩個非空小寫字串，以空白或換行分隔。\n\n## 輸出\n\n是anagram時印`Yes! It's anagram.`，否則印`No! It is not anagram.`，最後換行。字元或長度不合法、讀取失敗時印error並回傳1。\n\n## 限制與邊界\n\n各字串長度1–1000000，只能含ASCII a–z。考卷未訂長度上限，1000000為重建版的實用界線。\n\n## 範例\n\nstdout只包含程式輸出，不含終端機回顯的輸入。以下輸出已由C++11編譯後實際捕捉。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\nanagram naagrma\n```\n\n### 範例 1 輸出\n\n```text\nYes! It's anagram.\n```\n\n### 範例 2 輸入\n\n```text\nrat cat\n```\n\n### 範例 2 輸出\n\n```text\nNo! It is not anagram.\n```\n\n範例說明：第一例兩字串的a出現三次，其餘n、g、r、m各一次，因此相同。第二例rat含r，而cat含c，故不同。\n\n## 考卷已知與重建補定\n\n考卷已知：考卷定義字母重排、僅含a–z，並給出兩個精確結果字串及範例。\n\n重建補定：非空、實用長度上限及非法輸入的error處理；合法資料的輸出完整遵循正式範例。",
+      "document": "exams/2021/final/solutions/problem_d.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法\n\n建立26個整數的頻率差，第一個字串遇字母加一，第二個減一。最後所有差為0，才能重新排列成彼此。時間O(|s1|+|s2|)，額外空間O(26)。長度不同自然會留下非零頻率差。\n\n## 完整題解程式\n\n獨立來源：[../problem_d.cpp](../problem_d.cpp)。",
+      "code": "// 2021 final D: compare lowercase-letter multiplicities.\n#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string first, second;\n    if (!(cin >> first >> second) || first.size() > 1000000 || second.size() > 1000000) {\n        cout << \"error\\n\";\n        return 1;\n    }\n    int counts[26] = {};\n    for (size_t i = 0; i < first.size(); ++i) {\n        if (first[i] < 'a' || first[i] > 'z') { cout << \"error\\n\"; return 1; }\n        ++counts[first[i] - 'a'];\n    }\n    for (size_t i = 0; i < second.size(); ++i) {\n        if (second[i] < 'a' || second[i] > 'z') { cout << \"error\\n\"; return 1; }\n        --counts[second[i] - 'a'];\n    }\n    bool anagram = true;\n    for (int i = 0; i < 26; ++i) if (counts[i] != 0) anagram = false;\n    cout << (anagram ? \"Yes! It's anagram.\\n\" : \"No! It is not anagram.\\n\");\n}\n",
+      "source": "exams/2021/final/problem_d.cpp",
+      "source_sha256": "d63a35695de44c84c7ff3ca1397937637db440f834cc96c338256450404e5db9"
+    },
+    "examples": [
+      {
+        "stdin": "anagram naagrma\n",
+        "stdout": "Yes! It's anagram.\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "rat cat\n",
+        "stdout": "No! It is not anagram.\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-E",
+    "title": "2021 期末 E：Encryption System：交錯位移",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 E：Encryption System：交錯位移\n\n> 完整重建版，非考卷逐字抄錄。已知規則與範例依2021期末考卷；歧義與缺漏以本頁明訂規則補齊。程式為獨立重新實作，公開內容只使用非個資範例。\n\n## 題目\n\n實作指定的encrypt類別，包含encrypt(string)建構子、encryption()、decryption()、print_information()三個public方法，以及private string information和int key=3。字串以0-based位元組索引逐字處理：偶數位置加key²=9，奇數位置減key=3。解密做相反位移。依正式範例，ASCII空格本身保持不變，但仍占索引位置，不能把字串拆詞重組。\n\n## 輸入\n\n第一行為1（加密）或2（解密），第二行為完整資訊，可為空行；前後及連續空格都保留。模式後至換行的其餘字元忽略。換行不屬於資訊；末尾CR作為CRLF的一部分移除。基本明文字元為ASCII32–126，合法解密資料由上述加密產生。\n\n## 輸出\n\n先印三行歡迎／模式選項，接著空一行，再印`Input information: `且不換行。結果接著印`Encrypted information: `或`Decrypted information: `與轉換後字串，最後換行。無法讀取模式或模式不為1/2時印error並回傳1；缺少資訊行時保留提示後回傳1。範例以匿名文字轉寫，不附個人姓名。\n\n## 限制與邊界\n\n本題沒有另設字串長度上限，以可配置的string為限。不是Unicode字元位移，而是8-bit位元組運算；非空格位移按mod256保存，某些結果可能超出可列印ASCII。空格是保留符號，因此基本往返測資另排除「奇數索引的#」，它減3會變成空格而與原空格混淆。此限制由重建版明訂；對限制外資料仍按字面位移，不承諾唯一還原。\n\n## 範例\n\nstdout只包含程式輸出，不含終端機回顯的輸入。以下輸出已由C++11編譯後實際捕捉。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n1\nTest is a good message\n```\n\n### 範例 1 輸出\n\n```text\nWelcome to encryption system!\nEnter 1 to encrypt\nEnter 2 to decrypt\n\nInput information: Encrypted information: ]b|q f| j plxa jnp|^pb\n```\n\n### 範例 2 輸入\n\n```text\n2\n]b|q f| j plxa jnp|^pb\n```\n\n### 範例 2 輸出\n\n```text\nWelcome to encryption system!\nEnter 1 to encrypt\nEnter 2 to decrypt\n\nInput information: Decrypted information: Test is a good message\n```\n\n範例說明：匿名範例保持正式加解密的提示與演算法。索引0的T加9變成]，索引1的e減3變成b。各空格不變；同一索引的解密做逆操作，還原原文。\n\n## 考卷已知與重建補定\n\n考卷已知：考卷指定類別欄位／介面、key3、模2交錯規則、模式1/2與提示；正式範例證明空格保持但仍占位置，key²指平方而非C++ XOR。\n\n重建補定：明訂0-based索引、完整行輸入、空字串、末尾CR、位元組模256、不可唯一還原的空格碰撞測資界線與錯誤處理。公開範例匿名化，不複製個人資訊。",
+      "document": "exams/2021/final/solutions/problem_e.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法\n\n建構子保存整行資訊。兩個方法依原索引取unsigned char值，分別加/減9或3，再轉回一個位元組；不處理ASCII空格。完整getline保留所有空白，避免逐詞讀入丟失索引。時間O(L)，information儲存O(L)，原地轉換額外空間O(1)。\n\n## 完整題解程式\n\n獨立來源：[../problem_e.cpp](../problem_e.cpp)。",
+      "code": "// 2021 final E: the prescribed encrypt class, with spaces preserved.\n#include <iostream>\n#include <limits>\n#include <string>\nusing namespace std;\n\nclass encrypt {\npublic:\n    explicit encrypt(string text) : information(text) {}\n    void encryption() {\n        for (size_t i = 0; i < information.size(); ++i) {\n            if (information[i] == ' ') continue;\n            const int value = static_cast<unsigned char>(information[i]);\n            const int changed = i % 2 == 0 ? value + key * key : value - key;\n            information[i] = static_cast<char>(static_cast<unsigned char>(changed));\n        }\n    }\n    void decryption() {\n        for (size_t i = 0; i < information.size(); ++i) {\n            if (information[i] == ' ') continue;\n            const int value = static_cast<unsigned char>(information[i]);\n            const int changed = i % 2 == 0 ? value - key * key : value + key;\n            information[i] = static_cast<char>(static_cast<unsigned char>(changed));\n        }\n    }\n    void print_information() { cout << information << '\\n'; }\nprivate:\n    string information;\n    int key = 3;\n};\nint main() {\n    cout << \"Welcome to encryption system!\\nEnter 1 to encrypt\\nEnter 2 to decrypt\\n\";\n    int mode;\n    if (!(cin >> mode) || (mode != 1 && mode != 2)) { cout << \"error\\n\"; return 1; }\n    cin.ignore(numeric_limits<streamsize>::max(), '\\n');\n    cout << \"\\nInput information: \";\n    string information;\n    if (!getline(cin, information)) return 1;\n    if (!information.empty() && information.back() == '\\r') information.pop_back();\n    encrypt message(information);\n    if (mode == 1) { message.encryption(); cout << \"Encrypted information: \"; }\n    else { message.decryption(); cout << \"Decrypted information: \"; }\n    message.print_information();\n}\n",
+      "source": "exams/2021/final/problem_e.cpp",
+      "source_sha256": "ef7690e8ecbe6a5d1cef70fc9c0f487c9e81848697b5cd8fc28474b8e652621b"
+    },
+    "examples": [
+      {
+        "stdin": "1\nTest is a good message\n",
+        "stdout": "Welcome to encryption system!\nEnter 1 to encrypt\nEnter 2 to decrypt\n\nInput information: Encrypted information: ]b|q f| j plxa jnp|^pb\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "2\n]b|q f| j plxa jnp|^pb\n",
+        "stdout": "Welcome to encryption system!\nEnter 1 to encrypt\nEnter 2 to decrypt\n\nInput information: Decrypted information: Test is a good message\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-F",
+    "title": "2021 期末 F：Average Score II：平均與不及格名單",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 F：Average Score II：平均與不及格名單\n\n> 完整重建版，非考卷逐字抄錄。已知規則與範例依2021期末考卷；歧義與缺漏以本頁明訂規則補齊。程式為獨立重新實作，公開內容只使用非個資範例。\n\n## 題目\n\n讀入1–50個整數成績，求平均並依輸入順序列出小於70分者。正式範例沒有先輸入N，因此N由實際成績數決定：讀至EOF，跨行或同一行都視為同一組分數。不要把第一個成績誤當作N。\n\n## 輸入\n\nstdin全部token都是分數，不另提供N。至少一個、至多50個，以空白或換行分隔，最後EOF。在互動終端機需送出EOF；以輸入檔執行會自動遇到EOF。\n\n## 輸出\n\n先印`Please enter the scores of all students:`與換行。再印`avg = V`。平均四捨五入到小數第二位，刪除無意義的尾零及小數點，因此40印40、47.50印47.5、0.13印0.13。若有分數<70，再印一次`fail:`，接著每筆`序號: 分數`各一行，序號從1開始。沒有不及格者不印fail。所有行換行。空輸入、超過50筆、非整數或分數超範圍時印error並回傳1。\n\n## 限制與邊界\n\n1≤N≤50，0≤score≤100；及格門檻為70。原文同時寫三位小數、N位小數與第二位捨入，相互矛盾；重建版採第二位四捨五入且刪尾零，以吻合正式40與47.5範例。\n\n## 範例\n\nstdout只包含程式輸出，不含終端機回顯的輸入。以下輸出已由C++11編譯後實際捕捉。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 輸入\n\n```text\n30\n40\n50\n```\n\n### 範例 1 輸出\n\n```text\nPlease enter the scores of all students:\navg = 40\nfail:\n1: 30\n2: 40\n3: 50\n```\n\n### 範例 2 輸入\n\n```text\n20\n40\n60\n70\n```\n\n### 範例 2 輸出\n\n```text\nPlease enter the scores of all students:\navg = 47.5\nfail:\n1: 20\n2: 40\n3: 60\n```\n\n範例說明：第一例平均40，三筆都小於70。第二例平均(20+40+60+70)/4=47.5，只有前三筆不及格，70分不列出。\n\n## 考卷已知與重建補定\n\n考卷已知：考卷明定1–50筆、0–100分、低於70不及格、輸入順序及fail格式；兩個正式範例確認沒有獨立N、整數與一位小數可以直接印。\n\n重建補定：讀完整stdin至EOF、不在第一個換行提早停止、二位四捨五入／刪尾零、非法分數處理。這些補定解決原文與既有換行讀取方法的歧義。",
+      "document": "exams/2021/final/solutions/problem_f.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## 解法\n\n用50格整數陣列保存，累加sum。百分位平均的整數結果為(sum×100+N/2)/N，正分數下等價四捨五入到第二位；以商、餘數輸出並刪尾零，避免浮點捨入誤差。最後掃描陣列列出所有低於70者。時間O(N)、空間O(N)。\n\n## 完整題解程式\n\n獨立來源：[../problem_f.cpp](../problem_f.cpp)。",
+      "code": "// 2021 final F: infer N from all scores up to EOF; round to two decimal places.\n#include <iomanip>\n#include <iostream>\n#include <sstream>\n#include <string>\nusing namespace std;\nint main() {\n    cout << \"Please enter the scores of all students:\\n\";\n    int scores[50], count = 0, sum = 0;\n    string token;\n    while (cin >> token) {\n        istringstream parser(token);\n        int score;\n        if (!(parser >> score) || parser.peek() != char_traits<char>::eof() ||\n            score < 0 || score > 100 || count == 50) { cout << \"error\\n\"; return 1; }\n        scores[count++] = score;\n        sum += score;\n    }\n    if (!cin.eof() || count == 0) { cout << \"error\\n\"; return 1; }\n    const int rounded = (sum * 100 + count / 2) / count;\n    const int fraction = rounded % 100;\n    cout << \"avg = \" << rounded / 100;\n    if (fraction) {\n        cout << '.';\n        if (fraction % 10 == 0) cout << fraction / 10;\n        else cout << setfill('0') << setw(2) << fraction;\n    }\n    cout << '\\n';\n    bool failed = false;\n    for (int i = 0; i < count; ++i) if (scores[i] < 70) failed = true;\n    if (failed) {\n        cout << \"fail:\\n\";\n        for (int i = 0; i < count; ++i) if (scores[i] < 70) cout << i + 1 << \": \" << scores[i] << '\\n';\n    }\n}\n",
+      "source": "exams/2021/final/problem_f.cpp",
+      "source_sha256": "d0fb0efeac07978d577e81beaffabd0b2069639e496198d7e248cfeff1968318"
+    },
+    "examples": [
+      {
+        "stdin": "30\n40\n50\n",
+        "stdout": "Please enter the scores of all students:\navg = 40\nfail:\n1: 30\n2: 40\n3: 50\n",
+        "stderr": "",
+        "returncode": 0
+      },
+      {
+        "stdin": "20\n40\n60\n70\n",
+        "stdout": "Please enter the scores of all students:\navg = 47.5\nfail:\n1: 20\n2: 40\n3: 60\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  },
+  {
+    "id": "2021-Final-G",
+    "title": "2021 期末 G：NCU Theater Reservation System VII",
+    "status": "provided-exam-with-documented-clarifications",
+    "problem": {
+      "statement_markdown": "# 2021 期末 G：NCU Theater Reservation System VII\n\n依提供的正式考卷整理。下方 solution 包含完整、可獨立編譯的 C++11 解答。範例會員均為合成資料。\n\n## 題目\n\n延續課堂的劇院訂位系統，保留訂位、取消、查詢座位、會員註冊與登入、載入會員、修改資料及關鍵字搜尋功能。修改 `show_member`，同時顯示所有會員的使用者名稱與電話。電話必須保存為字串，保留開頭的 0。\n\n預設表頭為 `No.  Username    Phone`：`No.` 後兩個空格，`Username` 後四個空格。編號欄寬為 5；使用者名稱從 U 所在欄開始，所有電話從 P 所在欄開始。\n\n## 輸入\n\n程式持續讀取主選單命令。每個互動欄位依提示輸入；選單與座位編號是整數，y/n 欄位採小寫，文字欄位各占一行。\n\n| 命令 | 後續輸入 | 行為 |\n| --- | --- | --- |\n| 1 | y/n；y 時再輸入座位編號 | 指定空位或自動選最小空位 |\n| 2 | 座位編號 | 取消該座位 |\n| 3 | 無 | 依序顯示空位 |\n| 4 | 無 | 顯示全部座位狀態 |\n| 5 | 未登入：y/n，依流程再給名稱、密碼、電話 | 會員中心；登入後同命令登出 |\n| 6 | 無 | 顯示會員名稱與電話 |\n| 7 | 檔名 | 載入會員資料 |\n| 8 | 1/2、名稱、舊密碼、新密碼或新電話 | 通過驗證後修改資料 |\n| 9 | 搜尋字串 | 依名稱搜尋，大小寫相異；列出符合會員 |\n| 10 | 無 | 結束 |\n\n座位為 1–15，最多 15 位會員。名稱與密碼各為 1–50 個字元。電話保存輸入原字串。文字的開頭空白由互動讀取略過，中間空白保留。\n\n命令 7 的文字檔每筆為 `username password phone`，以空白分隔；第一個非空白行可為 `Name Password Phone` 表頭。檔案欄位不得包含空白。程式從執行工作目錄尋找相對路徑，範例附件必須先建立。\n\n## 輸出\n\n每輪列出完整英文主選單與 `Enter your selection Here: ` 提示，無輸入回顯。登入後顯示歡迎文字，命令 5 改列登出。命令 10 顯示 `Thank you for using our system`、`Have a nice day~~` 各一行。\n\n命令 6 先印 `***NCU Theater Membership***`。沒有會員時印 `No Member`；有會員時印表頭，再以載入或註冊順序列出編號、名稱、電話。密碼不出現在會員清單中。\n\n## 原題規則與採用的邊界行為\n\n考卷直接要求會員電話、表頭空格、U/P 欄對齊，以及保留課堂功能。本解答沿用 repo 既有劇院系統流程與 15 個座位／會員限制。\n\n- 名稱最多 10 字元時，表頭完全符合考卷空格規則。課堂文字欄位可達 50 字元；較長名稱時，本版將名稱欄擴大到「最長名稱長度 + 2」，同時移動表頭 Phone 與所有電話欄，避免文字互相覆蓋。這是長名稱的明確擴充規則。\n- 重複註冊名稱不新增會員。檔案的重複名稱、錯誤欄數、超長名稱／密碼或超過 15 位會員，整次載入輸出 `Invalid member data.`，不部分更新名單。這是本版明確補定的檔案錯誤行為。\n- 找不到檔案時印 `File could not be opened.`。非法選單／座位／y/n 會重讀；指定已保留座位時要求再選。EOF 結束程式，不完成尚未讀完的註冊、訂位或資料修改。\n- 紀錄只存在程式執行期間，離開後不另寫會員檔案。\n\n## 範例\n\n第一例先載入三筆合成會員資料，再顯示清單並離開；電話前導 0 與表頭對齊均需保留。第二例顯示初始空名單。\n\n下列是實際 stdin／stdout，包含程式提示，不包含使用者輸入的終端機回顯。\n\n### 範例 1 附件 `member1.txt`\n\n```text\nName Password Phone\nGuestA demoA 0000000001\nGuestB demoB 0000000002\nGuestLong demoC 0000000003\n```\n\n### 範例 1 輸入\n\n```text\n7\nmember1.txt\n6\n10\n```\n\n### 範例 1 輸出\n\n```text\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***Load member information***\nPlease enter the member file name: The file member1.txt has been loaded...\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***NCU Theater Membership***\nNo.  Username    Phone\n1.   GuestA      0000000001\n2.   GuestB      0000000002\n3.   GuestLong   0000000003\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \nThank you for using our system\nHave a nice day~~\n```\n\n### 範例 2 輸入\n\n```text\n6\n10\n```\n\n### 範例 2 輸出\n\n```text\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***NCU Theater Membership***\nNo Member\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \nThank you for using our system\nHave a nice day~~\n```",
+      "document": "exams/2021/final/solutions/problem_g.md"
+    },
+    "solution": {
+      "language": "C++11",
+      "explanation_markdown": "## solution\n\n### 解法\n\n用 15 格布林陣列儲存座位狀態，會員資料用結構與 vector 儲存，登入狀態保存會員索引。`show_member` 先決定名稱欄寬，再使用 `std::left`、`std::setw` 輸出表頭與各列；編號加句點後填滿 5 欄，兩位數編號仍與 U 對齊。會員電話使用 string，避免失去前導 0。\n\n載入時先把所有新資料放進暫存 vector，核對欄數、長度、重複名稱及容量，整份合法才加入現有名單。因此錯誤檔案不會留下半套資料，也不會改變登入中的索引。訂位、取消與會員驗證分別使用對應函式，主選單只負責派送。\n\n若本次檔案有 r 筆資料、已存在 m 位會員，載入檢查為 O(r(m+r))；m+r 最多 15。會員清單為 O(m+文字總長)，座位操作掃描固定 15 格。除會員文字與一行檔案緩衝外，空間為 O(m+r)。\n\n### 完整 C++11 程式碼",
+      "code": "// 2021 final exam G: preserve theater features and display member phones.\n// This translation unit is self-contained: submit or compile this .cpp alone.\n#include <algorithm>\n#include <fstream>\n#include <iomanip>\n#include <iostream>\n#include <sstream>\n#include <string>\n#include <vector>\nusing namespace std;\n\nstruct MemberData { string username, password, phone; };\nstruct Theater {\n    bool reserved[15];\n    vector<MemberData> members;\n    int logged_in;\n    Theater() : reserved{}, logged_in(-1) {}\n};\nconst char *invalid_input = \"Invalid input, please enter your selection again: \";\n\nbool read_integer(int& value, int minimum, int maximum) {\n    string token;\n    while (cin >> token) {\n        istringstream parser(token);\n        char extra;\n        if (parser >> value && !(parser >> extra) && value >= minimum && value <= maximum) return true;\n        cout << invalid_input;\n    }\n    return false;\n}\nbool read_yes_no(char& answer) {\n    string token;\n    while (cin >> token) {\n        if (token == \"y\" || token == \"n\") { answer = token[0]; return true; }\n        cout << invalid_input;\n    }\n    return false;\n}\nbool read_text(string& value, bool limited = true) {\n    while (getline(cin >> ws, value)) {\n        if (!value.empty() && (!limited || value.size() <= 50)) return true;\n        cout << invalid_input;\n    }\n    return false;\n}\nint authenticate(const Theater& theater, const string& username, const string& password) {\n    for (size_t i = 0; i < theater.members.size(); ++i)\n        if (theater.members[i].username == username && theater.members[i].password == password)\n            return static_cast<int>(i);\n    return -1;\n}\nvoid Member(Theater& theater) {\n    cout << \"***NCU Theater Member Center***\\nDo you have the membership? (y/n) \";\n    char answer;\n    if (!read_yes_no(answer)) return;\n    if (answer == 'y') {\n        string username, password;\n        cout << \"Enter Username: \";\n        if (!read_text(username)) return;\n        cout << \"Enter Password: \";\n        if (!read_text(password)) return;\n        theater.logged_in = authenticate(theater, username, password);\n        if (theater.logged_in == -1) cout << \"The username and the password don't match.\\n\";\n    } else {\n        cout << \"Would you like to sign up? (y/n) \";\n        if (!read_yes_no(answer)) return;\n        if (answer == 'n') { cout << \"Okay! Have a nice day.\\n\"; return; }\n        if (theater.members.size() >= 15) { cout << \"The member center is full.\\n\"; return; }\n        MemberData member;\n        cout << \"Enter Username: \";\n        if (!read_text(member.username)) return;\n        cout << \"Enter Password: \";\n        if (!read_text(member.password)) return;\n        cout << \"Enter Phone number: \";\n        if (!read_text(member.phone, false)) return;\n        for (size_t i = 0; i < theater.members.size(); ++i)\n            if (theater.members[i].username == member.username) {\n                cout << \"This username already exists.\\n\";\n                return;\n            }\n        theater.members.push_back(member);\n        cout << \"Welcome! You are now a member of NCU theater.\\nPlease log in again.\\n\";\n    }\n}\nvoid reserve_seat(Theater& theater) {\n    cout << \"***Make a new reservation***\\n\";\n    int first_available = -1;\n    for (int i = 0; i < 15; ++i)\n        if (!theater.reserved[i]) { first_available = i; break; }\n    if (first_available == -1) { cout << \"All seats have been reserved.\\n\"; return; }\n    cout << \"Do you need a specified seat? (y/n) \";\n    char answer;\n    if (!read_yes_no(answer)) return;\n    int seat = first_available + 1;\n    if (answer == 'y') {\n        cout << \"Enter the seat number: \";\n        while (true) {\n            if (!read_integer(seat, 1, 15)) return;\n            if (!theater.reserved[seat - 1]) break;\n            cout << \"The seat has been reserved, please enter your selection again: \";\n        }\n    }\n    theater.reserved[seat - 1] = true;\n    cout << \"The seat number \" << seat << \" is reserved for you...\\n\";\n}\nvoid cancel_seat(Theater& theater) {\n    cout << \"***Cancel an existing reservation***\\nPlease enter the seat number which you want to cancel: \";\n    int seat;\n    if (!read_integer(seat, 1, 15)) return;\n    if (theater.reserved[seat - 1]) {\n        theater.reserved[seat - 1] = false;\n        cout << \"The seat number \" << seat << \" is available now...\\n\";\n    } else cout << \"The seat is not reserved\\n\";\n}\nvoid show_available(const Theater& theater) {\n    cout << \"***Show the all available seats***\\n\";\n    for (int i = 0; i < 15; ++i) if (!theater.reserved[i]) cout << \"seat \" << i + 1 << '\\n';\n}\nvoid show_seats(const Theater& theater) {\n    cout << \"***Show the status of all seats***\\nSeat number       Status\\n\";\n    for (int i = 0; i < 15; ++i)\n        cout << \"Seat \" << left << setw(13) << i + 1 << (theater.reserved[i] ? \"reserved\" : \"available\") << '\\n';\n}\nvoid show_member(const Theater& theater) {\n    cout << \"***NCU Theater Membership***\\n\";\n    if (theater.members.empty()) {\n        cout << \"No Member\\n\";\n        return;\n    }\n    size_t name_width = 12;\n    for (size_t i = 0; i < theater.members.size(); ++i)\n        name_width = max(name_width, theater.members[i].username.size() + 2);\n    cout << left << setw(5) << \"No.\" << setw(static_cast<int>(name_width))\n         << \"Username\" << \"Phone\\n\";\n    for (size_t i = 0; i < theater.members.size(); ++i)\n        cout << left << setw(5) << (to_string(i + 1) + \".\")\n             << setw(static_cast<int>(name_width)) << theater.members[i].username\n             << theater.members[i].phone << '\\n';\n}\nvoid load_member(Theater& theater) {\n    cout << \"***Load member information***\\nPlease enter the member file name: \";\n    string filename;\n    if (!(cin >> filename)) return;\n    ifstream infile(filename.c_str(), ios::in);\n    if (!infile) { cout << \"File could not be opened.\\n\"; return; }\n    vector<MemberData> pending;\n    string line;\n    bool first_row = true;\n    while (getline(infile, line)) {\n        istringstream row(line);\n        if (!(row >> ws) || row.eof()) continue;\n        MemberData member;\n        string extra;\n        if (!(row >> member.username >> member.password >> member.phone) || (row >> extra)) {\n            cout << \"Invalid member data.\\n\";\n            return;\n        }\n        if (first_row && member.username == \"Name\" && member.password == \"Password\"\n            && member.phone == \"Phone\") {\n            first_row = false;\n            continue;\n        }\n        first_row = false;\n        bool duplicate = false;\n        for (size_t i = 0; i < theater.members.size(); ++i)\n            duplicate = duplicate || theater.members[i].username == member.username;\n        for (size_t i = 0; i < pending.size(); ++i)\n            duplicate = duplicate || pending[i].username == member.username;\n        if (member.username.size() > 50 || member.password.size() > 50 || duplicate\n            || theater.members.size() + pending.size() >= 15) {\n            cout << \"Invalid member data.\\n\";\n            return;\n        }\n        pending.push_back(member);\n    }\n    if (infile.bad()) { cout << \"Invalid member data.\\n\"; return; }\n    theater.members.insert(theater.members.end(), pending.begin(), pending.end());\n    cout << \"The file \" << filename << \" has been loaded...\\n\";\n}\nvoid change_member(Theater& theater) {\n    cout << \"***Change member data***\\nPlease type 1 to change password\\n\"\n         << \"Please type 2 to change phone number\\nEnter your selection Here: \";\n    int selection;\n    if (!read_integer(selection, 1, 2)) return;\n    string username, password, replacement;\n    cout << \"Enter Username: \";\n    if (!read_text(username)) return;\n    cout << \"Enter Password: \";\n    if (!read_text(password)) return;\n    const int member = authenticate(theater, username, password);\n    if (member == -1) { cout << \"The username and the password don't match.\\n\"; return; }\n    cout << (selection == 1 ? \"Enter the new password: \" : \"Enter the new phone number: \");\n    if (!read_text(replacement, selection == 1)) return;\n    if (selection == 1) theater.members[member].password = replacement;\n    else theater.members[member].phone = replacement;\n}\nvoid find_member(const Theater& theater) {\n    cout << \"***Find member data***\\nPlease enter the search keyword: \";\n    string keyword;\n    if (!read_text(keyword, false)) return;\n    cout << \"\\nThe searching keyword is \\\"\" << keyword << \"\\\"...\\n\"\n         << \"The searching results are as follows:\\n\";\n    bool found = false;\n    for (size_t i = 0; i < theater.members.size(); ++i) {\n        const MemberData& member = theater.members[i];\n        if (member.username.find(keyword) != string::npos) {\n            if (!found) cout << \"*** Customer Information ***\\n\"\n                             << left << setw(16) << \"Name\" << ' ' << setw(16) << \"Password\" << \" Phone\\n\";\n            cout << left << setw(16) << member.username << ' ' << setw(16) << member.password << ' ' << member.phone << '\\n';\n            found = true;\n        }\n    }\n    if (!found) cout << \"We cannot find the keyword\\n\";\n}\nint main() {\n    Theater theater;\n    while (true) {\n        cout << \"*** Welcome to NCU theater reservation system ***\\n\";\n        if (theater.logged_in >= 0)\n            cout << \"***Welcome back \" << theater.members[theater.logged_in].username << \"***\\n\";\n        cout << \"Please type 1 to make a new reservation\\n\"\n             << \"Please type 2 to cancel an existing reservation\\n\"\n             << \"Please type 3 to show the all available seats\\n\"\n             << \"Please type 4 to show the status of all current seats\\n\";\n        cout << (theater.logged_in >= 0 ? \"Please type 5 to log-out\\n\" : \"Please type 5 to member center\\n\");\n        cout << \"Please type 6 to show member\\n\";\n        cout << \"Please type 7 to load member information\\n\";\n        cout << \"Please type 8 to change member data\\n\";\n        cout << \"Please type 9 to find member data\\n\";\n        cout << \"Please type 10 to exit the system\\n\";\n\n        cout << \"Enter your selection Here: \";\n        int selection;\n        if (!read_integer(selection, 1, 10)) return 0;\n        cout << '\\n';\n        if (selection == 10) {\n            cout << \"Thank you for using our system\\nHave a nice day~~\\n\";\n            return 0;\n        }\n        switch (selection) {\n            case 1: reserve_seat(theater); break;\n            case 2: cancel_seat(theater); break;\n            case 3: show_available(theater); break;\n            case 4: show_seats(theater); break;\n            case 5:\n                if (theater.logged_in >= 0) theater.logged_in = -1;\n                else Member(theater);\n                break;\n            case 6: show_member(theater); break;\n            case 7: load_member(theater); break;\n            case 8: change_member(theater); break;\n            case 9: find_member(theater); break;\n\n        }\n        if (!cin) return 0;\n        cout << '\\n';\n    }\n}\n",
+      "source": "exams/2021/final/problem_g.cpp",
+      "source_sha256": "7613994fb44cd28d27ed17b6ae73220ce9da8636d0e34e6935e5d7378efe30cb"
+    },
+    "examples": [
+      {
+        "stdin": "7\nmember1.txt\n6\n10\n",
+        "stdout": "*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***Load member information***\nPlease enter the member file name: The file member1.txt has been loaded...\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***NCU Theater Membership***\nNo.  Username    Phone\n1.   GuestA      0000000001\n2.   GuestB      0000000002\n3.   GuestLong   0000000003\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \nThank you for using our system\nHave a nice day~~\n",
+        "stderr": "",
+        "returncode": 0,
+        "files": {
+          "member1.txt": "Name Password Phone\nGuestA demoA 0000000001\nGuestB demoB 0000000002\nGuestLong demoC 0000000003\n"
+        }
+      },
+      {
+        "stdin": "6\n10\n",
+        "stdout": "*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \n***NCU Theater Membership***\nNo Member\n\n*** Welcome to NCU theater reservation system ***\nPlease type 1 to make a new reservation\nPlease type 2 to cancel an existing reservation\nPlease type 3 to show the all available seats\nPlease type 4 to show the status of all current seats\nPlease type 5 to member center\nPlease type 6 to show member\nPlease type 7 to load member information\nPlease type 8 to change member data\nPlease type 9 to find member data\nPlease type 10 to exit the system\nEnter your selection Here: \nThank you for using our system\nHave a nice day~~\n",
+        "stderr": "",
+        "returncode": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "document": "problem_a.md",
+    "source": "exams/2021/final/problem_a.cpp",
+    "stdin": "Width,Length\n4 5\nx,y\n1 3\n",
+    "stdout": "20 16 07 08 09\n19 15 06 01 02\n18 14 05 04 03\n17 13 12 11 10\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_a.md",
+    "source": "exams/2021/final/problem_a.cpp",
+    "stdin": "10 22\n0 21\n",
+    "stdout": "220 210 200 190 180 170 160 150 140 130 120 110 100 081 064 049 036 025 016 009 004 001\n219 209 199 189 179 169 159 149 139 129 119 109 099 080 063 048 035 024 015 008 003 002\n218 208 198 188 178 168 158 148 138 128 118 108 098 079 062 047 034 023 014 007 006 005\n217 207 197 187 177 167 157 147 137 127 117 107 097 078 061 046 033 022 013 012 011 010\n216 206 196 186 176 166 156 146 136 126 116 106 096 077 060 045 032 021 020 019 018 017\n215 205 195 185 175 165 155 145 135 125 115 105 095 076 059 044 031 030 029 028 027 026\n214 204 194 184 174 164 154 144 134 124 114 104 094 075 058 043 042 041 040 039 038 037\n213 203 193 183 173 163 153 143 133 123 113 103 093 074 057 056 055 054 053 052 051 050\n212 202 192 182 172 162 152 142 132 122 112 102 092 073 072 071 070 069 068 067 066 065\n211 201 191 181 171 161 151 141 131 121 111 101 091 090 089 088 087 086 085 084 083 082\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_b.md",
+    "source": "exams/2021/final/problem_b.cpp",
+    "stdin": "26 17 41 14 21 30 47\n",
+    "stdout": "14 21 17 30 47 41 26\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_b.md",
+    "source": "exams/2021/final/problem_b.cpp",
+    "stdin": "1 2 3 4 5 6 7\n",
+    "stdout": "7 6 5 4 3 2 1\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_c.md",
+    "source": "exams/2021/final/problem_c.cpp",
+    "stdin": "stock1.txt\n",
+    "stdout": "File: Maximum profit: 7\n",
+    "stderr": "",
+    "returncode": 0,
+    "files": {
+      "stock1.txt": "stock1\nprices: 7 1 5 3 6 4\n"
+    }
+  },
+  {
+    "document": "problem_c.md",
+    "source": "exams/2021/final/problem_c.cpp",
+    "stdin": "stock2.txt\n",
+    "stdout": "File: Maximum profit: 9\n",
+    "stderr": "",
+    "returncode": 0,
+    "files": {
+      "stock2.txt": "stock2\nprices: 1 2 3 4 5 6 7 8 9 10\n"
+    }
+  },
+  {
+    "document": "problem_d.md",
+    "source": "exams/2021/final/problem_d.cpp",
+    "stdin": "anagram naagrma\n",
+    "stdout": "Yes! It's anagram.\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_d.md",
+    "source": "exams/2021/final/problem_d.cpp",
+    "stdin": "rat cat\n",
+    "stdout": "No! It is not anagram.\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_e.md",
+    "source": "exams/2021/final/problem_e.cpp",
+    "stdin": "1\nTest is a good message\n",
+    "stdout": "Welcome to encryption system!\nEnter 1 to encrypt\nEnter 2 to decrypt\n\nInput information: Encrypted information: ]b|q f| j plxa jnp|^pb\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_e.md",
+    "source": "exams/2021/final/problem_e.cpp",
+    "stdin": "2\n]b|q f| j plxa jnp|^pb\n",
+    "stdout": "Welcome to encryption system!\nEnter 1 to encrypt\nEnter 2 to decrypt\n\nInput information: Decrypted information: Test is a good message\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_f.md",
+    "source": "exams/2021/final/problem_f.cpp",
+    "stdin": "30\n40\n50\n",
+    "stdout": "Please enter the scores of all students:\navg = 40\nfail:\n1: 30\n2: 40\n3: 50\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  {
+    "document": "problem_f.md",
+    "source": "exams/2021/final/problem_f.cpp",
+    "stdin": "20\n40\n60\n70\n",
+    "stdout": "Please enter the scores of all students:\navg = 47.5\nfail:\n1: 20\n2: 40\n3: 60\n",
+    "stderr": "",
+    "returncode": 0
+  }
+]
