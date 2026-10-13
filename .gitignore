@@ -1,0 +1,9 @@
+build/
+__pycache__/
+*.pyc
+*.exe
+*.o
+*.obj
+*.layout
+*.depend
+*out.txt
