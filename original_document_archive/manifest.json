@@ -1,0 +1,1660 @@
+{
+  "schema_version": 1,
+  "source_scope": "All provided PDF, DOCX, PNG, JPG, and JPEG course documents and images in the supplied EE1007 laboratory course source directory. Code, headers, data files, and IDE configuration are recorded by the separate source archive.",
+  "policy": "Preserve useful source material and anonymous historical reports, screenshots, and grades. All lab-exemption and waiver exam documents are explicitly excluded at the user's request. For other instruction documents, retain the latest provided revision per distinct course year and assignment. Local source originals remain unchanged. Compiler outputs are excluded by the separate code archive. Privacy edits do not correct original problem parameters or historical report claims.",
+  "scope_count": 54,
+  "new_file_count": 13,
+  "already_preserved_reference_count": 37,
+  "excluded": [
+    {
+      "source_id": "file-014",
+      "source_sha256": "c3036b11e655d02832bf8b50f5a2284359bc38b6c1f1a7993bce8ac108d1cf64",
+      "source_bytes": 166078,
+      "source_format": "pdf",
+      "former_published_path": "original_document_archive/exemption_rules/2023/計算機概論_實習_抵免考試規則_Andy_20230905_1200.pdf",
+      "status": "intentionally_excluded_user_request",
+      "reason": "All lab-exemption and waiver exam documents are explicitly excluded at the user's request, including the latest supplied edition. This is a scope exclusion, not a missing companion file.",
+      "source_original_unchanged": true
+    },
+    {
+      "source_id": "file-015",
+      "source_sha256": "b6afbab6a67e0dd521d8303451afe86f9d549822203684fd43ef3ebbb74424da",
+      "source_bytes": 208194,
+      "source_format": "pdf",
+      "former_published_path": "original_document_archive/exemption_rules/2024/計算機概論_實習_抵免考試規則_Andy_20240305_1200.pdf",
+      "status": "intentionally_excluded_user_request",
+      "reason": "All lab-exemption and waiver exam documents are explicitly excluded at the user's request, including the latest supplied edition. This is a scope exclusion, not a missing companion file.",
+      "source_original_unchanged": true
+    },
+    {
+      "source_id": "file-016",
+      "source_sha256": "ad33a82700c0ab16500d4fb6b6e9ea0f6d00fd8ad6de19802fe5e8544328daf8",
+      "source_bytes": 174689,
+      "source_format": "pdf",
+      "former_published_path": "original_document_archive/exemption_rules/2025/計算機概論_實習_抵免考試規則_Andy_20250304.pdf",
+      "status": "intentionally_excluded_user_request",
+      "reason": "All lab-exemption and waiver exam documents are explicitly excluded at the user's request, including the latest supplied edition. This is a scope exclusion, not a missing companion file.",
+      "source_original_unchanged": true
+    },
+    {
+      "source_id": "file-027",
+      "source_sha256": "cd9f011072cf3947ccd3325caee52669f366195e9ba8cc94cae77a3275aea836",
+      "source_bytes": 413055,
+      "source_format": "pdf",
+      "former_published_path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
+      "status": "intentionally_excluded_superseded",
+      "reason": "Same 2021 Lab 13 instructions, superseded by the later 2015 update; the update corrects login versus registration phone-number flow.",
+      "replacement_path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "source_original_unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "source_id": "file-001",
+      "source_sha256": "5bcbcf89349a3fbbae402f69843cfa5241aab3faa4b91a34f284f0fe063e3722",
+      "source_bytes": 288930,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              590,
+              241,
+              1530,
+              275
+            ],
+            "reason": "personal executable path",
+            "replacement": "silver-kite-30a8"
+          },
+          {
+            "rect_pixels": [
+              0,
+              1004,
+              769,
+              1031
+            ],
+            "reason": "personal source path",
+            "replacement": "silver-kite-30a8"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/lab01/screenshots/silver-kite-30a8/welcome-to-cpp.png",
+      "published_sha256": "52f3336e494cc38e4202aa00b07ed530417f687df06d95b273ec08aa120a5d86",
+      "published_bytes": 248103,
+      "status": "preserved anonymous derivative",
+      "source_format": "jpg"
+    },
+    {
+      "source_id": "file-002",
+      "source_sha256": "56d4c810e89eaf610e69938f8f1e46eceb045954eeee283cf6aa6e3211844d8f",
+      "source_bytes": 289854,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              22,
+              0,
+              245,
+              25
+            ],
+            "reason": "student source filename",
+            "replacement": "amber-finch-7657"
+          },
+          {
+            "rect_pixels": [
+              316,
+              151,
+              538,
+              176
+            ],
+            "reason": "student source tab",
+            "replacement": "amber-finch-7657"
+          },
+          {
+            "rect_pixels": [
+              572,
+              151,
+              792,
+              176
+            ],
+            "reason": "student source tab",
+            "replacement": "amber-finch-7657"
+          },
+          {
+            "rect_pixels": [
+              575,
+              275,
+              1200,
+              308
+            ],
+            "reason": "personal executable path",
+            "replacement": "amber-finch-7657"
+          },
+          {
+            "rect_pixels": [
+              0,
+              1004,
+              640,
+              1031
+            ],
+            "reason": "personal source path",
+            "replacement": "amber-finch-7657"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/lab01/screenshots/amber-finch-7657/welcome-to-cpp.png",
+      "published_sha256": "5f9332d0a461b64582310f675a506ea10ae273d01bae6a8b3eb8891b792be8a5",
+      "published_bytes": 466379,
+      "status": "preserved anonymous derivative",
+      "source_format": "jpg"
+    },
+    {
+      "source_id": "file-003",
+      "source_sha256": "97cd2581bbd7b166de1f76d8c8bdd907e515705094236c89efd96ce72549672e",
+      "source_bytes": 58877,
+      "format": "png",
+      "role": "historical assignment name and schedule index with anonymous grades",
+      "byte_exact": true,
+      "privacy_transform": "source folder identity replaced by anonymous directory; no visible identity or identifying metadata in image",
+      "verification": {
+        "full_source_image_reviewed": true,
+        "published_pixels_byte_exact": true
+      },
+      "path": "original_document_archive/notes/indigo-finch-8db8/assignment-name-index.png",
+      "published_sha256": "97cd2581bbd7b166de1f76d8c8bdd907e515705094236c89efd96ce72549672e",
+      "published_bytes": 58877,
+      "status": "preserved byte-exact",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-004",
+      "source_sha256": "8403daf32ef51c7659d8f58b42c5921e80bb9de626a3d52296b9df7ffd585dc0",
+      "source_bytes": 85808,
+      "format": "docx",
+      "role": "original historical exam prompt",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "original OOXML package retained; core author metadata replaced with anonymous alias",
+        "changed_members": [
+          "docProps/core.xml"
+        ],
+        "visible_content_changes": []
+      },
+      "members": [
+        {
+          "path": "[Content_Types].xml",
+          "source_sha256": "dc0ba88f406d2a619fbd880f53c46c31052b92c72d63773e96a6fc490ac162b5",
+          "published_sha256": "dc0ba88f406d2a619fbd880f53c46c31052b92c72d63773e96a6fc490ac162b5",
+          "byte_exact": true
+        },
+        {
+          "path": "_rels/.rels",
+          "source_sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "published_sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "byte_exact": true
+        },
+        {
+          "path": "word/document.xml",
+          "source_sha256": "d7e81f93051e36e6cbb97c556be965a801fe4ff7be413b62841f46638b8b9903",
+          "published_sha256": "d7e81f93051e36e6cbb97c556be965a801fe4ff7be413b62841f46638b8b9903",
+          "byte_exact": true
+        },
+        {
+          "path": "word/_rels/document.xml.rels",
+          "source_sha256": "3ad996a6abfe92cfc6c67eef49affd9a8496127802ba38a1c2b3daa2d692a834",
+          "published_sha256": "3ad996a6abfe92cfc6c67eef49affd9a8496127802ba38a1c2b3daa2d692a834",
+          "byte_exact": true
+        },
+        {
+          "path": "word/footnotes.xml",
+          "source_sha256": "9ca80141a74864abac40122623ebc796999c450417c707d3288b89d6872c98ba",
+          "published_sha256": "9ca80141a74864abac40122623ebc796999c450417c707d3288b89d6872c98ba",
+          "byte_exact": true
+        },
+        {
+          "path": "word/endnotes.xml",
+          "source_sha256": "646f5d9b5aa4e896f4f56bd923bb2fc6063232a1ff7208e80d066a25f5606f6d",
+          "published_sha256": "646f5d9b5aa4e896f4f56bd923bb2fc6063232a1ff7208e80d066a25f5606f6d",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image1.jpeg",
+          "source_sha256": "24838773f8dd39ca7f973808e6ba535d8a961921c635c295e67570771578f16c",
+          "published_sha256": "24838773f8dd39ca7f973808e6ba535d8a961921c635c295e67570771578f16c",
+          "byte_exact": true
+        },
+        {
+          "path": "word/theme/theme1.xml",
+          "source_sha256": "87748024cf1895e18f8494689ead27da2d449d7dfd27198b1df04989e8162e6c",
+          "published_sha256": "87748024cf1895e18f8494689ead27da2d449d7dfd27198b1df04989e8162e6c",
+          "byte_exact": true
+        },
+        {
+          "path": "word/settings.xml",
+          "source_sha256": "8851be97ee6f1d12fddf3ca31cae6c5c8aeb032d5cc5e0a583b8beaf32a0cd06",
+          "published_sha256": "8851be97ee6f1d12fddf3ca31cae6c5c8aeb032d5cc5e0a583b8beaf32a0cd06",
+          "byte_exact": true
+        },
+        {
+          "path": "word/numbering.xml",
+          "source_sha256": "5db38393c9ff8ba73a6195c6616dc972907ef3416c994e2c4c70cbd00336cae7",
+          "published_sha256": "5db38393c9ff8ba73a6195c6616dc972907ef3416c994e2c4c70cbd00336cae7",
+          "byte_exact": true
+        },
+        {
+          "path": "word/styles.xml",
+          "source_sha256": "018001406afc39abc7b59ee0cf2f4f2565cf5ff9925e5ee1037aac3398dadc86",
+          "published_sha256": "018001406afc39abc7b59ee0cf2f4f2565cf5ff9925e5ee1037aac3398dadc86",
+          "byte_exact": true
+        },
+        {
+          "path": "word/webSettings.xml",
+          "source_sha256": "55d7125220bbbdc7d25c68cac66ec1ea0012bb703d9c55b7339516275170b3f5",
+          "published_sha256": "55d7125220bbbdc7d25c68cac66ec1ea0012bb703d9c55b7339516275170b3f5",
+          "byte_exact": true
+        },
+        {
+          "path": "word/fontTable.xml",
+          "source_sha256": "53b5e33f5f77f7d03cff75938bb4c688e51cbe8e326f160cdd0f44cdb8a5076e",
+          "published_sha256": "53b5e33f5f77f7d03cff75938bb4c688e51cbe8e326f160cdd0f44cdb8a5076e",
+          "byte_exact": true
+        },
+        {
+          "path": "docProps/core.xml",
+          "source_sha256": "fdd90ce104e394f779e7e9c12aa93bed7ba2cbd96bb40a5d5273b4dede4048a7",
+          "published_sha256": "d3e4d2e4a580ab174e1b376113d64ea1230701b5f8fe2fd04ec1768b7fabf2d2",
+          "byte_exact": false
+        },
+        {
+          "path": "docProps/app.xml",
+          "source_sha256": "303ea006bdd50a6d6181848ae99c6013163203d166a8985447cdc0840440a909",
+          "published_sha256": "303ea006bdd50a6d6181848ae99c6013163203d166a8985447cdc0840440a909",
+          "byte_exact": true
+        }
+      ],
+      "verification": {
+        "all_xml_story_text_and_relationships_reviewed": true,
+        "all_full_embedded_images_reviewed": true,
+        "document_xml_styles_relationships_footnotes_endnotes_byte_exact": true,
+        "unmodified_package_members_byte_exact": true,
+        "cached_word_page_count": 9,
+        "verified_render_page_count": 9,
+        "full_docx_layout_render_status": "passed: read-only Microsoft Word COM fallback export to PDF, with Poppler PNG visual review of every page; canonical render_docx.py unavailable",
+        "final_embedded_image_visually_reviewed": true,
+        "canonical_docx_renderer_status": "render_docx.py attempted and unavailable: no bundled LibreOffice soffice.exe",
+        "word_readonly_fallback_qa": {
+          "source_id": "file-004",
+          "verified_word_pdf_page_count": 9,
+          "method": "Hidden Microsoft Word COM read-only Open; macros disabled; ExportAsFixedFormat PDF; Poppler PNG rasterization",
+          "canonical_docx_renderer_status": "render_docx.py attempted and unavailable: no bundled LibreOffice soffice.exe",
+          "source_and_published_DOCX_input_hashes_unchanged": true,
+          "pages": [
+            {
+              "page": 1,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 2,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 3,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 4,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 5,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 6,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 7,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 8,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 9,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            }
+          ]
+        }
+      },
+      "path": "original_document_archive/exams/2021/midterm/prompt.docx",
+      "published_sha256": "71692c948958c0f22ac0e41a68fdfc5f28bd582134fd7e76681270f7e013c846",
+      "published_bytes": 83349,
+      "status": "preserved anonymous derivative",
+      "source_format": "docx"
+    },
+    {
+      "source_id": "file-005",
+      "source_sha256": "268375a6d7362b6133814027d58089b9f2e6d4d9e5e7363ebd4b9268385c4770",
+      "source_bytes": 275071,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1290,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          },
+          {
+            "rect_pixels": [
+              1280,
+              587,
+              1410,
+              633
+            ],
+            "reason": "course host account",
+            "replacement": "opal-marten-e759"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/temperature-description.png",
+      "published_sha256": "dc2e65ab95781bc115be7681e81f4dab24d07505a3d3c9338381960b82cb4c78",
+      "published_bytes": 228561,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-006",
+      "source_sha256": "e726d6ad7f84f8ae0d8d7c7c8bad5175ba1a31700b74731f1ffc9ffedeaf5216",
+      "source_bytes": 223475,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1290,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/temperature-samples.png",
+      "published_sha256": "38f6d10ce084826eb1e25a68ed4c2237d290f9b0fdff179538a9a9405ee26dbc",
+      "published_bytes": 178699,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-007",
+      "source_sha256": "aa89db2d56af705b9cbcc812e517d4018fad8e40d23f47dfdfcc092aeb426f20",
+      "source_bytes": 284667,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1290,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          },
+          {
+            "rect_pixels": [
+              1280,
+              587,
+              1410,
+              633
+            ],
+            "reason": "course host account",
+            "replacement": "opal-marten-e759"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/arithmetic-description.png",
+      "published_sha256": "c8a4b12747e36583ac8282e13457725ed22dc7b7a0f9975662b02bdc8a7777a4",
+      "published_bytes": 239956,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-008",
+      "source_sha256": "aa315ce397abae1239c4d6adf9662613e88c4adbf3a50845e5f666e07d4d0f42",
+      "source_bytes": 222584,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1290,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/arithmetic-samples-1.png",
+      "published_sha256": "6b8a67fe9fb0fa5bb75656af4e08d4c7b8f7cd49c117ec712725b9608b799260",
+      "published_bytes": 180397,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-009",
+      "source_sha256": "91cfb1259468824e12390620f9bc37456f17597c4205eeb532b206371e528680",
+      "source_bytes": 225818,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1290,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/arithmetic-samples-2.png",
+      "published_sha256": "48f9b4c38ccf5a08f5b52fc27f3b3e7d235ea336f008066a46f6b03482c2e93c",
+      "published_bytes": 182076,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-010",
+      "source_sha256": "a8bef4115a927577b50603fab9f243e46a4ca5bbfd355f56bda8c86a2883cf02",
+      "source_bytes": 291712,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1280,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          },
+          {
+            "rect_pixels": [
+              1274,
+              587,
+              1405,
+              633
+            ],
+            "reason": "course host account",
+            "replacement": "opal-marten-e759"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/square-root-description.png",
+      "published_sha256": "c6a7c7b221aaf8ae67df5e0e8b7ebd150e45fb68344b77247dd72c647adc2790",
+      "published_bytes": 245468,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-011",
+      "source_sha256": "ee9275cf903c52f41e1894ffdd261f86a4b8cfcc58000e4a9344b59c36dfb6bd",
+      "source_bytes": 232308,
+      "format": "png",
+      "role": "historical program or exam screenshot",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "irreversible affected-image-pixel redaction followed by anonymous alias; published PNG has no original image or identity metadata",
+        "edits": [
+          {
+            "rect_pixels": [
+              1290,
+              10,
+              1422,
+              46
+            ],
+            "reason": "student login",
+            "replacement": "cedar-owl-d872"
+          }
+        ]
+      },
+      "verification": {
+        "full_source_image_reviewed": true,
+        "decoded_pixels_unchanged_outside_privacy_regions": true,
+        "published_container_metadata_empty": true,
+        "final_image_visually_reviewed": true
+      },
+      "path": "original_document_archive/exams/2021/midterm/screenshots/square-root-samples.png",
+      "published_sha256": "60990864f857ff735181838516041bc872dff3a70f8f72626ca3aa1eb27728d3",
+      "published_bytes": 185562,
+      "status": "preserved anonymous derivative",
+      "source_format": "png"
+    },
+    {
+      "source_id": "file-012",
+      "source_sha256": "e9c9abf0e12e4398a5eaf878291498b337564e6917ee01c6765ff3578dbd91b5",
+      "source_bytes": 436917,
+      "format": "docx",
+      "role": "original historical exam prompt",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "original OOXML package retained; core author metadata replaced with anonymous alias",
+        "changed_members": [
+          "docProps/core.xml"
+        ],
+        "visible_content_changes": []
+      },
+      "members": [
+        {
+          "path": "[Content_Types].xml",
+          "source_sha256": "3c88cf7ee8aca5751618df4257a2885328ac743c4680d01605ef57dd0db45eb8",
+          "published_sha256": "3c88cf7ee8aca5751618df4257a2885328ac743c4680d01605ef57dd0db45eb8",
+          "byte_exact": true
+        },
+        {
+          "path": "_rels/.rels",
+          "source_sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "published_sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "byte_exact": true
+        },
+        {
+          "path": "word/document.xml",
+          "source_sha256": "f72aa3f18dbaff919dc0d42f32cd3d67d84b3a425907d339d093324a08612d4b",
+          "published_sha256": "f72aa3f18dbaff919dc0d42f32cd3d67d84b3a425907d339d093324a08612d4b",
+          "byte_exact": true
+        },
+        {
+          "path": "word/_rels/document.xml.rels",
+          "source_sha256": "96d7d4d77a88827a2bf12f90f2602a3142f6f15c40a9c95a4bb610266928cf54",
+          "published_sha256": "96d7d4d77a88827a2bf12f90f2602a3142f6f15c40a9c95a4bb610266928cf54",
+          "byte_exact": true
+        },
+        {
+          "path": "word/footnotes.xml",
+          "source_sha256": "ced02a9357640beb2fa43855d2e636d9109460b63f69a9d9daaae51e705b5c8c",
+          "published_sha256": "ced02a9357640beb2fa43855d2e636d9109460b63f69a9d9daaae51e705b5c8c",
+          "byte_exact": true
+        },
+        {
+          "path": "word/endnotes.xml",
+          "source_sha256": "4ec3808efc3c6b45357edf797724284c22cb306f0edd7dd903c0cb65ae38ef39",
+          "published_sha256": "4ec3808efc3c6b45357edf797724284c22cb306f0edd7dd903c0cb65ae38ef39",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image1.png",
+          "source_sha256": "d19eba17346af34d7673caebbf8007f601d55df386d6c63f5203583c9795d8c2",
+          "published_sha256": "d19eba17346af34d7673caebbf8007f601d55df386d6c63f5203583c9795d8c2",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image2.png",
+          "source_sha256": "709ff368ef56daa627eb2ac588b4e0ec8d9ba7c83ef6bc35a1bf9b2449420b90",
+          "published_sha256": "709ff368ef56daa627eb2ac588b4e0ec8d9ba7c83ef6bc35a1bf9b2449420b90",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image3.png",
+          "source_sha256": "0ba04db1ad4cd51ca84004c0291505e4737bcab89579f2086d07d79ddd7b3856",
+          "published_sha256": "0ba04db1ad4cd51ca84004c0291505e4737bcab89579f2086d07d79ddd7b3856",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image4.png",
+          "source_sha256": "b517ece41f9619e5b2b11318dced1c896591a9c42710d02d0e2949828861b12b",
+          "published_sha256": "b517ece41f9619e5b2b11318dced1c896591a9c42710d02d0e2949828861b12b",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image5.jpeg",
+          "source_sha256": "6344cfabeaed4052157e5f5ad838c772bbf7f8475470df6a5e6acba832774597",
+          "published_sha256": "6344cfabeaed4052157e5f5ad838c772bbf7f8475470df6a5e6acba832774597",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image6.png",
+          "source_sha256": "62ef12909d892739c761231ebb5c2531bfa913ccadf5604f9175acc487640303",
+          "published_sha256": "62ef12909d892739c761231ebb5c2531bfa913ccadf5604f9175acc487640303",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image7.png",
+          "source_sha256": "c9e6aace1818ad64876d31cd7568296abfa60912ad6a2462b045719ee1824089",
+          "published_sha256": "c9e6aace1818ad64876d31cd7568296abfa60912ad6a2462b045719ee1824089",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image8.png",
+          "source_sha256": "f2a8e1cfe761455e486d7052b965fc3e037b8a1f38dd1c53fdf7e7fd3281e38e",
+          "published_sha256": "f2a8e1cfe761455e486d7052b965fc3e037b8a1f38dd1c53fdf7e7fd3281e38e",
+          "byte_exact": true
+        },
+        {
+          "path": "word/theme/theme1.xml",
+          "source_sha256": "87748024cf1895e18f8494689ead27da2d449d7dfd27198b1df04989e8162e6c",
+          "published_sha256": "87748024cf1895e18f8494689ead27da2d449d7dfd27198b1df04989e8162e6c",
+          "byte_exact": true
+        },
+        {
+          "path": "word/settings.xml",
+          "source_sha256": "79e9a51496d36d44fcf8ba8b80986142d33d1d9c5da3acbb5d4ecf063962fa41",
+          "published_sha256": "79e9a51496d36d44fcf8ba8b80986142d33d1d9c5da3acbb5d4ecf063962fa41",
+          "byte_exact": true
+        },
+        {
+          "path": "word/numbering.xml",
+          "source_sha256": "0579218938234a93b4b0cdd14257dcae0f3dd9f019be21e64438414c0f4240ef",
+          "published_sha256": "0579218938234a93b4b0cdd14257dcae0f3dd9f019be21e64438414c0f4240ef",
+          "byte_exact": true
+        },
+        {
+          "path": "word/styles.xml",
+          "source_sha256": "17844d658d1b3763949b439243881469de861cb6f9f46cb8bf4bca758a9e9150",
+          "published_sha256": "17844d658d1b3763949b439243881469de861cb6f9f46cb8bf4bca758a9e9150",
+          "byte_exact": true
+        },
+        {
+          "path": "word/webSettings.xml",
+          "source_sha256": "9d0b001206cb4dbd749dd894026d79c5cfdd8d94a5500f90ad82f99de43612d4",
+          "published_sha256": "9d0b001206cb4dbd749dd894026d79c5cfdd8d94a5500f90ad82f99de43612d4",
+          "byte_exact": true
+        },
+        {
+          "path": "word/fontTable.xml",
+          "source_sha256": "3caf2beb6950898bd1d95882fbe865deffce7a613e57148350ce26e55fe5820d",
+          "published_sha256": "3caf2beb6950898bd1d95882fbe865deffce7a613e57148350ce26e55fe5820d",
+          "byte_exact": true
+        },
+        {
+          "path": "docProps/core.xml",
+          "source_sha256": "37f2acb5b623c6e7a728b8776ebf7922d7f60c75fb4c8a2d2cbf48d2ac35a464",
+          "published_sha256": "fd92e70d3a3d7bfc86ab25404cf7bef2a7f6f82102b0e210de0f191770a8de45",
+          "byte_exact": false
+        },
+        {
+          "path": "docProps/app.xml",
+          "source_sha256": "f95e9741d10886ff44845adfb035feac97f11edcf79f94ac67194369be4242ec",
+          "published_sha256": "f95e9741d10886ff44845adfb035feac97f11edcf79f94ac67194369be4242ec",
+          "byte_exact": true
+        }
+      ],
+      "verification": {
+        "all_xml_story_text_and_relationships_reviewed": true,
+        "all_full_embedded_images_reviewed": true,
+        "document_xml_styles_relationships_footnotes_endnotes_byte_exact": true,
+        "unmodified_package_members_byte_exact": true,
+        "cached_word_page_count": 18,
+        "verified_render_page_count": 18,
+        "full_docx_layout_render_status": "passed: read-only Microsoft Word COM fallback export to PDF, with Poppler PNG visual review of every page; canonical render_docx.py unavailable",
+        "final_embedded_image_visually_reviewed": true,
+        "canonical_docx_renderer_status": "render_docx.py attempted and unavailable: no bundled LibreOffice soffice.exe",
+        "word_readonly_fallback_qa": {
+          "source_id": "file-012",
+          "verified_word_pdf_page_count": 18,
+          "method": "Hidden Microsoft Word COM read-only Open; macros disabled; ExportAsFixedFormat PDF; Poppler PNG rasterization",
+          "canonical_docx_renderer_status": "render_docx.py attempted and unavailable: no bundled LibreOffice soffice.exe",
+          "source_and_published_DOCX_input_hashes_unchanged": true,
+          "pages": [
+            {
+              "page": 1,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 2,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 3,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 4,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 5,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 6,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 7,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 8,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 9,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 10,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 11,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 12,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 13,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 14,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 15,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 16,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 17,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            },
+            {
+              "page": 18,
+              "identity_rect_points": [],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            }
+          ]
+        }
+      },
+      "path": "original_document_archive/exams/2021/final/prompt.docx",
+      "published_sha256": "7f8c426dd69b24d84458fb28dac3e3ad96150c4d4fe70094bf4fc168ffb696f2",
+      "published_bytes": 433948,
+      "status": "preserved anonymous derivative",
+      "source_format": "docx",
+      "companion_files": [
+        {
+          "filename": "stock1.txt",
+          "path": "exams/2021/final/fixtures/stock1.txt",
+          "status": "available stock fixture"
+        },
+        {
+          "filename": "member1.txt",
+          "path": "exams/2021/final/fixtures/member1.txt",
+          "status": "available fictional member fixture; original private member identities are anonymized by the separate source archive"
+        }
+      ]
+    },
+    {
+      "source_id": "file-013",
+      "source_sha256": "d4b14466a280213ee72b537794dd1bfa1c6dfb71c77a706fa2bc3ce7bf8366be",
+      "source_bytes": 195939,
+      "format": "docx",
+      "role": "historical anonymous judge results screenshot document",
+      "byte_exact": false,
+      "privacy_transform": {
+        "method": "original OOXML package retained; core author metadata replaced with anonymous alias; affected screenshot pixels truly redacted",
+        "changed_members": [
+          "word/media/image1.png",
+          "docProps/core.xml"
+        ],
+        "visible_content_changes": [
+          {
+            "rect_pixels": [
+              1548,
+              80,
+              1648,
+              116
+            ],
+            "reason": "student login",
+            "replacement": "amber-owl-7276"
+          }
+        ]
+      },
+      "members": [
+        {
+          "path": "[Content_Types].xml",
+          "source_sha256": "7449e9f52ad3d82af4d3510c2e9e4b6c5a593d9004fdf831b114462b017c60ce",
+          "published_sha256": "7449e9f52ad3d82af4d3510c2e9e4b6c5a593d9004fdf831b114462b017c60ce",
+          "byte_exact": true
+        },
+        {
+          "path": "_rels/.rels",
+          "source_sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "published_sha256": "e19238d7a71fa7a2490776252686f70e2de6238c87cd509b5e3a3cc07c2ea4df",
+          "byte_exact": true
+        },
+        {
+          "path": "word/_rels/document.xml.rels",
+          "source_sha256": "8d7f9080612b38a10fb4240db44136fb44dd66c7abf6cc68a314fdab2e57fc12",
+          "published_sha256": "8d7f9080612b38a10fb4240db44136fb44dd66c7abf6cc68a314fdab2e57fc12",
+          "byte_exact": true
+        },
+        {
+          "path": "word/document.xml",
+          "source_sha256": "8bf6a903517e4547040ec60a133c968c8de19bb21238d0d9d9000ac46c0003ab",
+          "published_sha256": "8bf6a903517e4547040ec60a133c968c8de19bb21238d0d9d9000ac46c0003ab",
+          "byte_exact": true
+        },
+        {
+          "path": "word/footnotes.xml",
+          "source_sha256": "ebf0742f888c1c637e3188e195137332cb160c0972e3cb9b6cb146ccf1c91509",
+          "published_sha256": "ebf0742f888c1c637e3188e195137332cb160c0972e3cb9b6cb146ccf1c91509",
+          "byte_exact": true
+        },
+        {
+          "path": "word/endnotes.xml",
+          "source_sha256": "bd828857e748112634b053cee3cfe0107d29afbc0debd2865e607ad86c8e41b9",
+          "published_sha256": "bd828857e748112634b053cee3cfe0107d29afbc0debd2865e607ad86c8e41b9",
+          "byte_exact": true
+        },
+        {
+          "path": "word/theme/theme1.xml",
+          "source_sha256": "e6a26c12c1fc6e7f76085aca60517ac0cb4487a4a382630f9c32929b1bc74159",
+          "published_sha256": "e6a26c12c1fc6e7f76085aca60517ac0cb4487a4a382630f9c32929b1bc74159",
+          "byte_exact": true
+        },
+        {
+          "path": "word/media/image1.png",
+          "source_sha256": "f418ea4e3fa6d6ef1ccc618942028ee7361aac0533b42f27ccc5796772363a79",
+          "published_sha256": "33a196f3f0a577a24cf498c53c18c6dce3515957d93916c6331d5d1b90f44b4f",
+          "byte_exact": false
+        },
+        {
+          "path": "word/settings.xml",
+          "source_sha256": "430ace1ca2a899abe29108edfa1084273f6606663bf705f74b25db83a3d545c3",
+          "published_sha256": "430ace1ca2a899abe29108edfa1084273f6606663bf705f74b25db83a3d545c3",
+          "byte_exact": true
+        },
+        {
+          "path": "word/fontTable.xml",
+          "source_sha256": "ddd5164af46c0fecd4ac8c1bd2b421cf442e103d2b42ebef0cb68503a31a1b39",
+          "published_sha256": "ddd5164af46c0fecd4ac8c1bd2b421cf442e103d2b42ebef0cb68503a31a1b39",
+          "byte_exact": true
+        },
+        {
+          "path": "word/webSettings.xml",
+          "source_sha256": "5e0de111fbc9f99dab9067eb9cd883fa916aaf1958d43d4ef07cfd05a2329a54",
+          "published_sha256": "5e0de111fbc9f99dab9067eb9cd883fa916aaf1958d43d4ef07cfd05a2329a54",
+          "byte_exact": true
+        },
+        {
+          "path": "docProps/app.xml",
+          "source_sha256": "5278b674e4881fc22624d1bdac4f1cbb4c733ef245045954c206f98be56ec46b",
+          "published_sha256": "5278b674e4881fc22624d1bdac4f1cbb4c733ef245045954c206f98be56ec46b",
+          "byte_exact": true
+        },
+        {
+          "path": "word/styles.xml",
+          "source_sha256": "14eb0d23017ba86bb5be90db5898f5c59e926e632154fbe5a51538174038c7c8",
+          "published_sha256": "14eb0d23017ba86bb5be90db5898f5c59e926e632154fbe5a51538174038c7c8",
+          "byte_exact": true
+        },
+        {
+          "path": "docProps/core.xml",
+          "source_sha256": "0c2d04cc0e22623d981a00237b0ea1d8c5ebfe49ff51fa99c50083c7ddaca5a2",
+          "published_sha256": "7d0fce262513dcc50e8e84770fcf676850358739f1e92c43d99057f4adfd60d2",
+          "byte_exact": false
+        }
+      ],
+      "verification": {
+        "all_xml_story_text_and_relationships_reviewed": true,
+        "all_full_embedded_images_reviewed": true,
+        "document_xml_styles_relationships_footnotes_endnotes_byte_exact": true,
+        "unmodified_package_members_byte_exact": true,
+        "cached_word_page_count": 1,
+        "verified_render_page_count": 1,
+        "full_docx_layout_render_status": "passed: read-only Microsoft Word COM fallback export to PDF, with Poppler PNG visual review of every page; canonical render_docx.py unavailable",
+        "final_embedded_image_visually_reviewed": true,
+        "canonical_docx_renderer_status": "render_docx.py attempted and unavailable: no bundled LibreOffice soffice.exe",
+        "word_readonly_fallback_qa": {
+          "source_id": "file-013",
+          "verified_word_pdf_page_count": 1,
+          "method": "Hidden Microsoft Word COM read-only Open; macros disabled; ExportAsFixedFormat PDF; Poppler PNG rasterization",
+          "canonical_docx_renderer_status": "render_docx.py attempted and unavailable: no bundled LibreOffice soffice.exe",
+          "source_and_published_DOCX_input_hashes_unchanged": true,
+          "pages": [
+            {
+              "page": 1,
+              "identity_rect_points": [
+                [
+                  553.3115234375,
+                  96.32293701171875,
+                  583.2412719726562,
+                  107.09727478027344
+                ]
+              ],
+              "render_unchanged_outside_identity_regions": true,
+              "native_pdf_text_unchanged": true,
+              "visually_reviewed": true
+            }
+          ]
+        }
+      },
+      "path": "original_document_archive/exams/2021/final/amber-owl-7276/historical-results.docx",
+      "published_sha256": "f94f27fda4a668141c215fc1a3fa62a2cc65a48c473ff6773bebe3c6a7d3a90c",
+      "published_bytes": 162248,
+      "status": "preserved anonymous derivative",
+      "source_format": "docx"
+    },
+    {
+      "source_id": "file-017",
+      "source_sha256": "412d05a735d99c1b58ced2e021a3b8609914e0215e361914a4028b3c063cee9d",
+      "source_bytes": 2133254,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Chapter0_Introduction_Stud.pdf",
+      "published_sha256": "412d05a735d99c1b58ced2e021a3b8609914e0215e361914a4028b3c063cee9d",
+      "published_bytes": 2133254,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-018",
+      "source_sha256": "b3bfe7a88902f0fe8116afa71d1cd06c3b0374f22d8240540f727d253bfeb55a",
+      "source_bytes": 334973,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_error_message_20211013_0300_Andy.pdf",
+      "published_sha256": "b3bfe7a88902f0fe8116afa71d1cd06c3b0374f22d8240540f727d253bfeb55a",
+      "published_bytes": 334973,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-019",
+      "source_sha256": "07e693e6dabaaefc61701da90338910ca4ae14c445094d29e6d4236e84204cf4",
+      "source_bytes": 2011923,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_GDB_20211028_1630.pdf",
+      "published_sha256": "07e693e6dabaaefc61701da90338910ca4ae14c445094d29e6d4236e84204cf4",
+      "published_bytes": 2011923,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-020",
+      "source_sha256": "0a52e507db7ae683a770eb14c3f15ebb8ad252556ce97ebf879e782bcbee67e4",
+      "source_bytes": 822804,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_HydroOJ-userguide_Andy_20210930_0155.pdf",
+      "published_sha256": "0a52e507db7ae683a770eb14c3f15ebb8ad252556ce97ebf879e782bcbee67e4",
+      "published_bytes": 822804,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-021",
+      "source_sha256": "4b340d951afccfa3d6769f79e09db18ce00894e46c444ffeda534ceee03f1fca",
+      "source_bytes": 420274,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab10_Andy_20211209_1545.pdf",
+      "published_sha256": "4b340d951afccfa3d6769f79e09db18ce00894e46c444ffeda534ceee03f1fca",
+      "published_bytes": 420274,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-022",
+      "source_sha256": "5980e443c9c5dcda8412e394e15a8a3eeb6fa3163c1bfcabbae7153ca3ccadc9",
+      "source_bytes": 620640,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab10_Review_宜真.pdf",
+      "published_sha256": "5980e443c9c5dcda8412e394e15a8a3eeb6fa3163c1bfcabbae7153ca3ccadc9",
+      "published_bytes": 620640,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-023",
+      "source_sha256": "992eeb1e027bc7fee62277fe724d7059921afbbec0cb162f649b81c4966671f2",
+      "source_bytes": 406049,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab11_Andy_20211215_1940.pdf",
+      "published_sha256": "992eeb1e027bc7fee62277fe724d7059921afbbec0cb162f649b81c4966671f2",
+      "published_bytes": 406049,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-024",
+      "source_sha256": "dc81ccd9929f1cb26e584be073797a2dd11854f65de990dbd1c1f46cb7221fa7",
+      "source_bytes": 522683,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab11_Review_柏燁_20211223_1654.pdf",
+      "published_sha256": "dc81ccd9929f1cb26e584be073797a2dd11854f65de990dbd1c1f46cb7221fa7",
+      "published_bytes": 522683,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-025",
+      "source_sha256": "39ff7db12faacef4af52c50cedaea98456fbab0c3a697988bce2534bb3495069",
+      "source_bytes": 441212,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "published_sha256": "39ff7db12faacef4af52c50cedaea98456fbab0c3a697988bce2534bb3495069",
+      "published_bytes": 441212,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-026",
+      "source_sha256": "425559bbda04e73d5477c43311aa03aa35fa8bdf7af9640e060f6896ba1fdae6",
+      "source_bytes": 572093,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab12_Review_Andy.pdf",
+      "published_sha256": "425559bbda04e73d5477c43311aa03aa35fa8bdf7af9640e060f6896ba1fdae6",
+      "published_bytes": 572093,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-028",
+      "source_sha256": "89fab0ca81a9a60ee5fff6e9cdbc3da4fc08d6606c408981151f41563aae7933",
+      "source_bytes": 412900,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "published_sha256": "89fab0ca81a9a60ee5fff6e9cdbc3da4fc08d6606c408981151f41563aae7933",
+      "published_bytes": 412900,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-029",
+      "source_sha256": "fbad75398ed5e3486cf48358b3416596549220ac12ab1e1e75aeb9bced29b544",
+      "source_bytes": 656815,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_Review.pdf",
+      "published_sha256": "fbad75398ed5e3486cf48358b3416596549220ac12ab1e1e75aeb9bced29b544",
+      "published_bytes": 656815,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-030",
+      "source_sha256": "1328e5dd78240650e9064da4f61b8ca3a28229bb10f0b8d9ace518f5456a1134",
+      "source_bytes": 733261,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab14_20220105_0030_Andy.pdf",
+      "published_sha256": "1328e5dd78240650e9064da4f61b8ca3a28229bb10f0b8d9ace518f5456a1134",
+      "published_bytes": 733261,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-031",
+      "source_sha256": "855f871da66a4cda274858587ed41dc2b1f06d9c1361f9e6ef59755c6c41d526",
+      "source_bytes": 1556949,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab1_20210922_0300_Andy.pdf",
+      "published_sha256": "855f871da66a4cda274858587ed41dc2b1f06d9c1361f9e6ef59755c6c41d526",
+      "published_bytes": 1556949,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-032",
+      "source_sha256": "5e1b97ad5f48e7446a06ab38f0d190cc73ad861c4357659cf4031d6600063969",
+      "source_bytes": 408933,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab2_20210926_2325_Andy.pdf",
+      "published_sha256": "5e1b97ad5f48e7446a06ab38f0d190cc73ad861c4357659cf4031d6600063969",
+      "published_bytes": 408933,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-033",
+      "source_sha256": "d64b716a06d7c9966ccada1da3d55db9e37504b5b4b8a9c128e7cc7510b5ba79",
+      "source_bytes": 282466,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab3_20211005_1600_Andy.pdf",
+      "published_sha256": "d64b716a06d7c9966ccada1da3d55db9e37504b5b4b8a9c128e7cc7510b5ba79",
+      "published_bytes": 282466,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-034",
+      "source_sha256": "499ce2c9999a15422b9beceec9336371322230d9cda32ae5d58f351655ad0bd2",
+      "source_bytes": 386189,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab4_20211013_0300_Andy.pdf",
+      "published_sha256": "499ce2c9999a15422b9beceec9336371322230d9cda32ae5d58f351655ad0bd2",
+      "published_bytes": 386189,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-035",
+      "source_sha256": "1a7cea9f882134e9b1bf05f8c48afd618bba03562c801f85a2f804a0d7657352",
+      "source_bytes": 547865,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab4_Review_20211021_0100_Andy.pdf",
+      "published_sha256": "1a7cea9f882134e9b1bf05f8c48afd618bba03562c801f85a2f804a0d7657352",
+      "published_bytes": 547865,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-036",
+      "source_sha256": "c69fda2bc8dad6923f5a689b34048361370b8dd629b46644fe24e7e511d20260",
+      "source_bytes": 428336,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab5_Review_20211028_0100_Andy.pdf",
+      "published_sha256": "c69fda2bc8dad6923f5a689b34048361370b8dd629b46644fe24e7e511d20260",
+      "published_bytes": 428336,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-037",
+      "source_sha256": "4351746b73d1856e853a4c2cd2c6d4d71777df385d237c74d793991d791bc953",
+      "source_bytes": 273149,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab6_20211028_1230_Andy.pdf",
+      "published_sha256": "4351746b73d1856e853a4c2cd2c6d4d71777df385d237c74d793991d791bc953",
+      "published_bytes": 273149,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-038",
+      "source_sha256": "c5b05bcf6591d790feed7fd1d2063eedbc7f81c48c3d8edeb978cdd3d998472f",
+      "source_bytes": 370902,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab6_Review_20211104_0100_Andy.pdf",
+      "published_sha256": "c5b05bcf6591d790feed7fd1d2063eedbc7f81c48c3d8edeb978cdd3d998472f",
+      "published_bytes": 370902,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-039",
+      "source_sha256": "c51b67708610bba27371d4a8f76c9ad271dbf764f06dce9d3f4747b00510b0c7",
+      "source_bytes": 492253,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab7_20211104_1530_Andy.pdf",
+      "published_sha256": "c51b67708610bba27371d4a8f76c9ad271dbf764f06dce9d3f4747b00510b0c7",
+      "published_bytes": 492253,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-040",
+      "source_sha256": "354e0375fd5a450e0c5dcd7e4b20c3b5af054796880d56f760b1dda0c94e1ab8",
+      "source_bytes": 453552,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab8_20211125_1800_Andy.pdf",
+      "published_sha256": "354e0375fd5a450e0c5dcd7e4b20c3b5af054796880d56f760b1dda0c94e1ab8",
+      "published_bytes": 453552,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-041",
+      "source_sha256": "a926c96e4586f5894e4471af3ce1132ba089ad9dade3f48fdf438dc63f9db6b9",
+      "source_bytes": 823344,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab8_Review_Andy.pdf",
+      "published_sha256": "a926c96e4586f5894e4471af3ce1132ba089ad9dade3f48fdf438dc63f9db6b9",
+      "published_bytes": 823344,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-042",
+      "source_sha256": "3d3ac5d62e0316aaebdbc4a1065127bf506e8b9934dcaf6ebc4645b7315149a1",
+      "source_bytes": 501258,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab9_20211202_1230_Andy.pdf",
+      "published_sha256": "3d3ac5d62e0316aaebdbc4a1065127bf506e8b9934dcaf6ebc4645b7315149a1",
+      "published_bytes": 501258,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-043",
+      "source_sha256": "64ebfb0a50582bd94a6f753a4c50769fa7854a1b2ed5cb3f86cb3414aaf3b7da",
+      "source_bytes": 640128,
+      "format": "pdf",
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab9_Review_Andy.pdf",
+      "published_sha256": "64ebfb0a50582bd94a6f753a4c50769fa7854a1b2ed5cb3f86cb3414aaf3b7da",
+      "published_bytes": 640128,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-044",
+      "source_sha256": "58394ae9ff86d2c931a12ae62bd9fb51ec83e7fcb759e2b09c06481c86f41a45",
+      "source_bytes": 1935300,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_CSLab_Lab5_Debugger_20241017.pdf",
+      "published_sha256": "58394ae9ff86d2c931a12ae62bd9fb51ec83e7fcb759e2b09c06481c86f41a45",
+      "published_bytes": 1935300,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-045",
+      "source_sha256": "3d776dc71b40e318f2bd41fcd2ab5346f240eaf7a93d59a56ee92232a27ccb72",
+      "source_bytes": 1822448,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab10_20241204.pdf",
+      "published_sha256": "3d776dc71b40e318f2bd41fcd2ab5346f240eaf7a93d59a56ee92232a27ccb72",
+      "published_bytes": 1822448,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-046",
+      "source_sha256": "13355af3f36bd916afe813c6668ef101e332e472669dd587b2ef169e3ca50c88",
+      "source_bytes": 944386,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab11_20241209.pdf",
+      "published_sha256": "13355af3f36bd916afe813c6668ef101e332e472669dd587b2ef169e3ca50c88",
+      "published_bytes": 944386,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-047",
+      "source_sha256": "eb0f875bc222e210c8cecbe46d9ff16427169ddea5f33ae7e2e9127a6f4cdd6f",
+      "source_bytes": 713294,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "published_sha256": "eb0f875bc222e210c8cecbe46d9ff16427169ddea5f33ae7e2e9127a6f4cdd6f",
+      "published_bytes": 713294,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-048",
+      "source_sha256": "60e570a1faf691a58d03e7afa1e5e4f9a0e0b8fed4440273d4b7ee38edb5996b",
+      "source_bytes": 516617,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab3_Review_20241010.pdf",
+      "published_sha256": "60e570a1faf691a58d03e7afa1e5e4f9a0e0b8fed4440273d4b7ee38edb5996b",
+      "published_bytes": 516617,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-049",
+      "source_sha256": "d37fd493cc4db75ad14360597404b4a60156e623a50095ad327b55405f36e46b",
+      "source_bytes": 381153,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab4_Review_20241017.pdf",
+      "published_sha256": "d37fd493cc4db75ad14360597404b4a60156e623a50095ad327b55405f36e46b",
+      "published_bytes": 381153,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-050",
+      "source_sha256": "a47cb6ab847d46ff0c299502661a643016f4609b47b4f4755aa8669ca06d7242",
+      "source_bytes": 1220398,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "published_sha256": "a47cb6ab847d46ff0c299502661a643016f4609b47b4f4755aa8669ca06d7242",
+      "published_bytes": 1220398,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-051",
+      "source_sha256": "1732d4718a56b50647130912408f7a7e878f2f26fce6ee778f39f63a1374946a",
+      "source_bytes": 1721396,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab6_20241026.pdf",
+      "published_sha256": "1732d4718a56b50647130912408f7a7e878f2f26fce6ee778f39f63a1374946a",
+      "published_bytes": 1721396,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-052",
+      "source_sha256": "cc407ad264d36783fa36c8195f1700a8a7ea9b87ebd6f84878e0dfe46e745682",
+      "source_bytes": 489497,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab7_20241105.pdf",
+      "published_sha256": "cc407ad264d36783fa36c8195f1700a8a7ea9b87ebd6f84878e0dfe46e745682",
+      "published_bytes": 489497,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-053",
+      "source_sha256": "827a299a20e48f778671f2543364c2d011ca999a39afe70dc34f687483553982",
+      "source_bytes": 485144,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab8_20241121.pdf",
+      "published_sha256": "827a299a20e48f778671f2543364c2d011ca999a39afe70dc34f687483553982",
+      "published_bytes": 485144,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    },
+    {
+      "source_id": "file-054",
+      "source_sha256": "571ed3d59bc5aa69e551eb3454035618ddb820554cfb4d2f83e5168277f673e8",
+      "source_bytes": 546092,
+      "format": "pdf",
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab9_20241128.pdf",
+      "published_sha256": "571ed3d59bc5aa69e551eb3454035618ddb820554cfb4d2f83e5168277f673e8",
+      "published_bytes": 546092,
+      "status": "already preserved byte-exact",
+      "role": "official lecture or lab document",
+      "byte_exact": true,
+      "privacy_transform": "none; official provided course document",
+      "source_format": "pdf"
+    }
+  ],
+  "qa_limits": [
+    "The canonical render_docx.py was attempted but is unavailable because the bundled Windows runtime lacks LibreOffice soffice.exe. This does not claim a successful canonical LibreOffice render. Actual fallback QA used hidden Microsoft Word COM with macros disabled and read-only Open, ExportAsFixedFormat to private PDF, and Poppler PNG rasterization. All 28 published pages were visually reviewed; source and published exports have identical native text and identical rendered pixels outside the declared privacy region. All six source/published DOCX inputs remained byte-identical through rendering. Original document XML, styles, relationships, footnotes, endnotes, and image placement geometry remain byte-exact."
+  ],
+  "verification_summary": {
+    "source_items": 54,
+    "existing_byte_exact_pdf_references": 37,
+    "new_files": 13,
+    "new_byte_exact_official_pdf_pages": 0,
+    "docx_files": 3,
+    "full_docx_embedded_images_inspected": 10,
+    "anonymized_bitmap_derivatives_reviewed": 10,
+    "all_anonymized_bitmap_pixels_identical_outside_documented_privacy_regions": true,
+    "docx_package_members_unchanged_except_declared_privacy_edits": true,
+    "full_docx_render_status": "passed via read-only Microsoft Word COM fallback and Poppler PNG visual review; canonical render_docx.py unavailable",
+    "retained_source_items": 50,
+    "intentionally_superseded_instructions": 1,
+    "canonical_docx_renderer_status": "attempted but unavailable: bundled LibreOffice soffice.exe absent",
+    "verified_docx_render_pages": 28,
+    "all_docx_render_pages_visually_reviewed": true,
+    "docx_render_native_text_unchanged": true,
+    "docx_render_pixels_unchanged_outside_privacy_regions": true,
+    "docx_render_source_and_published_input_hashes_unchanged": true,
+    "intentionally_user_excluded_waiver_documents": 3
+  },
+  "retained_item_count": 50,
+  "waiver_document_policy": "All three supplied lab-exemption and waiver exam rule PDFs are excluded at the user's explicit request. Ordinary course midterm and final exam statements remain in scope."
+}

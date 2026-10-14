@@ -1,0 +1,9 @@
+No.     Present
+1	pencil
+2	eraser
+3	ruler
+4	toy
+5	card
+6	cookie
+7	candy
+8	mirror

@@ -7,3 +7,5 @@ __pycache__/
 *.layout
 *.depend
 *out.txt
+# Historical text outputs in the supplied source archive are retained data.
+!source_archive/**/*.txt

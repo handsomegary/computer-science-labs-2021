@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+
+long long int a;
+double sqroot(long long int,long long int);
+int main()
+{
+
+    cout<<"Enter a number: ";
+    cin>>a;
+    while(a<0){
+        cout<<"The number is out of range. Please enter again: ";
+        cin>>a;
+    }
+
+
+    cout<<sqroot(a);
+    return 0;
+}
+
+double sqroot(long long int b,long long int root=1){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

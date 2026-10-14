@@ -1,6 +1,6 @@
 # 原講義與搭配附件核對
 
-完整原始檔清單、來源檔名、SHA256、PDF 引用頁及對應附件見 [course-materials.json](course-materials.json)。本次保存 38 份官方 PDF 原檔：[2021 共 27 份](originals/2021)、[2024 共 11 份](originals/2024)。包含作業題面、Review、除錯／OJ／操作說明；沒有學生報告或個人提交截圖。PDF、非個資文字檔及六份 starter／template 保留原始位元組與檔名。
+完整原始檔清單、來源檔名、SHA256、PDF 引用頁及對應附件見 [course-materials.json](course-materials.json)。本次保存 37 份目前採用的官方 PDF 原檔：[2021 共 26 份](originals/2021)、[2024 共 11 份](originals/2024)。包含不同作業題面、Review、除錯／OJ／操作說明；同一份 2021 Lab13 說明只保留 `2015_update` 最新修訂，`1745` 舊版列為主動排除，不算缺件。PDF、非個資文字檔及六份 starter／template 保留原始位元組與檔名。另有[匿名原文件與截圖保存區](original_document_archive/README.txt)，收錄歷史課內期中／期末考題原 DOCX 與匿名提交截圖／分數資料。
 
 這份核對分別檢查「目前成品程式可執行」與「原講義要求的附件是否保存」。現有成品程式可完整執行，仍有下列兩份 2024 官方原始 starter 在提供資料中缺少，不能以重寫的完整解答冒充原檔。
 
@@ -48,3 +48,5 @@ python tools/check_course_materials.py --json
 此工具核對所有 PDF、starter、文字範例及匿名 ZIP 的存在、SHA256、別名／ZIP 結構與引用對應；缺檔或內容變動會失敗，GitHub CI 也執行同一檢查。結果另外明示 `original_course_attachment_set_complete: false` 及兩項已知來源缺口，不把保存檔案的 hash 通過當成原附件全集完整。
 
 若需要嚴格要求原附件全集完整，使用 `python tools/check_course_materials.py --require-complete`；目前會因兩份 2024 原 source 未提供而回傳 2。
+
+抵免測驗規則的三個年份版本皆依使用者要求排除，不算缺件；一般課內考題仍保留。三份匿名 DOCX 經 Word 唯讀匯出核對 9、18、1 頁，全部頁面已視覺檢查，原內容與匿名區域外像素一致。canonical render_docx.py 因缺少 bundled LibreOffice 無法執行，此限制與實際 Word fallback QA 分別記錄。

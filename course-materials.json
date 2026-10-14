@@ -103,16 +103,6 @@
       "sha256": "425559bbda04e73d5477c43311aa03aa35fa8bdf7af9640e060f6896ba1fdae6"
     },
     {
-      "source_filename": "2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
-      "year": "2021",
-      "page_count": 15,
-      "status": "preserved",
-      "byte_exact": true,
-      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
-      "size": 413055,
-      "sha256": "cd9f011072cf3947ccd3325caee52669f366195e9ba8cc94cae77a3275aea836"
-    },
-    {
       "source_filename": "2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
       "year": "2021",
       "page_count": 15,
@@ -873,5 +863,20 @@
   "source_extra_examples": [
     "course_support/2021/lab12/examples/1_2.txt",
     "course_support/2021/lab12/examples/2_2.txt"
-  ]
+  ],
+  "superseded_documents": [
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
+      "year": "2021",
+      "source_sha256": "cd9f011072cf3947ccd3325caee52669f366195e9ba8cc94cae77a3275aea836",
+      "size": 413055,
+      "page_count": 15,
+      "former_published_path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
+      "status": "intentionally_excluded_superseded",
+      "superseded_by": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "replacement_sha256": "89fab0ca81a9a60ee5fff6e9cdbc3da4fc08d6606c408981151f41563aae7933",
+      "evidence": "Both files have the same 2021-12-30 EE1007 Lab13 title and 15 PDF pages. The later 2015_update revision corrects the membership-flow figure: logging in omits phone number; registration includes phone number. Both companion-file references already cite the later PDF, on verified PDF pages 3 and 6."
+    }
+  ],
+  "instruction_version_policy": "Latest supplied revision per course year and distinct document type. Distinct lab topics, Reviews, debugger guides, and different course years are retained. Same-year 2021 Lab13 1745 edition is superseded by 2015_update."
 }

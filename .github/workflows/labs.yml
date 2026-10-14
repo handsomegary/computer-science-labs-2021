@@ -12,5 +12,9 @@ jobs:
           python-version: '3.11'
       - name: Verify original course PDFs and companion files
         run: python tools/check_course_materials.py
+      - name: Verify retained original sources and local data
+        run: python tools/check_source_archive.py
+      - name: Verify latest original documents and privacy derivatives
+        run: python original_document_archive/check_archive.py
       - run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
       - run: python tools/verify.py --cxx g++

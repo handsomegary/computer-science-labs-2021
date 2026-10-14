@@ -72,6 +72,15 @@ def check_materials():
         if target and (target not in seen or not inside_repo(target).is_file()):
             errors.append('Companion reference has no preserved resource: ' + target)
     missing = manifest['missing_original_companions']
+    superseded = manifest.get('superseded_documents', [])
+    for row in superseded:
+        if row.get('status') != 'intentionally_excluded_superseded':
+            errors.append('Superseded instruction status is not an intentional exclusion')
+        if inside_repo(row['former_published_path']).exists():
+            errors.append('Superseded instruction PDF is still published: ' + row['former_published_path'])
+        replacement = documents.get(row['superseded_by'])
+        if not replacement or replacement['sha256'] != row['replacement_sha256']:
+            errors.append('Superseded instruction has no verified latest replacement: ' + row['superseded_by'])
     if any(row['status'] != 'not_provided' or row.get('resource_path') for row in missing):
         errors.append('Known original-source gap is incorrectly labelled as a preserved file')
     return {
@@ -80,6 +89,7 @@ def check_materials():
         'original_pdfs_checked': len(manifest['documents']),
         'companion_resources_checked': len(manifest['resources']),
         'reference_items_checked': len(manifest['companion_references']),
+        'intentionally_superseded_instructions': len(superseded),
         'known_missing_official_originals': [row['reference'] for row in missing],
         'errors': errors,
     }

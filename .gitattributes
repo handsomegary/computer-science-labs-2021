@@ -9,3 +9,5 @@
 exams/2021/*/solutions/*.md whitespace=-blank-at-eol
 originals/** -text
 course_support/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+source_archive/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+original_document_archive/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
