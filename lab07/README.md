@@ -20,3 +20,6 @@ Windows 執行 `lab7_1.exe`；替換檔名即可執行另外兩題。
 7.1 的結果等同 `floor(sqrt(n × 10²⁰))` 拆成整數部分與十位小數，所有合法輸入都使用相同精度。7.3 的因數枚舉只掃到根號附近，時間 O(√n)，避免原版掃描至 n。
 
 執行 `python tests/test_labs_6_9.py` 驗證。7.1 用 Python 整數平方根獨立比對 2⁶³−1、完全平方數及固定亂數案例；7.2 驗證重複數字、18 位輸入與超過整數範圍的合併；7.3 驗證計數、1 的因數、負數與錯誤選項。
+## 原課程附件
+
+講義要求的 [LAB7_2_sample.cpp](../course_support/2021/templates/LAB7_2_sample.cpp) 及 [LAB7_3_sample.cpp](../course_support/2021/templates/LAB7_3_sample.cpp) 已提供。第一份原下載檔拼作 [LAB7_2_smaple.cpp](../course_support/2021/templates/LAB7_2_smaple.cpp)，保留原名並加上與題面一致的同內容別名；兩份都是未完成模板。原 PDF、SHA256 及引用頁見[附件核對](../COMPANION_FILES.md)。

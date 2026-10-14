@@ -48,3 +48,6 @@ g++ -std=c++11 -O2 -Wall -Wextra -Wpedantic lab12_1.cpp -o lab12_1
 投影片沒有 Maze 的完整 main 輸入提示，故採用上述維度加字元矩陣格式，不額外印輸入提示。Reverse Array 也只輸出結果。三題算法與投影片指定的指標存取方式一致。
 
 repo 根目錄執行 `python tests/test_2024_labs_10_12.py`。測試以獨立 BFS 檢查迷宮可達性，再檢查輸出路徑每一步合法且不重複；另測 100×100 長蛇迷宮、單一格、死路、無路、digital root 邊界、房間庫存、日期隔離與空飯店隱藏。
+## 原課程檔案保存
+
+[Lab 12 原 PDF](../../originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf) 已原樣保存。P113042 的完整官方 `CODE BEGIN/END` template 未在提供資料中找到，記為 `not_provided`；第 7 頁的片段不是完整原檔。本目錄完成版與官方原模板分別標示，詳見 [COMPANION_FILES.md](../../COMPANION_FILES.md)。

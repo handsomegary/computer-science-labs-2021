@@ -36,3 +36,6 @@ g++ -std=c++11 -Wall -Wextra -Wpedantic lab14_1.cpp -o lab14_1
 ## 驗證
 
 在 repo 根目錄執行 `python tests/test_lab14.py --cxx g++`。涵蓋講義範例、0 的加減乘除、負結果、同級左結合、整數上下限、大數中間值相消、超過 100 個運算元、150 組固定種子隨機運算及空字串反轉。14.3 的會員搜尋包含在 `tests/test_labs_10_14.py`。
+## 原課程附件
+
+[Lab14.4_template.cpp](../course_support/2021/templates/Lab14.4_template.cpp) 已原樣保留，只有指定的 class skeleton，並非已完成的獨立主程式。[電話欄位會員範例](../course_support/2021/lab14/examples/3_1.txt)及[會員資料 ZIP](../originals/anonymized_resources/53%20NCU%20Theater%20Reservation%20System%28VI%29.zip)是明確標 `original_private_data_replaced` 的匿名替代，不是原始個資內容；原 PDF 與所有 SHA256 見[附件核對](../COMPANION_FILES.md)。

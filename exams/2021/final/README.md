@@ -20,6 +20,35 @@ g++ -std=c++11 -Wall -Wextra -Wpedantic exams/2021/final/problem_a.cpp -o proble
 
 Windows執行`problem_a.exe`，其他平台執行`./problem_a`。替換檔名即可編譯其他題。C題以工作目錄中的檔案讀取價格；兩份非個資資料在[fixtures/stock1.txt](fixtures/stock1.txt)及[fixtures/stock2.txt](fixtures/stock2.txt)。範例manifest內也附所需檔名與內容。
 
+### 直接使用已附的檔案範例
+
+C、G 的資料都已上傳；從 repo 根目錄執行時，輸入完整的 repo 相對路徑，即可使用，不必另外建立同名檔案：
+
+```sh
+g++ -std=c++11 -O2 exams/2021/final/problem_c.cpp -o problem_c
+./problem_c
+```
+
+看到 `File: ` 提示後，輸入 `exams/2021/final/fixtures/stock1.txt`，結果為 `Maximum profit: 7`。另一份範例可輸入 `exams/2021/final/fixtures/stock2.txt`，結果為 9。
+
+G 的會員資料是隨附的 [fixtures/member1.txt](fixtures/member1.txt)：
+
+```sh
+g++ -std=c++11 -O2 exams/2021/final/problem_g.cpp -o problem_g
+./problem_g
+```
+
+依序輸入下列四行，即可載入、顯示會員並離開：
+
+```text
+7
+exams/2021/final/fixtures/member1.txt
+6
+10
+```
+
+Windows 分別使用 `.\problem_c.exe`、`.\problem_g.exe`。若要原封不動重播 solution 中只輸入 `stock1.txt`／`member1.txt` 的範例，先將對應 fixture 複製到執行工作目錄；檔案內容已在 repo，這只是工作目錄的差異。
+
 幾個考卷歧義已依正式範例及程式補齊：
 
 - A的`width`為列數、`length`為欄數，螺旋可越界行走而不編號，並保持原本外擴轉彎位置。

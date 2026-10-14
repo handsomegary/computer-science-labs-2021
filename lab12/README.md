@@ -24,3 +24,6 @@ g++ -std=c++11 -O2 -Wall -Wextra -Wpedantic lab12_1.cpp -o lab12_1
 12.4 支援上下左右任意轉彎，大小寫相符才算命中。採用回溯搜尋，每一次單字路徑不重用同一格；這項通常的 word-search 規則在講義文字沒有明說，因此在此列明。文字盤必須是 81 個字母，可以有空白與換行。例如 `HELLO`、`COMPUTER`、`LLVOIRP` 輸出 `True`，`ZZZZZ` 輸出 `False`。
 
 repo 根目錄執行 `python tests/test_labs_10_14.py`。測試在暫存工作目錄放置檔案，檢查 EOF、空檔、遺失檔案、禮物輸出內容、會員追加/登入/登出，以及字母盤邊界與多分支回溯。
+## 原課程附件
+
+原樣保留的 [Lab12_2_sample.cpp](../course_support/2021/templates/Lab12_2_sample.cpp)、成績／禮物／字母盤範例（含原 `1_2.txt`／`2_2.txt`）在 [course_support/2021/lab12](../course_support/2021/lab12)。原會員檔含個人欄位，其五筆／十筆來源案例以 random names 與合成資料替代並標 `original_private_data_replaced`，並非原版。完整 PDF 引用與 SHA256 見[附件核對](../COMPANION_FILES.md)。

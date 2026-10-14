@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "source": "Provided EE1007 2021 and 2024 official course PDFs and matching companion files recovered from the supplied course source collections.",
+  "documents": [
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Chapter0_Introduction_Stud.pdf",
+      "year": "2021",
+      "page_count": 28,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Chapter0_Introduction_Stud.pdf",
+      "size": 2133254,
+      "sha256": "412d05a735d99c1b58ced2e021a3b8609914e0215e361914a4028b3c063cee9d"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_error_message_20211013_0300_Andy.pdf",
+      "year": "2021",
+      "page_count": 5,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_error_message_20211013_0300_Andy.pdf",
+      "size": 334973,
+      "sha256": "b3bfe7a88902f0fe8116afa71d1cd06c3b0374f22d8240540f727d253bfeb55a"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_GDB_20211028_1630.pdf",
+      "year": "2021",
+      "page_count": 11,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_GDB_20211028_1630.pdf",
+      "size": 2011923,
+      "sha256": "07e693e6dabaaefc61701da90338910ca4ae14c445094d29e6d4236e84204cf4"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_HydroOJ-userguide_Andy_20210930_0155.pdf",
+      "year": "2021",
+      "page_count": 11,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_HydroOJ-userguide_Andy_20210930_0155.pdf",
+      "size": 822804,
+      "sha256": "0a52e507db7ae683a770eb14c3f15ebb8ad252556ce97ebf879e782bcbee67e4"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab10_Andy_20211209_1545.pdf",
+      "year": "2021",
+      "page_count": 11,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab10_Andy_20211209_1545.pdf",
+      "size": 420274,
+      "sha256": "4b340d951afccfa3d6769f79e09db18ce00894e46c444ffeda534ceee03f1fca"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab10_Review_宜真.pdf",
+      "year": "2021",
+      "page_count": 16,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab10_Review_宜真.pdf",
+      "size": 620640,
+      "sha256": "5980e443c9c5dcda8412e394e15a8a3eeb6fa3163c1bfcabbae7153ca3ccadc9"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab11_Andy_20211215_1940.pdf",
+      "year": "2021",
+      "page_count": 10,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab11_Andy_20211215_1940.pdf",
+      "size": 406049,
+      "sha256": "992eeb1e027bc7fee62277fe724d7059921afbbec0cb162f649b81c4966671f2"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab11_Review_柏燁_20211223_1654.pdf",
+      "year": "2021",
+      "page_count": 14,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab11_Review_柏燁_20211223_1654.pdf",
+      "size": 522683,
+      "sha256": "dc81ccd9929f1cb26e584be073797a2dd11854f65de990dbd1c1f46cb7221fa7"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "year": "2021",
+      "page_count": 12,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "size": 441212,
+      "sha256": "39ff7db12faacef4af52c50cedaea98456fbab0c3a697988bce2534bb3495069"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab12_Review_Andy.pdf",
+      "year": "2021",
+      "page_count": 18,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab12_Review_Andy.pdf",
+      "size": 572093,
+      "sha256": "425559bbda04e73d5477c43311aa03aa35fa8bdf7af9640e060f6896ba1fdae6"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
+      "year": "2021",
+      "page_count": 15,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_1745_Andy.pdf",
+      "size": 413055,
+      "sha256": "cd9f011072cf3947ccd3325caee52669f366195e9ba8cc94cae77a3275aea836"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "year": "2021",
+      "page_count": 15,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "size": 412900,
+      "sha256": "89fab0ca81a9a60ee5fff6e9cdbc3da4fc08d6606c408981151f41563aae7933"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab13_Review.pdf",
+      "year": "2021",
+      "page_count": 19,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab13_Review.pdf",
+      "size": 656815,
+      "sha256": "fbad75398ed5e3486cf48358b3416596549220ac12ab1e1e75aeb9bced29b544"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab14_20220105_0030_Andy.pdf",
+      "year": "2021",
+      "page_count": 12,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab14_20220105_0030_Andy.pdf",
+      "size": 733261,
+      "sha256": "1328e5dd78240650e9064da4f61b8ca3a28229bb10f0b8d9ace518f5456a1134"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab1_20210922_0300_Andy.pdf",
+      "year": "2021",
+      "page_count": 18,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab1_20210922_0300_Andy.pdf",
+      "size": 1556949,
+      "sha256": "855f871da66a4cda274858587ed41dc2b1f06d9c1361f9e6ef59755c6c41d526"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab2_20210926_2325_Andy.pdf",
+      "year": "2021",
+      "page_count": 7,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab2_20210926_2325_Andy.pdf",
+      "size": 408933,
+      "sha256": "5e1b97ad5f48e7446a06ab38f0d190cc73ad861c4357659cf4031d6600063969"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab3_20211005_1600_Andy.pdf",
+      "year": "2021",
+      "page_count": 5,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab3_20211005_1600_Andy.pdf",
+      "size": 282466,
+      "sha256": "d64b716a06d7c9966ccada1da3d55db9e37504b5b4b8a9c128e7cc7510b5ba79"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab4_20211013_0300_Andy.pdf",
+      "year": "2021",
+      "page_count": 4,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab4_20211013_0300_Andy.pdf",
+      "size": 386189,
+      "sha256": "499ce2c9999a15422b9beceec9336371322230d9cda32ae5d58f351655ad0bd2"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab4_Review_20211021_0100_Andy.pdf",
+      "year": "2021",
+      "page_count": 8,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab4_Review_20211021_0100_Andy.pdf",
+      "size": 547865,
+      "sha256": "1a7cea9f882134e9b1bf05f8c48afd618bba03562c801f85a2f804a0d7657352"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab5_Review_20211028_0100_Andy.pdf",
+      "year": "2021",
+      "page_count": 11,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab5_Review_20211028_0100_Andy.pdf",
+      "size": 428336,
+      "sha256": "c69fda2bc8dad6923f5a689b34048361370b8dd629b46644fe24e7e511d20260"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab6_20211028_1230_Andy.pdf",
+      "year": "2021",
+      "page_count": 9,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab6_20211028_1230_Andy.pdf",
+      "size": 273149,
+      "sha256": "4351746b73d1856e853a4c2cd2c6d4d71777df385d237c74d793991d791bc953"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab6_Review_20211104_0100_Andy.pdf",
+      "year": "2021",
+      "page_count": 13,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab6_Review_20211104_0100_Andy.pdf",
+      "size": 370902,
+      "sha256": "c5b05bcf6591d790feed7fd1d2063eedbc7f81c48c3d8edeb978cdd3d998472f"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab7_20211104_1530_Andy.pdf",
+      "year": "2021",
+      "page_count": 8,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab7_20211104_1530_Andy.pdf",
+      "size": 492253,
+      "sha256": "c51b67708610bba27371d4a8f76c9ad271dbf764f06dce9d3f4747b00510b0c7"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab8_20211125_1800_Andy.pdf",
+      "year": "2021",
+      "page_count": 7,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab8_20211125_1800_Andy.pdf",
+      "size": 453552,
+      "sha256": "354e0375fd5a450e0c5dcd7e4b20c3b5af054796880d56f760b1dda0c94e1ab8"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab8_Review_Andy.pdf",
+      "year": "2021",
+      "page_count": 13,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab8_Review_Andy.pdf",
+      "size": 823344,
+      "sha256": "a926c96e4586f5894e4471af3ce1132ba089ad9dade3f48fdf438dc63f9db6b9"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab9_20211202_1230_Andy.pdf",
+      "year": "2021",
+      "page_count": 13,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab9_20211202_1230_Andy.pdf",
+      "size": 501258,
+      "sha256": "3d3ac5d62e0316aaebdbc4a1065127bf506e8b9934dcaf6ebc4645b7315149a1"
+    },
+    {
+      "source_filename": "2021Fall_EE1007_CSLab_Lab9_Review_Andy.pdf",
+      "year": "2021",
+      "page_count": 21,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2021/2021Fall_EE1007_CSLab_Lab9_Review_Andy.pdf",
+      "size": 640128,
+      "sha256": "64ebfb0a50582bd94a6f753a4c50769fa7854a1b2ed5cb3f86cb3414aaf3b7da"
+    },
+    {
+      "source_filename": "2024Fall_CSLab_Lab5_Debugger_20241017.pdf",
+      "year": "2024",
+      "page_count": 21,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_CSLab_Lab5_Debugger_20241017.pdf",
+      "size": 1935300,
+      "sha256": "58394ae9ff86d2c931a12ae62bd9fb51ec83e7fcb759e2b09c06481c86f41a45"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab10_20241204.pdf",
+      "year": "2024",
+      "page_count": 7,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab10_20241204.pdf",
+      "size": 1822448,
+      "sha256": "3d776dc71b40e318f2bd41fcd2ab5346f240eaf7a93d59a56ee92232a27ccb72"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab11_20241209.pdf",
+      "year": "2024",
+      "page_count": 11,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab11_20241209.pdf",
+      "size": 944386,
+      "sha256": "13355af3f36bd916afe813c6668ef101e332e472669dd587b2ef169e3ca50c88"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "year": "2024",
+      "page_count": 20,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "size": 713294,
+      "sha256": "eb0f875bc222e210c8cecbe46d9ff16427169ddea5f33ae7e2e9127a6f4cdd6f"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab3_Review_20241010.pdf",
+      "year": "2024",
+      "page_count": 8,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab3_Review_20241010.pdf",
+      "size": 516617,
+      "sha256": "60e570a1faf691a58d03e7afa1e5e4f9a0e0b8fed4440273d4b7ee38edb5996b"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab4_Review_20241017.pdf",
+      "year": "2024",
+      "page_count": 7,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab4_Review_20241017.pdf",
+      "size": 381153,
+      "sha256": "d37fd493cc4db75ad14360597404b4a60156e623a50095ad327b55405f36e46b"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "year": "2024",
+      "page_count": 19,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "size": 1220398,
+      "sha256": "a47cb6ab847d46ff0c299502661a643016f4609b47b4f4755aa8669ca06d7242"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab6_20241026.pdf",
+      "year": "2024",
+      "page_count": 20,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab6_20241026.pdf",
+      "size": 1721396,
+      "sha256": "1732d4718a56b50647130912408f7a7e878f2f26fce6ee778f39f63a1374946a"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab7_20241105.pdf",
+      "year": "2024",
+      "page_count": 8,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab7_20241105.pdf",
+      "size": 489497,
+      "sha256": "cc407ad264d36783fa36c8195f1700a8a7ea9b87ebd6f84878e0dfe46e745682"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab8_20241121.pdf",
+      "year": "2024",
+      "page_count": 6,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab8_20241121.pdf",
+      "size": 485144,
+      "sha256": "827a299a20e48f778671f2543364c2d011ca999a39afe70dc34f687483553982"
+    },
+    {
+      "source_filename": "2024Fall_EE1007_CSLab_Lab9_20241128.pdf",
+      "year": "2024",
+      "page_count": 10,
+      "status": "preserved",
+      "byte_exact": true,
+      "path": "originals/2024/2024Fall_EE1007_CSLab_Lab9_20241128.pdf",
+      "size": 546092,
+      "sha256": "571ed3d59bc5aa69e551eb3454035618ddb820554cfb4d2f83e5168277f673e8"
+    }
+  ],
+  "resources": [
+    {
+      "source_filename": "lab6_1err original one.cpp",
+      "role": "original_exercise_starter_or_template",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "finished_solution": false,
+      "path": "course_support/2021/templates/lab6_1err original one.cpp",
+      "size": 742,
+      "sha256": "74a5b4c181f3298e54e1f120614e25749958966e14e025f1459aa025b86a9cac"
+    },
+    {
+      "source_filename": "LAB7_2_smaple.cpp",
+      "role": "original_exercise_starter_or_template",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "finished_solution": false,
+      "path": "course_support/2021/templates/LAB7_2_smaple.cpp",
+      "size": 838,
+      "sha256": "4a91e6070dd6a75dbcd141638f554fc6b0204cb8704eb783f8f3d747a8ea0bd3"
+    },
+    {
+      "source_filename": "LAB7_3_sample.cpp",
+      "role": "original_exercise_starter_or_template",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "finished_solution": false,
+      "path": "course_support/2021/templates/LAB7_3_sample.cpp",
+      "size": 1472,
+      "sha256": "655c1f602530cf73f39fa5a11f0eccc842857232b8eab9d0803154d4b5d45a5d"
+    },
+    {
+      "source_filename": "Lab12_2_sample.cpp",
+      "role": "original_exercise_starter_or_template",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "finished_solution": false,
+      "path": "course_support/2021/templates/Lab12_2_sample.cpp",
+      "size": 336,
+      "sha256": "5d1eee2e0b79a576a93a33d150b098adc37df8fa1f13692b43adaf6d7eae5c26"
+    },
+    {
+      "source_filename": "sample_code_13_2.cpp",
+      "role": "original_exercise_starter_or_template",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "finished_solution": false,
+      "path": "course_support/2021/templates/sample_code_13_2.cpp",
+      "size": 308,
+      "sha256": "01056dc9cd6739fdb41d8794d595dd6f352978d6a080c769e696690c3d7215be"
+    },
+    {
+      "source_filename": "Lab14.4_template.cpp",
+      "role": "original_exercise_starter_or_template",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "finished_solution": false,
+      "path": "course_support/2021/templates/Lab14.4_template.cpp",
+      "size": 221,
+      "sha256": "a5c944d684e4e210b949078e14494e8d8606396c0216e67a42b70041999b0d6e"
+    },
+    {
+      "source_filename": "LAB7_2_smaple.cpp",
+      "role": "spelling_alias_for_pdf_reference",
+      "status": "filename_alias",
+      "byte_exact": true,
+      "source_path": "course_support/2021/templates/LAB7_2_smaple.cpp",
+      "path": "course_support/2021/templates/LAB7_2_sample.cpp",
+      "size": 838,
+      "sha256": "4a91e6070dd6a75dbcd141638f554fc6b0204cb8704eb783f8f3d747a8ea0bd3"
+    },
+    {
+      "source_filename": "1_1.txt",
+      "role": "provided_score_gift_or_word_board_example",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "path": "course_support/2021/lab12/examples/1_1.txt",
+      "size": 22,
+      "sha256": "9d3e6e17eb75be712939acfe3a9fc9ac0c6a8beadb417b277e3178b82933295b"
+    },
+    {
+      "source_filename": "1_2.txt",
+      "role": "provided_score_gift_or_word_board_example",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 5,
+      "path": "course_support/2021/lab12/examples/1_2.txt",
+      "size": 38,
+      "sha256": "ad7b30c3624a52e70d2883d50fbacfe50b4bf180ac099a6da65ecaf74fd5d657"
+    },
+    {
+      "source_filename": "2_1.txt",
+      "role": "provided_score_gift_or_word_board_example",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 7,
+      "path": "course_support/2021/lab12/examples/2_1.txt",
+      "size": 62,
+      "sha256": "46738b9b06479b00410608978397fcf2b859f5d57af70cbab8b91bb0b2abc764"
+    },
+    {
+      "source_filename": "2_2.txt",
+      "role": "provided_score_gift_or_word_board_example",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 6,
+      "path": "course_support/2021/lab12/examples/2_2.txt",
+      "size": 88,
+      "sha256": "48e80f8e451fc9c7b33944a99deb1408a337893e21e03f4476c1c90f7902ad5f"
+    },
+    {
+      "source_filename": "4_1.txt",
+      "role": "provided_score_gift_or_word_board_example",
+      "status": "preserved",
+      "byte_exact": true,
+      "identical_source_copies": 6,
+      "path": "course_support/2021/lab12/examples/4_1.txt",
+      "size": 161,
+      "sha256": "f03639a7bd7032a87eca791333044c86cc5f7f05cb88b1d958f266649c1f9ba9"
+    },
+    {
+      "source_filename": "3_1.txt",
+      "role": "synthetic_membership_example",
+      "status": "original_private_data_replaced",
+      "byte_exact": false,
+      "source_sha256": [
+        "1fdd84b98ebfa326634311e22c612d841e2929f3eecb2e1159cd5f25dbacdc28",
+        "5588b3e57047a466c2c66201f9ca18a4b4d3a8f44dab6a5d1e66451441fcf2ec"
+      ],
+      "record_count": 5,
+      "column_count": 2,
+      "transformation": "Names and passwords replaced by random shared aliases; phone fields replaced by synthetic digits. Record counts and field layout preserved.",
+      "path": "course_support/2021/lab12/examples/3_1.txt",
+      "size": 139,
+      "sha256": "e54d2f76454fd8cb8bb0fdc741921ea4d9435b209dcad6cee0b8df42bac3d7a1"
+    },
+    {
+      "source_filename": "3_1.txt",
+      "role": "synthetic_membership_example",
+      "status": "original_private_data_replaced",
+      "byte_exact": false,
+      "source_sha256": [
+        "78dc6695fe5f4383acccfd8cd3809426759dc6f20a5548c74e09d7bcedeff2d5"
+      ],
+      "record_count": 8,
+      "column_count": 3,
+      "transformation": "Names and passwords replaced by random shared aliases; phone fields replaced by synthetic digits. Record counts and field layout preserved.",
+      "path": "course_support/2021/lab14/examples/3_1.txt",
+      "size": 308,
+      "sha256": "bd4364f9cd2245982fd699e8abc215786e149645e167226b5d1c2d04886ec8cc"
+    },
+    {
+      "source_filename": "3_2.txt",
+      "role": "synthetic_membership_example",
+      "status": "original_private_data_replaced",
+      "byte_exact": false,
+      "source_sha256": [
+        "e22c5f441ecf85ada31a6bda1194540f7c30e82d05084f32c870bb48093e4a7c"
+      ],
+      "record_count": 10,
+      "column_count": 2,
+      "transformation": "Names and passwords replaced by random shared aliases; phone fields replaced by synthetic digits. Record counts and field layout preserved.",
+      "path": "course_support/2021/lab12/examples/3_2.txt",
+      "size": 264,
+      "sha256": "f16680d9a1baf71f0a8b28c5a16c93690fa888bd861c39f6b23962eedffc5db2"
+    },
+    {
+      "source_filename": "53 NCU Theater Reservation System(VI).zip",
+      "role": "privacy_transformed_membership_package",
+      "status": "original_private_data_replaced",
+      "byte_exact": false,
+      "source_sha256": "032199aae17812aab5055ccf21b1cbecec1821c7b9d26e01629e0f1a861a92e4",
+      "transformation": "Original package contained only personal membership data. Preserved archive filename/member structure with the same anonymous replacement as the extracted member example.",
+      "path": "originals/anonymized_resources/53 NCU Theater Reservation System(VI).zip",
+      "size": 420,
+      "sha256": "2116a439eb2bd71c5d8b485856a32c8ccf455593bcc4b8f501858968c31e3c5c"
+    }
+  ],
+  "companion_references": [
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab6_20211028_1230_Andy.pdf",
+      "pdf_page": 1,
+      "reference": "Given debugging .cpp source",
+      "resource_path": "course_support/2021/templates/lab6_1err original one.cpp",
+      "status": "preserved",
+      "evidence_excerpt": "There are 8 errors hidden in different lines of the given .cpp file."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab7_20211104_1530_Andy.pdf",
+      "pdf_page": 3,
+      "reference": "LAB7_2_sample.cpp",
+      "resource_path": "course_support/2021/templates/LAB7_2_sample.cpp",
+      "status": "filename_alias",
+      "evidence_excerpt": "Please use the sample code LAB7_2_sample.cpp."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab7_20211104_1530_Andy.pdf",
+      "pdf_page": 5,
+      "reference": "LAB7_3_sample.cpp",
+      "resource_path": "course_support/2021/templates/LAB7_3_sample.cpp",
+      "status": "preserved",
+      "evidence_excerpt": "Partial code of this problem is given in LAB7_3_sample.cpp."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "pdf_page": 2,
+      "reference": "1_1.txt",
+      "resource_path": "course_support/2021/lab12/examples/1_1.txt",
+      "status": "preserved",
+      "evidence_excerpt": "1_1.txt"
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "pdf_page": 3,
+      "reference": "Lab12_2_sample.cpp",
+      "resource_path": "course_support/2021/templates/Lab12_2_sample.cpp",
+      "status": "preserved",
+      "evidence_excerpt": "The template of this lab is given as Lab12_2_sample.cpp."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "pdf_page": 4,
+      "reference": "2_1.txt",
+      "resource_path": "course_support/2021/lab12/examples/2_1.txt",
+      "status": "preserved",
+      "evidence_excerpt": "2_1.txt"
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "pdf_page": 4,
+      "reference": "2_1out.txt",
+      "resource_path": null,
+      "status": "generated_output",
+      "evidence_excerpt": "The output file should appear as follows."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "pdf_page": 9,
+      "reference": "3_1.txt membership example",
+      "resource_path": "course_support/2021/lab12/examples/3_1.txt",
+      "status": "original_private_data_replaced",
+      "evidence_excerpt": "3_1.txt"
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab12_20211223_1626_Andy.pdf",
+      "pdf_page": 10,
+      "reference": "4_1.txt",
+      "resource_path": "course_support/2021/lab12/examples/4_1.txt",
+      "status": "preserved",
+      "evidence_excerpt": "Find a specific word from a given file 4_1.txt."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "pdf_page": 3,
+      "reference": "Blood-type sample code",
+      "resource_path": "course_support/2021/templates/sample_code_13_2.cpp",
+      "status": "preserved",
+      "evidence_excerpt": "Please use the sample code to complete this problem."
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab13_20211230_2015_update_Andy.pdf",
+      "pdf_page": 6,
+      "reference": "3_1.txt with phone column",
+      "resource_path": "course_support/2021/lab14/examples/3_1.txt",
+      "status": "original_private_data_replaced",
+      "evidence_excerpt": "3_1.txt After"
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab14_20220105_0030_Andy.pdf",
+      "pdf_page": 5,
+      "reference": "3_1.txt membership example",
+      "resource_path": "course_support/2021/lab14/examples/3_1.txt",
+      "status": "original_private_data_replaced",
+      "evidence_excerpt": "3_1.txt"
+    },
+    {
+      "document": "originals/2021/2021Fall_EE1007_CSLab_Lab14_20220105_0030_Andy.pdf",
+      "pdf_page": 10,
+      "reference": "reverse_str class skeleton",
+      "resource_path": "course_support/2021/templates/Lab14.4_template.cpp",
+      "status": "preserved",
+      "evidence_excerpt": "class reverse_str"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "pdf_page": 10,
+      "reference": "P113019 Lab 5.3 Debugging complete supplied C++ source",
+      "classification": "supplied_exercise_source_missing_from_provided_materials",
+      "evidence_excerpt": "The problem provides the complete source code for you",
+      "resource_path": null,
+      "status": "not_provided",
+      "evidence": "PDF pages 11-14 contain selected screenshots and fixes, not the full unmodified starter. Page 12 identifies the illegal 7_number variable in the supplied version. No source .cpp in the provided lab root contains that exact variable token. Existing Lab5.3 student code has already changed it and is not proof of the supplied original."
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "pdf_page": 5,
+      "reference": "P113042 Digital Root code template with CODE BEGIN / CODE END blocks",
+      "classification": "supplied_exercise_template_missing_from_provided_materials",
+      "evidence_excerpt": "You can not change anything but the block between// CODE BEGIN and // CODE END in the code template.",
+      "resource_path": null,
+      "status": "not_provided",
+      "evidence": "PDF page 7 contains only a main do/while excerpt and an implemented digitalRoot function. It does not include complete source or the CODE BEGIN / CODE END blocks. The text signature on page 5 is int *dRoot, whereas the code image on page 7 uses int &dRoot; silently calling that screenshot the original template would be inaccurate."
+    },
+    {
+      "document": "originals/2024/2024Fall_CSLab_Lab5_Debugger_20241017.pdf",
+      "pdf_page": 5,
+      "reference": "main.cpp",
+      "classification": "inline_code_example_only",
+      "evidence_excerpt": "Correct the code",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_CSLab_Lab5_Debugger_20241017.pdf",
+      "pdf_page": 16,
+      "reference": "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\\gdb",
+      "classification": "external_development_tool_path",
+      "evidence_excerpt": "Choose C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\\gdb",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "pdf_page": 18,
+      "reference": "D:\\program\\CodeBlocks\\MinGW\\bin\\gdb.exe",
+      "classification": "external_development_tool_path",
+      "evidence_excerpt": "debugger設定的路徑，需要按照你下載codeblocks的位置，做調整。",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "pdf_page": 19,
+      "reference": "https://junwu.nptu.edu.tw/dokuwiki/doku.php?id=cpp:strings",
+      "classification": "optional_bibliographic_link",
+      "evidence_excerpt": "也可以用cin.ignore()解決 ref:",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab6_20241026.pdf",
+      "pdf_page": 18,
+      "reference": "https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity",
+      "classification": "optional_bibliographic_link",
+      "evidence_excerpt": "Reference:",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab9_20241128.pdf",
+      "pdf_page": 7,
+      "reference": "gray_data image matrix for P113032 Local Binary Patterns",
+      "classification": "user_entered_matrix_not_an_image_attachment",
+      "evidence_excerpt": "The grayscale image data gray_data is processed",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab11_20241209.pdf",
+      "pdf_page": 6,
+      "reference": "Booking System hotel/room tables",
+      "classification": "inline_data_and_code_not_an_external_data_attachment",
+      "evidence_excerpt": "Search System",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "pdf_page": 16,
+      "reference": "Maze stack and pathfinding example functions",
+      "classification": "inline_code_example_only",
+      "evidence_excerpt": "Stack",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab3_Review_20241010.pdf",
+      "pdf_page": 7,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "pdf_page": 18,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab6_20241026.pdf",
+      "pdf_page": 19,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab7_20241105.pdf",
+      "pdf_page": 8,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab8_20241121.pdf",
+      "pdf_page": 5,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab9_20241128.pdf",
+      "pdf_page": 10,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab10_20241204.pdf",
+      "pdf_page": 7,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab11_20241209.pdf",
+      "pdf_page": 10,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "pdf_page": 19,
+      "reference": "Five evaluation test cases per exercise",
+      "classification": "grading_description_not_a_supplied_test_file_reference",
+      "evidence_excerpt": "5 testcases",
+      "resource_path": null,
+      "status": "inline_or_external_reference_not_a_supplied_attachment"
+    }
+  ],
+  "missing_original_companions": [
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab5_Review_20241024.pdf",
+      "pdf_page": 10,
+      "reference": "P113019 Lab 5.3 Debugging complete supplied C++ source",
+      "classification": "supplied_exercise_source_missing_from_provided_materials",
+      "evidence_excerpt": "The problem provides the complete source code for you",
+      "resource_path": null,
+      "status": "not_provided",
+      "evidence": "PDF pages 11-14 contain selected screenshots and fixes, not the full unmodified starter. Page 12 identifies the illegal 7_number variable in the supplied version. No source .cpp in the provided lab root contains that exact variable token. Existing Lab5.3 student code has already changed it and is not proof of the supplied original."
+    },
+    {
+      "document": "originals/2024/2024Fall_EE1007_CSLab_Lab12_20241216.pdf",
+      "pdf_page": 5,
+      "reference": "P113042 Digital Root code template with CODE BEGIN / CODE END blocks",
+      "classification": "supplied_exercise_template_missing_from_provided_materials",
+      "evidence_excerpt": "You can not change anything but the block between// CODE BEGIN and // CODE END in the code template.",
+      "resource_path": null,
+      "status": "not_provided",
+      "evidence": "PDF page 7 contains only a main do/while excerpt and an implemented digitalRoot function. It does not include complete source or the CODE BEGIN / CODE END blocks. The text signature on page 5 is int *dRoot, whereas the code image on page 7 uses int &dRoot; silently calling that screenshot the original template would be inaccurate."
+    }
+  ],
+  "privacy_policy": "Original instruction PDFs and non-personal support files remain byte-exact. Personal membership examples are replaced by random synthetic records and explicitly marked original_private_data_replaced.",
+  "source_extra_examples": [
+    "course_support/2021/lab12/examples/1_2.txt",
+    "course_support/2021/lab12/examples/2_2.txt"
+  ]
+}

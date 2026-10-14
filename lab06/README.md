@@ -21,3 +21,6 @@ g++ -std=c++11 -Wall -Wextra -Wpedantic lab06/lab6_1.cpp -o lab6_1
 Lab 6.1 的講義宣告輸入可達 2³¹−1，但其固定整數範本無法表示這些階乘；完整輸出本身也可能長達數十億位。標準解保留除錯題結構並對 64 位元溢位防呆，選用檔則明確限制實際運算量，兩者都不會把溢位值誤當答案。Lab 6.2 的範例畫面把三角形周長誤標成 rectangle，此處採用正確的 `Perimeter of the triangle` 標籤。
 
 從 repo 根目錄執行 `python tests/test_labs_6_9.py`；可用 `--cxx` 或 `CXX` 指定編譯器。測試包括階乘 20!、溢位拒絕、三角形重輸入、大周長，以及注入固定亂數序列驗證各成績分界及母體標準差。
+## 原課程附件
+
+Lab 6 給定的故障除錯程式已原樣保留：[lab6_1err original one.cpp](../course_support/2021/templates/lab6_1err%20original%20one.cpp)。它是題目要求修復的 starter，與本目錄的完成版分開。原 PDF 與附件 SHA256／引用頁見[附件核對](../COMPANION_FILES.md)。
